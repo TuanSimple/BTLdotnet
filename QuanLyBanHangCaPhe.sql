@@ -181,6 +181,9 @@ BEGIN
     INNER JOIN inserted i
         ON ctsp.MaSanPham = i.MaSanPham AND ctsp.MaNguyenLieu = i.MaNguyenLieu;
 END;
+select * from HoaDonNhap
+
+select * from ChiTietSanPham	
 -- Trigger tính TongTien cho bảng HoaDonNhap
 CREATE TRIGGER trg_TinhTongTien_HoaDonNhap
 ON ChiTietHoaDonNhap
@@ -188,7 +191,8 @@ AFTER INSERT, UPDATE, DELETE
 AS
 BEGIN
     SET NOCOUNT ON;
-
+	alter table SanPham
+	add GiaNhap decimal(15,0)
 -- Cập nhật lại tổng tiền cho các hóa đơn bị ảnh hưởng
     UPDATE hdn
     SET TongTien = (
@@ -352,9 +356,73 @@ INSERT INTO ChiTietHoaDonBan VALUES
 ('HDB01', 'SP01', 2, 0),
 ('HDB01', 'SP02', 1, 0);
 
+select * from SanPham
 
+-- cập nhập chi phí trong chi tiết sản phẩm
+CREATE TRIGGER trg_CapNhatChiPhi_ChiTietSanPham
+ON ChiTietSanPham
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
 
+    UPDATE ctsp
+    SET ChiPhi = ctsp.SoLuongDung * cthdn.DonGia
+    FROM ChiTietSanPham ctsp
+    JOIN inserted i ON ctsp.MaSanPham = i.MaSanPham AND ctsp.MaNguyenLieu = i.MaNguyenLieu
+    CROSS APPLY (
+        SELECT TOP 1 cthdn.DonGia
+        FROM ChiTietHoaDonNhap cthdn
+        JOIN HoaDonNhap hdn ON cthdn.MaHoaDonNhap = hdn.MaHoaDonNhap
+        WHERE cthdn.MaNguyenLieu = i.MaNguyenLieu
+        ORDER BY hdn.NgayNhap DESC
+    ) AS cthdn;
+END;
 
+-- Cập nhập giá nhập trong bảng sản phẩm
+CREATE TRIGGER trg_CapNhatGiaNhap_SanPham
+ON ChiTietSanPham
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
 
+    -- Danh sách sản phẩm bị ảnh hưởng
+    DECLARE @AffectedSanPham TABLE (MaSanPham VARCHAR(20));
+
+    -- Với INSERT
+    INSERT INTO @AffectedSanPham (MaSanPham)
+    SELECT DISTINCT MaSanPham FROM inserted;
+
+    -- Với DELETE
+    INSERT INTO @AffectedSanPham (MaSanPham)
+    SELECT DISTINCT MaSanPham FROM deleted;
+
+    -- Cập nhật lại GiaNhap = tổng ChiPhi của nguyên liệu cấu thành sản phẩm
+    UPDATE sp
+    SET GiaNhap = ISNULL(ct.TongChiPhi, 0)
+    FROM SanPham sp
+    JOIN (
+        SELECT MaSanPham, SUM(ChiPhi) AS TongChiPhi
+        FROM ChiTietSanPham
+        GROUP BY MaSanPham
+    ) ct ON sp.MaSanPham = ct.MaSanPham
+    WHERE sp.MaSanPham IN (SELECT MaSanPham FROM @AffectedSanPham);
+END;
+-- Tự động cập nhập giá bán
+CREATE TRIGGER trg_CapNhatGiaBan_SanPham
+ON SanPham
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Cập nhật Giá Bán nếu Giá Nhập bị thay đổi
+    UPDATE sp
+    SET GiaBan = ROUND(sp.GiaNhap * 1.1, 0)  -- Làm tròn nếu cần
+    FROM SanPham sp
+    JOIN inserted i ON sp.MaSanPham = i.MaSanPham
+    WHERE i.GiaNhap IS NOT NULL AND i.GiaNhap <> sp.GiaBan / 1.1;
+END;
 
 
