@@ -52,11 +52,15 @@
               "Title": "frmSanpham.cs [Design]",
               "DocumentMoniker": "D:\\L\u1EACP TR\u00CCNH .NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmSanpham.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmSanpham.cs",
-              "ToolTip": "D:\\L\u1EACP TR\u00CCNH .NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmSanpham.cs [Design]*",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmSanpham.cs [Design]*",
+              "ToolTip": "D:\\L\u1EACP TR\u00CCNH .NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmSanpham.cs [Design]",
+              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmSanpham.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T10:25:47.212Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
@@ -77,16 +81,12 @@
               "Title": "frmSanpham.cs",
               "DocumentMoniker": "D:\\L\u1EACP TR\u00CCNH .NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmSanpham.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmSanpham.cs",
-              "ToolTip": "D:\\L\u1EACP TR\u00CCNH .NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmSanpham.cs*",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmSanpham.cs*",
-              "ViewState": "AgIAAHABAAAAAAAAAAAAAIcBAAA7AAAAAAAAAA==",
+              "ToolTip": "D:\\L\u1EACP TR\u00CCNH .NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmSanpham.cs",
+              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmSanpham.cs",
+              "ViewState": "AgIAAHABAAAAAAAAAAAAAIwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-20T10:30:08.045Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
@@ -94,8 +94,8 @@
               "Title": "frmSanpham.Designer.cs",
               "DocumentMoniker": "D:\\L\u1EACP TR\u00CCNH .NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmSanpham.Designer.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmSanpham.Designer.cs",
-              "ToolTip": "D:\\L\u1EACP TR\u00CCNH .NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmSanpham.Designer.cs*",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmSanpham.Designer.cs*",
+              "ToolTip": "D:\\L\u1EACP TR\u00CCNH .NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmSanpham.Designer.cs",
+              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmSanpham.Designer.cs",
               "ViewState": "AgIAAMcBAAAAAAAAAAAjwNABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T04:39:55.21Z",

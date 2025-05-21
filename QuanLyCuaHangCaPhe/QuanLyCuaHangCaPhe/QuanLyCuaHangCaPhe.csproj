@@ -59,11 +59,25 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="frmSanpham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSanpham.Designer.cs">
       <DependentUpon>frmSanpham.cs</DependentUpon>
+=======
+    <Compile Include="frm_quanlyban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_quanlyban.Designer.cs">
+      <DependentUpon>frm_quanlyban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_quanlytaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_quanlytaikhoan.Designer.cs">
+      <DependentUpon>frm_quanlytaikhoan.cs</DependentUpon>
+>>>>>>> 47f15947873f765c50518d0c9d7a4cb82a6d615d
     </Compile>
     <Compile Include="Function.cs" />
     <Compile Include="Program.cs" />
@@ -71,8 +85,16 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="frmSanpham.resx">
       <DependentUpon>frmSanpham.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="frm_quanlyban.resx">
+      <DependentUpon>frm_quanlyban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_quanlytaikhoan.resx">
+      <DependentUpon>frm_quanlytaikhoan.cs</DependentUpon>
+>>>>>>> 47f15947873f765c50518d0c9d7a4cb82a6d615d
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

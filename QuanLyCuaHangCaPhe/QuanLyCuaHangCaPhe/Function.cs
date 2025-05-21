@@ -17,7 +17,7 @@ namespace QuanLyCuaHangCaPhe
         public static void Connect()
         {
             //Thiết lập giá trị cho chuỗi kết nối
-            connString = "Data Source=DESKTOP-PLEJFRL;Initial Catalog=QuanLyBanHangCaPhe;Integrated Security=True;";
+            connString = "Data Source=LAPTOP-RGE5IC42\\MSSQLSERVER01;Initial Catalog=QuanLyBanHangCaPhe;Integrated Security=True;Encrypt=False;TrustServerCertificate=True";
             Conn = new SqlConnection();                 //Cấp phát đối tượng
             Conn.ConnectionString = connString;         //Kết nối
             Conn.Open();                                //Mở kết nối

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\LẬP TRÌNH .NET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QuanLyCuaHangCaPhe.exe.config
 D:\LẬP TRÌNH .NET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QuanLyCuaHangCaPhe.exe
 D:\LẬP TRÌNH .NET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QuanLyCuaHangCaPhe.pdb
@@ -11,3 +12,19 @@ D:\LẬP TRÌNH .NET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\Q
 D:\LẬP TRÌNH .NET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmSanpham.resources
 D:\LẬP TRÌNH .NET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\FontAwesome.Sharp.dll
 D:\LẬP TRÌNH .NET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCu.3418C657.Up2Date
+=======
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QuanLyCuaHangCaPhe.exe.config
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QuanLyCuaHangCaPhe.exe
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QuanLyCuaHangCaPhe.pdb
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmMain.resources
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frm_quanlyban.resources
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.Properties.Resources.resources
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCu.3418C657.Up2Date
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.exe
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.pdb
+C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frm_quanlytaikhoan.resources
+>>>>>>> 47f15947873f765c50518d0c9d7a4cb82a6d615d
