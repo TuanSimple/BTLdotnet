@@ -21,6 +21,7 @@ namespace QuanLyCuaHangCaPhe
         {
             Function.Connect();
             txtManhanvien.Enabled = false;
+            txt
             ibtnLuu.Enabled = false;
             ibtnLammoi.Enabled = false;
             cboMachucvu.SelectedIndexChanged += new EventHandler(cboMachucvu_SelectedIndexChanged); // Đăng ký sự kiện
@@ -50,16 +51,17 @@ namespace QuanLyCuaHangCaPhe
             datagridtaikhoan.Columns["MaChucVu"].Visible = false;
             datagridtaikhoan.Columns["MaQue"].Visible = false;
             datagridtaikhoan.Columns[0].Width = 100;
-            datagridtaikhoan.Columns[1].Width = 150;
-            datagridtaikhoan.Columns[2].Width = 150;
-            datagridtaikhoan.Columns[3].Width = 150;
-            datagridtaikhoan.Columns[4].Width = 150;
-            datagridtaikhoan.Columns[5].Width = 150;
-            datagridtaikhoan.Columns[6].Width = 150;
-            datagridtaikhoan.Columns[7].Width = 150;
-            datagridtaikhoan.Columns[8].Width = 150;
-            datagridtaikhoan.Columns[9].Width = 150;
-            datagridtaikhoan.Columns[10].Width = 150;
+            datagridtaikhoan.Columns[0].Width = 250;
+            datagridtaikhoan.Columns[1].Width = 250;
+            datagridtaikhoan.Columns[2].Width = 250;
+            datagridtaikhoan.Columns[3].Width = 250;
+            datagridtaikhoan.Columns[4].Width = 250;
+            datagridtaikhoan.Columns[5].Width = 250;
+            datagridtaikhoan.Columns[6].Width = 250;
+            datagridtaikhoan.Columns[7].Width = 250;
+            datagridtaikhoan.Columns[8].Width = 250;
+            datagridtaikhoan.Columns[9].Width = 250;
+            datagridtaikhoan.Columns[10].Width = 250;
             datagridtaikhoan.AllowUserToAddRows = false;
             datagridtaikhoan.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
