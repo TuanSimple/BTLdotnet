@@ -426,3 +426,27 @@ BEGIN
 END;
 
 
+ALTER TABLE NhanVien
+ADD Luong DECIMAL(15,4) NULL;
+
+UPDATE nv
+SET nv.Luong = cv.LuongCoBan
+FROM NhanVien nv
+JOIN ChucVu cv ON nv.MaChucVu = cv.MaChucVu;
+
+CREATE TRIGGER trg_SyncLuongNhanVien
+ON ChucVu
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE nv
+    SET nv.Luong = i.LuongCoBan
+    FROM NhanVien nv
+    INNER JOIN inserted i ON nv.MaChucVu = i.MaChucVu
+    INNER JOIN deleted d ON i.MaChucVu = d.MaChucVu
+    WHERE i.LuongCoBan != d.LuongCoBan;
+END;
+ 
+ select * from ChucVu
