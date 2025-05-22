@@ -278,9 +278,9 @@ INSERT INTO KhuyenMai VALUES
 
 -- Insert data for NguyenLieu
 INSERT INTO NguyenLieu VALUES 
-('NL01', N'Cà phê hạt', 0, N'kg'),
+('NL03', N'Cà phê hạt', 0, N'kg'),
 ('NL02', N'Sữa đặc', 0, N'lon');
-
+select * from NguyenLieu
 -- Insert data for Loai
 INSERT INTO Loai VALUES 
 ('L01', N'Cà phê'),
@@ -425,4 +425,20 @@ BEGIN
     WHERE i.GiaNhap IS NOT NULL AND i.GiaNhap <> sp.GiaBan / 1.1;
 END;
 
+
+SELECT MaSanPham, n.MaNguyenLieu, n.TenNguyenLieu, SoLuongDung, ChiPhi
+FROM ChiTietSanPham c
+JOIN NguyenLieu n ON c.MaNguyenLieu = n.MaNguyenLieu
+WHERE MaSanPham = 'ht';
+
+select * from ChiTietSanPham
+WHERE MaSanPham = 'NL03';
+	
+ALTER TABLE SanPham
+DROP CONSTRAINT FK__SanPham__MaLoai__628FA481; -- Tên khóa ngoại cũ, thay bằng tên thực
+
+ALTER TABLE SanPham
+ADD CONSTRAINT FK__SanPham__MaLoai__628FA481
+FOREIGN KEY (MaLoai) REFERENCES Loai(MaLoai)
+ON DELETE CASCADE;
 

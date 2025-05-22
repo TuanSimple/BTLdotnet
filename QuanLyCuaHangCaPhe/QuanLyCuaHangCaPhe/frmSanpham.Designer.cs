@@ -59,13 +59,13 @@
             this.btnTim = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cboMaSPChitiet = new System.Windows.Forms.ComboBox();
+            this.cboNguyenlieu = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnLuuChitiet = new FontAwesome.Sharp.IconButton();
             this.btnXoaChitiet = new FontAwesome.Sharp.IconButton();
             this.btnSuaChitiet = new FontAwesome.Sharp.IconButton();
             this.btnThemChitiet = new FontAwesome.Sharp.IconButton();
-            this.cboNguyenlieu = new System.Windows.Forms.ComboBox();
-            this.cboMaSPChitiet = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQLyCaPhe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewChiTietSP)).BeginInit();
@@ -106,6 +106,7 @@
             this.btnBoqua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBoqua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBoqua.UseVisualStyleBackColor = false;
+            this.btnBoqua.Click += new System.EventHandler(this.btnBoqua_Click);
             // 
             // btnLuu
             // 
@@ -162,6 +163,7 @@
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -260,6 +262,7 @@
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(301, 24);
             this.txtTim.TabIndex = 0;
+            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
             // label2
             // 
@@ -409,6 +412,7 @@
             this.btnTim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTim.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTim.UseVisualStyleBackColor = false;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
             // panel1
             // 
@@ -452,6 +456,25 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(795, 290);
             this.panel3.TabIndex = 21;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // cboMaSPChitiet
+            // 
+            this.cboMaSPChitiet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMaSPChitiet.FormattingEnabled = true;
+            this.cboMaSPChitiet.Location = new System.Drawing.Point(398, 90);
+            this.cboMaSPChitiet.Name = "cboMaSPChitiet";
+            this.cboMaSPChitiet.Size = new System.Drawing.Size(231, 24);
+            this.cboMaSPChitiet.TabIndex = 24;
+            // 
+            // cboNguyenlieu
+            // 
+            this.cboNguyenlieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboNguyenlieu.FormattingEnabled = true;
+            this.cboNguyenlieu.Location = new System.Drawing.Point(398, 150);
+            this.cboNguyenlieu.Name = "cboNguyenlieu";
+            this.cboNguyenlieu.Size = new System.Drawing.Size(231, 24);
+            this.cboNguyenlieu.TabIndex = 23;
             // 
             // label9
             // 
@@ -499,6 +522,7 @@
             this.btnXoaChitiet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoaChitiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnXoaChitiet.UseVisualStyleBackColor = false;
+            this.btnXoaChitiet.Click += new System.EventHandler(this.btnXoaChitiet_Click);
             // 
             // btnSuaChitiet
             // 
@@ -517,6 +541,7 @@
             this.btnSuaChitiet.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSuaChitiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSuaChitiet.UseVisualStyleBackColor = false;
+            this.btnSuaChitiet.Click += new System.EventHandler(this.btnSuaChitiet_Click);
             // 
             // btnThemChitiet
             // 
@@ -536,22 +561,6 @@
             this.btnThemChitiet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThemChitiet.UseVisualStyleBackColor = false;
             this.btnThemChitiet.Click += new System.EventHandler(this.btnThemChitiet_Click);
-            // 
-            // cboNguyenlieu
-            // 
-            this.cboNguyenlieu.FormattingEnabled = true;
-            this.cboNguyenlieu.Location = new System.Drawing.Point(398, 150);
-            this.cboNguyenlieu.Name = "cboNguyenlieu";
-            this.cboNguyenlieu.Size = new System.Drawing.Size(231, 24);
-            this.cboNguyenlieu.TabIndex = 23;
-            // 
-            // cboMaSPChitiet
-            // 
-            this.cboMaSPChitiet.FormattingEnabled = true;
-            this.cboMaSPChitiet.Location = new System.Drawing.Point(398, 90);
-            this.cboMaSPChitiet.Name = "cboMaSPChitiet";
-            this.cboMaSPChitiet.Size = new System.Drawing.Size(231, 24);
-            this.cboMaSPChitiet.TabIndex = 24;
             // 
             // frmSanpham
             // 

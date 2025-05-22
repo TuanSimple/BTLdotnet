@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls.Primitives;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 
@@ -29,20 +30,32 @@ namespace QuanLyCuaHangCaPhe
 
         private void frmSanpham_Load(object sender, EventArgs e)
         {
-            //Khi form load thì sẽ gọi hàm Connect để kết nối với CSDL
+            // Khi form load thì sẽ gọi hàm Connect để kết nối với CSDL
             QuanLyCuaHangCaPhe.Function.Connect();
             txtMasanpham.Enabled = false;
             btnLuu.Enabled = false;
             btnBoqua.Enabled = false;
-            //Gọi hàm load dữ liệu vào datagridview
+            // Gọi hàm load dữ liệu vào datagridview
             Load_DataGridViewSP();
-            //Gọi hàm load dữ liệu vào combobox
+             // Gọi hàm load dữ liệu vào datagridview chi tiết sản phẩm
+            // Gọi hàm load dữ liệu vào combobox
             string sql = "SELECT * FROM Loai";
             QuanLyCuaHangCaPhe.Function.FillCombo(sql, cboDanhmuc, "Maloai", "Tenloai");
-            cboDanhmuc.SelectedIndex = -1; //Đặt giá trị mặc định cho combobox
-            ResetValues();
+            cboDanhmuc.SelectedIndex = -1; // Đặt giá trị mặc định cho combobox
 
-            //ẩn
+            // Khởi tạo DataSource cho cboMaSPChitiet và cboNguyenlieu
+            string sqlSanPham = "SELECT MaSanPham, TenSanPham FROM SanPham";
+            QuanLyCuaHangCaPhe.Function.FillCombo(sqlSanPham, cboMaSPChitiet, "MaSanPham", "TenSanPham");
+            cboMaSPChitiet.SelectedIndex = -1;
+
+            string sqlNguyenLieu = "SELECT MaNguyenLieu, TenNguyenLieu FROM NguyenLieu";
+            QuanLyCuaHangCaPhe.Function.FillCombo(sqlNguyenLieu, cboNguyenlieu, "MaNguyenLieu", "TenNguyenLieu");
+            cboNguyenlieu.SelectedIndex = -1;
+
+            ResetValues();
+            ResetValues1();
+
+            // Ẩn
             txtMasanpham.Enabled = false;
             btnBoqua.Enabled = false;
             btnLuu.Enabled = false;
@@ -123,16 +136,26 @@ namespace QuanLyCuaHangCaPhe
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnBoqua.Enabled = true;
-            string selectedMaSanPham = dataGridViewQLyCaPhe.CurrentRow.Cells["MaSanPham"].Value.ToString();
-            Load_DataGridViewChiTietSP(selectedMaSanPham);
+            
+            Load_DataGridViewChiTietSP();
 
         }
-        private void Load_DataGridViewChiTietSP(string maSanPham)
+        private void Load_DataGridViewChiTietSP()
         {
-            string sql;
-            sql = $"SELECT MaSanPham, n.MaNguyenLieu, n.TenNguyenLieu, SoLuongDung, ChiPhi FROM ChiTietSanPham c join NguyenLieu n on c.MaNguyenLieu = n.MaNguyenLieu WHERE MaSanPham = N'{maSanPham}'";
+            if (dataGridViewQLyCaPhe.CurrentRow == null)
+            {
+                // Không có dòng nào được chọn, có thể reset hoặc xóa dữ liệu
+                dataGridViewChiTietSP.DataSource = null;
+                return;
+            }
+
+            string maSanPham = dataGridViewQLyCaPhe.CurrentRow.Cells["MaSanPham"].Value.ToString();
+
+            string sql = $"SELECT MaSanPham, n.MaNguyenLieu, n.TenNguyenLieu, SoLuongDung, ChiPhi " +
+                         $"FROM ChiTietSanPham c JOIN NguyenLieu n ON c.MaNguyenLieu = n.MaNguyenLieu " +
+                         $"WHERE MaSanPham = N'{maSanPham}'";
+
             ChiTietSanPham = QuanLyCuaHangCaPhe.Function.GetDataToTable(sql);
-            // Gán dữ liệu từ bảng vào datagridview
             dataGridViewChiTietSP.DataSource = ChiTietSanPham;
 
             // Đặt tên cho các cột
@@ -166,34 +189,45 @@ namespace QuanLyCuaHangCaPhe
             txtTensanpham.Text = "";
             cboDanhmuc.Text = "";
             txtGiaban.Text = "";
+            txtGianhap.Text = "";
+            txtAnh.Text = "";
+            picAnh.Image = null;
         }
 
-       
-            private void dataGridViewChiTietSP_Click(object sender, EventArgs e)
+
+        private void dataGridViewChiTietSP_Click(object sender, EventArgs e)
         {
-            string ma1= "";
-            string ma2 = "";
-            if (btnThem.Enabled == false)
+            // Nạp lại dữ liệu cho ComboBox
+            string sqlSanPham = "SELECT MaSanPham, TenSanPham FROM SanPham";
+            QuanLyCuaHangCaPhe.Function.FillCombo(sqlSanPham, cboMaSPChitiet, "MaSanPham", "TenSanPham");
+
+            string sqlNguyenLieu = "SELECT MaNguyenLieu, TenNguyenLieu FROM NguyenLieu";
+            QuanLyCuaHangCaPhe.Function.FillCombo(sqlNguyenLieu, cboNguyenlieu, "MaNguyenLieu", "TenNguyenLieu");
+
+            // Kiểm tra xem ComboBox có dữ liệu hay không
+            if (cboMaSPChitiet.Items.Count == 0)
             {
-                MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtMasanpham.Focus();
-                return;
-            }
-            if (SanPham.Rows.Count == 0)
-            {
-                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                MessageBox.Show("ComboBox sản phẩm chi tiết không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
-            //Lấy dòng hiện tại
-            ma2 = dataGridViewChiTietSP.CurrentRow.Cells["MaSanPham"].Value.ToString();
-            cboMaSPChitiet.Text = QuanLyCuaHangCaPhe.Function.GetFieldValues("SELECT MaSanPham FROM SanPham WHERE MaSanPham = N'" + ma2 + "'");
-            txtSoluongdung.Text = dataGridViewChiTietSP.CurrentRow.Cells["SoLuongDung"].Value.ToString();
-            //txtTennguyenlieu.Text = dataGridViewChiTietSP.CurrentRow.Cells["TenNguyenLieu"].Value.ToString();
-            // ma = dataGridViewQLyCaPhe.CurrentRow.Cells["MaLoai"].Value.ToString();
-            ma1 = dataGridViewChiTietSP.CurrentRow.Cells["MaNguyenLieu"].Value.ToString();
-            cboNguyenlieu.Text = QuanLyCuaHangCaPhe.Function.GetFieldValues("SELECT TenNguyenLieu FROM NguyenLieu WHERE MaNguyenLieu = N'" + ma1 + "'");
+            if (cboNguyenlieu.Items.Count == 0)
+            {
+                MessageBox.Show("ComboBox nguyên liệu không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
+            // Lấy mã sản phẩm và mã nguyên liệu từ dòng hiện tại
+            if (dataGridViewChiTietSP.CurrentRow != null)
+            {
+                string ma2 = dataGridViewChiTietSP.CurrentRow.Cells["MaSanPham"].Value.ToString();
+                string ma1 = dataGridViewChiTietSP.CurrentRow.Cells["MaNguyenLieu"].Value.ToString();
+                txtSoluongdung.Text = dataGridViewChiTietSP.CurrentRow.Cells["SoLuongDung"].Value.ToString();
+
+                // Gán giá trị cho ComboBox
+                cboMaSPChitiet.SelectedValue = ma2;
+                cboNguyenlieu.SelectedValue = ma1;
+                cboMaSPChitiet.Enabled = false;
+                cboNguyenlieu.Enabled = false;
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -204,6 +238,7 @@ namespace QuanLyCuaHangCaPhe
             btnThem.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+            btnTim.Enabled = false;
             ResetValues();
             txtMasanpham.Enabled = true;
             txtTensanpham.Enabled = true;
@@ -255,9 +290,9 @@ namespace QuanLyCuaHangCaPhe
                 return;
             }
             //Thêm mới
-            sql = "INSERT INTO SanPham (MaSanPham, TenSanPham,MaLoai, HinheAnh) " +
+            sql = "INSERT INTO SanPham (MaSanPham, TenSanPham,MaLoai, HinhAnh, GiaBan, GiaNhap) " +
       "VALUES (N'" + txtMasanpham.Text + "', N'" + txtTensanpham.Text + "', N'" + cboDanhmuc.SelectedValue.ToString() +
-      "', N'" + txtAnh.Text + "')";
+      "', N'" + txtAnh.Text + "', 0, 0 )";
 
             QuanLyCuaHangCaPhe.Function.RunSql(sql);
             Load_DataGridViewSP();
@@ -287,10 +322,9 @@ namespace QuanLyCuaHangCaPhe
 
         public void ResetValues1()
         {
-            cboMaSPChitiet.Text = "";
-            cboNguyenlieu.Text = "";
+            cboMaSPChitiet.SelectedIndex = -1; // Reset giá trị chọn
+            cboNguyenlieu.SelectedIndex = -1;  // Reset giá trị chọn
             txtSoluongdung.Text = "";
-   
         }
         private void btnThemChitiet_Click(object sender, EventArgs e)
         {
@@ -394,6 +428,166 @@ namespace QuanLyCuaHangCaPhe
                 ResetValues();
             }
 
+
+        }
+
+        private void btnXoaChitiet_Click(object sender, EventArgs e)
+        {
+            string sql1= "";
+            string sql2 = "";   
+            if (ChiTietSanPham.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            if (cboMaSPChitiet.Text == "")
+            {
+                MessageBox.Show("Bạn phải chọn hàng để xóa", "Thông báo", MessageBoxButtons.OK);
+                return; 
+            }
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                sql1 = "DELETE FROM ChiTietSanPham WHERE MaNguyenLieu = (SELECT MaNguyenLieu FROM Nguyenlieu WHERE TenNguyenLieu = N'" + cboNguyenlieu.Text + "') AND MaSanPham = N'" + cboMaSPChitiet.Text + "'";
+                QuanLyCuaHangCaPhe.Function.RunSqlDel(sql1);
+                Load_DataGridViewChiTietSP();
+                ResetValues();
+            }
+
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            string sql;
+            txtGianhap.Enabled = false;
+            txtMasanpham.Enabled = false;
+
+            if (SanPham.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            if (txtMasanpham.Text == "")
+            {
+                MessageBox.Show("Bạn phải chọn sản phẩm để sửa", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            if (txtTensanpham.Text == "")
+            {
+                MessageBox.Show("Bạn phải nhập tên sản phẩm", "Thông báo", MessageBoxButtons.OK);
+                txtTensanpham.Focus();
+                return;
+            }
+            if (txtAnh.Text == "")
+            {
+                MessageBox.Show("Bạn phải nhập ảnh", "Thông báo", MessageBoxButtons.OK);
+                txtAnh.Focus();
+                return;
+            }
+            sql = "UPDATE SanPham SET TenSanPham = N'" + txtTensanpham.Text + "', MaLoai = N'" + cboDanhmuc.SelectedValue.ToString() +
+                "', HinhAnh = N'" + txtAnh.Text +
+                "' WHERE MaSanPham = N'" + txtMasanpham.Text + "'";
+
+            //hỏi ý kiến người dùng có muốn sửa không
+            if (MessageBox.Show("Bạn có chắc chắn muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                QuanLyCuaHangCaPhe.Function.RunSql(sql);
+                Load_DataGridViewSP();
+                ResetValues();
+                btnBoqua.Enabled = false;
+            }
+            txtGiaban.Enabled = false;
+            
+        }
+
+        private void btnSuaChitiet_Click(object sender, EventArgs e)
+        {
+            if (ChiTietSanPham.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            if (cboMaSPChitiet.SelectedIndex == -1)
+            {
+                MessageBox.Show("Bạn phải chọn sản phẩm để sửa", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+            if (cboNguyenlieu.SelectedIndex == -1)
+            {
+                MessageBox.Show("Bạn phải chọn tên nguyên liệu", "Thông báo", MessageBoxButtons.OK);
+                cboNguyenlieu.Focus();
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtSoluongdung.Text))
+            {
+                MessageBox.Show("Bạn phải nhập số lượng dùng", "Thông báo", MessageBoxButtons.OK);
+                txtSoluongdung.Focus();
+                return;
+            }
+
+            string maSanPham = cboMaSPChitiet.SelectedValue.ToString();
+            string maNguyenLieu = cboNguyenlieu.SelectedValue.ToString();
+            string soLuongDung = txtSoluongdung.Text.Trim();
+
+            // Kiểm tra số lượng có phải số không (nếu cần)
+            if (!int.TryParse(soLuongDung, out int soluong))
+            {
+                MessageBox.Show("Số lượng dùng phải là số nguyên.", "Thông báo", MessageBoxButtons.OK);
+                txtSoluongdung.Focus();
+                return;
+            }
+
+            string sql = "UPDATE ChiTietSanPham SET SoLuongDung = " + soluong +
+                         " WHERE MaSanPham = N'" + maSanPham + "' AND MaNguyenLieu = N'" + maNguyenLieu + "'";
+
+            if (MessageBox.Show("Bạn có chắc chắn muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                QuanLyCuaHangCaPhe.Function.RunSql(sql);
+                Load_DataGridViewChiTietSP();  // truyền tham số maSanPham để load lại dữ liệu
+                ResetValues1(); // Reset lại các trường chi tiết
+                btnBoqua.Enabled = false;
+            }
+        }
+
+
+        private void btnBoqua_Click(object sender, EventArgs e)
+        {
+            ResetValues();
+            btnBoqua.Enabled = false;
+            btnThem.Enabled = true;
+            btnXoa.Enabled = true;
+            btnSua.Enabled = true;
+            btnLuu.Enabled = false;
+            txtMasanpham.Enabled = false;
+            Load_DataGridViewSP();
+
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            //code nút tìm kiếm món ăn
+            string sql;
+            if (txtTim.Text == "")
+            {
+                MessageBox.Show("Bạn phải nhập tên sản phẩm", "Thông báo", MessageBoxButtons.OK);
+                txtTim.Focus();
+                return;
+            }
+            sql = "SELECT MaSanPham, TenSanPham, TenLoai, GiaBan, HinhAnh, GiaNhap FROM SanPham s join Loai l on l.MaLoai=s.MaLoai WHERE TenSanPham like N'%" + txtTim.Text + "%'";
+            SanPham = QuanLyCuaHangCaPhe.Function.GetDataToTable(sql);
+            //Gán dữ liệu từ bảng vào datagridview
+            dataGridViewQLyCaPhe.DataSource = SanPham;
+            //xóa chữ ở ô txtTim sau khi tìm xong
+            txtTim.Text = "";
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtTim_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

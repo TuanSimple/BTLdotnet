@@ -28,3 +28,6 @@ C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHan
 C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.pdb
 C:\Users\Admin\source\repos\TuanSimple\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frm_quanlytaikhoan.resources
 >>>>>>> 47f15947873f765c50518d0c9d7a4cb82a6d615d
+D:\LẬP TRÌNH .NET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frm_quanlyban.resources
+D:\LẬP TRÌNH .NET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frm_quanlytaikhoan.resources
+D:\LẬP TRÌNH .NET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmDanhmucsanpham.resources
