@@ -58,6 +58,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.datagridtaikhoan = new System.Windows.Forms.DataGridView();
+            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridtaikhoan)).BeginInit();
@@ -164,6 +165,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.panel2.Controls.Add(this.domainUpDown1);
             this.panel2.Controls.Add(this.txtLuong);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label9);
@@ -398,6 +400,7 @@
             this.label11.Size = new System.Drawing.Size(751, 67);
             this.label11.TabIndex = 28;
             this.label11.Text = "Danh sách quản lý tài khoản";
+//            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // datagridtaikhoan
             // 
@@ -408,8 +411,15 @@
             this.datagridtaikhoan.RowTemplate.Height = 33;
             this.datagridtaikhoan.Size = new System.Drawing.Size(1126, 403);
             this.datagridtaikhoan.TabIndex = 29;
-       //     this.datagridtaikhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridtaikhoan_CellContentClick);
             this.datagridtaikhoan.Click += new System.EventHandler(this.datagridtaikhoan_Click_1);
+            // 
+            // domainUpDown1
+            // 
+            this.domainUpDown1.Location = new System.Drawing.Point(194, 151);
+            this.domainUpDown1.Name = "domainUpDown1";
+            this.domainUpDown1.Size = new System.Drawing.Size(120, 31);
+            this.domainUpDown1.TabIndex = 20;
+            this.domainUpDown1.Text = "domainUpDown1";
             // 
             // frm_quanlytaikhoan
             // 
@@ -471,5 +481,6 @@
         private System.Windows.Forms.DataGridView datagridtaikhoan;
         private System.Windows.Forms.TextBox txtLuong;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DomainUpDown domainUpDown1;
     }
 }
