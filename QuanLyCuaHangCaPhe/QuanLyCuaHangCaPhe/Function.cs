@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace QuanLyCuaHangCaPhe
 {
@@ -17,10 +18,11 @@ namespace QuanLyCuaHangCaPhe
         public static void Connect()
         {
             //Thiết lập giá trị cho chuỗi kết nối
-            connString = "Data Source=DESKTOP-PLEJFRL;Initial Catalog=QuanLyBanHangCaPhe;Integrated Security=True;";
+            connString = "Data Source=DESKTOP-JAEVTHH\\SQLSERVER2022;Initial Catalog=QuanLyBanHangCaPhe;Integrated Security=True;";
             Conn = new SqlConnection();                 //Cấp phát đối tượng
             Conn.ConnectionString = connString;         //Kết nối
-            Conn.Open();                                //Mở kết nối
+            Conn.Open();  //Mở kết nối
+            //MessageBox.Show("Kết nối thành công", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public static void Disconnect()
@@ -107,6 +109,29 @@ namespace QuanLyCuaHangCaPhe
             reader.Close();
             return ma;
         }
+        public static double? GetFieldValues1(string sql)
+        {
+            double? ma = null;
+            SqlCommand cmd = new SqlCommand(sql, Function.Conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                if (!reader.IsDBNull(0))
+                {
+                    ma = Convert.ToDouble(reader[0]);
+                }
+            }
+            reader.Close();
+            return ma;
+        }
+
+        public static bool IsDate(string date)
+        {
+            DateTime temp;
+            return DateTime.TryParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out temp);
+        }
+
+
         public static void FillCombo(string sql, ComboBox cbo, string ma, string ten)
         {
             SqlDataAdapter Mydata = new SqlDataAdapter(sql, Conn);
@@ -117,5 +142,113 @@ namespace QuanLyCuaHangCaPhe
             cbo.ValueMember = ma;    // Truong gia tri
             cbo.DisplayMember = ten;    // Truong hien thi
         }
+        public static DataTable ExecuteQuery(string sql, object[] parameter = null)
+        {
+
+            DataTable data = new DataTable();
+            using (SqlCommand command = new SqlCommand(sql, Conn))
+            {
+                if (parameter != null)
+                {
+                    string[] listPara = sql.Split(' ');
+                    int i = 0;
+                    foreach (string item in listPara)
+                    {
+                        if (item.Contains('@'))
+                        {
+                            command.Parameters.AddWithValue(item, parameter[i]);
+                            i++;
+                        }
+                    }
+                }
+                using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                {
+                    adapter.Fill(data);
+                }
+                return data;
+            }
+        }
+        public static DataTable GetBillListByDate(DateTime checkIn, DateTime checkOut)
+        {
+            return ExecuteQuery("exec usp_GetListBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
+        }
+        public static string ChuyenSoSangChu(string sNumber)
+        {
+            int mLen, mDigit;
+            string mTemp = "";
+            string[] mNumText;
+            //Xóa các dấu "," nếu có
+            sNumber = sNumber.Replace(",", "");
+            sNumber = new string(sNumber.Where(char.IsDigit).ToArray());
+            mNumText = "không;một;hai;ba;bốn;năm;sáu;bảy;tám;chín".Split(';');
+            mLen = sNumber.Length - 1; // trừ 1 vì thứ tự đi từ 0
+            for (int i = 0; i <= mLen; i++)
+            {
+                mDigit = Convert.ToInt32(sNumber.Substring(i, 1));
+                mTemp = mTemp + " " + mNumText[mDigit];
+                if (mLen == i) // Chữ số cuối cùng không cần xét tiếp
+                    break;
+                switch ((mLen - i) % 9)
+                {
+                    case 0:
+                        mTemp = mTemp + " tỷ";
+                        if (sNumber.Substring(i + 1, 3) == "000")
+                            i = i + 3;
+                        if (sNumber.Substring(i + 1, 3) == "000")
+                            i = i + 3;
+                        if (sNumber.Substring(i + 1, 3) == "000")
+                            i = i + 3;
+                        break;
+                    case 6:
+                        mTemp = mTemp + " triệu";
+                        if (sNumber.Substring(i + 1, 3) == "000")
+                            i = i + 3;
+                        if (sNumber.Substring(i + 1, 3) == "000")
+                            i = i + 3;
+                        break;
+                    case 3:
+                        mTemp = mTemp + " nghìn";
+                        if (sNumber.Substring(i + 1, 3) == "000")
+                            i = i + 3;
+                        break;
+                    default:
+                        switch ((mLen - i) % 3)
+                        {
+                            case 2:
+                                mTemp = mTemp + " trăm";
+                                break;
+                            case 1:
+                                mTemp = mTemp + " mươi";
+                                break;
+                        }
+                        break;
+                }
+            }
+            //Loại bỏ trường hợp x00
+            mTemp = mTemp.Replace("không mươi không ", "");
+            mTemp = mTemp.Replace("không mươi không", "");
+            //Loại bỏ trường hợp 00x
+            mTemp = mTemp.Replace("không mươi ", "linh ");
+            //Loại bỏ trường hợp x0, x>=2
+            mTemp = mTemp.Replace("mươi không", "mươi");
+            //Fix trường hợp 10
+            mTemp = mTemp.Replace("một mươi", "mười");
+            //Fix trường hợp x4, x>=2
+            mTemp = mTemp.Replace("mươi bốn", "mươi tư");
+            //Fix trường hợp x04
+            mTemp = mTemp.Replace("linh bốn", "linh tư");
+            //Fix trường hợp x5, x>=2
+            mTemp = mTemp.Replace("mươi năm", "mươi lăm");
+            //Fix trường hợp x1, x>=2
+            mTemp = mTemp.Replace("mươi một", "mươi mốt");
+            //Fix trường hợp x15
+            mTemp = mTemp.Replace("mười năm", "mười lăm");
+            //Bỏ ký tự space
+            mTemp = mTemp.Trim();
+            //Viết hoa ký tự đầu tiên
+            mTemp = mTemp.Substring(0, 1).ToUpper() + mTemp.Substring(1) + " đồng";
+            return mTemp;
+        }
+
     }
 }

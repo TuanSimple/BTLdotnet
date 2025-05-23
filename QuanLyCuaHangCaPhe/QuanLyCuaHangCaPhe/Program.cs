@@ -16,7 +16,9 @@ namespace QuanLyCuaHangCaPhe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Function.Connect();
+            Application.Run(new frmBaoCao());
+
         }
     }
 }
