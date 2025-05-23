@@ -13,3 +13,4 @@ C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCua
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCu.3418C657.Up2Date
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmBanhang_Nhanvien.resources
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmBaocaohoadon_Nhanvien.resources
+C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QRCoder.dll

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
+using QRCoder;
+using System.Data.SqlClient;
 
 namespace QuanLyCuaHangCaPhe
 {
@@ -175,7 +178,7 @@ namespace QuanLyCuaHangCaPhe
         //Loaddatagridview
         private void LoadDataGridView(DataTable dt, string maBan)
         {
-            string sql = "SELECT sp.TenSanPham,ROUND(sp.GiaBan,2) AS GiaBan ,cthdb.SoLuong,  ROUND(cthdb.ThanhTien,2) AS ThanhTien, cthdb.GhiChu,hdb.MaHoaDonBan,hdb.MaKhachHang, hdb.Hinhthuc, hdb.TongTien, sp.MaSanPham,hdb.MaKhuyenMai, sp.MaLoai  " +
+            string sql = "SELECT sp.TenSanPham,ROUND(sp.GiaBan,2) AS GiaBan ,cthdb.SoLuong,  ROUND(cthdb.ThanhTien,2) AS ThanhTien, cthdb.GhiChu,hdb.MaHoaDonBan,hdb.MaKhachHang, hdb.Hinhthuc, hdb.TongTien, sp.MaSanPham,hdb.MaKhuyenMai, sp.MaLoai, hdb.MaNhanVien  " +
              "FROM HoaDonBan hdb " +
              "LEFT JOIN ChiTietHoaDonBan cthdb ON cthdb.MaHoaDonBan = hdb.MaHoaDonBan " +
              "LEFT JOIN SanPham sp ON cthdb.MaSanPham = sp.MaSanPham " +
@@ -273,10 +276,20 @@ namespace QuanLyCuaHangCaPhe
         //lay hoa don moi nhat
         public static string MaHoaDonMoiNhatTheoBan(string maBan)
         {
-            maBan = maBan.Replace("'", "''");
-            string sql = "SELECT TOP 1 MaHoaDonBan FROM HoaDonBan WHERE MaBan = '" + maBan + "' AND TinhTrang = 0 ORDER BY NgayBan DESC";
-            return Function.GetFieldValues(sql);
+            string sql = "SELECT TOP 1 MaHoaDonBan FROM HoaDonBan WHERE MaBan = @MaBan AND TrangThai = 0 ORDER BY NgayBan DESC";
+
+            using (SqlConnection conn = new SqlConnection(Function.connString)) 
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@MaBan", maBan);
+                    object result = cmd.ExecuteScalar();
+                    return result != null ? result.ToString() : null;
+                }
+            }
         }
+
         //ham retset
         private void ResetDrinkSelection()
         {
@@ -370,6 +383,8 @@ namespace QuanLyCuaHangCaPhe
             }
             else
             {
+                txtSodienthoai.Text = "";
+                txtKhachhang.Text = "";
                 btnThanhvien.Enabled = false;
                 txtSodienthoai.Enabled = false;
             }
@@ -482,8 +497,7 @@ namespace QuanLyCuaHangCaPhe
                 int index2 = cbDanhmuc.FindStringExact(tenLoai);
                 //hien thi danh muc
                 cbDanhmuc.SelectedIndex = index2;
-                //hien thi so luong
-                
+                //hien thi so luong               
                 numSoluong.Value = Convert.ToInt32(dGridChitietban.CurrentRow.Cells["SoLuong"].Value);
                 //hien thi ghi chu
                 txtGhichu.Text = dGridChitietban.CurrentRow.Cells["GhiChu"].Value.ToString();
@@ -659,6 +673,13 @@ namespace QuanLyCuaHangCaPhe
 
         private void btnGiamgia_Click(object sender, EventArgs e)
         {
+
+            // Hỏi người dùng xác nhận
+            DialogResult result = MessageBox.Show("Bạn có muốn áp dụng mã giảm giá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
             ApDungMaGiamGia(maBan);
 
 
@@ -710,14 +731,6 @@ namespace QuanLyCuaHangCaPhe
                 txtMagiamgia.Focus();
                 return;
             }
-
-            // Hỏi người dùng xác nhận
-            DialogResult result = MessageBox.Show("Bạn có muốn áp dụng mã giảm giá không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.No)
-            {
-                return;
-            }
-
             // Áp dụng mã giảm giá
             string sql = "UPDATE HoaDonBan SET MaKhuyenMai = '" + magiamgia + "' WHERE MaHoaDonBan = '" + maHoaDon + "'";
             Function.RunSql(sql);
@@ -731,18 +744,18 @@ namespace QuanLyCuaHangCaPhe
 
         private void btnThanhtoan_Click(object sender, EventArgs e)
         {
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(PrintHoaDon);
+            PrintPreviewDialog preview = new PrintPreviewDialog();
+            preview.Document = pd;
+            preview.ShowDialog();
+
             //Hien pdf thanh toan
             string maHoaDon = MaHoaDonMoiNhatTheoBan(maBan);
             string sql = "SELECT * FROM HoaDonBan WHERE MaHoaDonBan = '" + maHoaDon + "'";
             DataTable dt = Function.GetDataToTable(sql);
             if (dt != null)
             {
-                string maKhachHang = dt.Rows[0]["MaKhachHang"].ToString();
-                string hinhThuc = dt.Rows[0]["Hinhthuc"].ToString();
-                string maKhuyenMai = dt.Rows[0]["MaKhuyenMai"].ToString();
-                string tongTien = dt.Rows[0]["TongTien"].ToString();
-                string ngayBan = dt.Rows[0]["NgayBan"].ToString();
-                string maBan = dt.Rows[0]["MaBan"].ToString();
                 // Cập nhật trạng thái hóa đơn
                 string sql_updatehoadon = "UPDATE HoaDonBan SET TrangThai = 1 WHERE MaHoaDonBan = '" + maHoaDon + "'";
                 Function.RunSql(sql_updatehoadon);
@@ -752,6 +765,15 @@ namespace QuanLyCuaHangCaPhe
                 // Cập nhật trạng thái bàn
                 string sql_updateban2 = "UPDATE Ban SET TinhTrang = 0 WHERE MaBan = '" + maBan + "'";
                 Function.RunSql(sql_updateban2);
+                // Cập nhật thành viên
+                string maKhachHang = dt.Rows[0]["MaKhachHang"].ToString();
+                if (maKhachHang != null)
+                {
+                    string sql_updatekhachhang = "UPDATE KhachHang SET DiemTichLuy = '" + Convert.ToDecimal(txtTongtien.Text) + "' WHERE MaKhachHang = '" + dt.Rows[0]["MaKhachHang"] + "'";
+                    Function.RunSql(sql_updatekhachhang);
+                }
+                // Thong bao
+                MessageBox.Show("Đã xác nhận thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Load lại danh sách bàn
                 LoadTableList(flowLayoutPanel1);
                 LoadDataGridView(dbChitiethoadon, maBan);
@@ -760,8 +782,112 @@ namespace QuanLyCuaHangCaPhe
                 cbThanhvien.SelectedIndex = 1;
                 btnThem.Enabled = false;
                 btnThoat.Enabled = false;
+                btnThanhtoan.Enabled = false;
             }
+         }
+        //in hoa don
+        private void PrintHoaDon(object sender, PrintPageEventArgs e)
+        {
+
+            Graphics g = e.Graphics;
+            Font font = new Font("Times New Roman", 12, FontStyle.Regular);
+            Font fontBold = new Font("Times New Roman", 12, FontStyle.Bold);
+            float y = 20;
+            float leftMargin = 20;
+            float contentWidth = 520;
+            //lay ma nhan vien
+            string maNhanvien = ""; 
+            maNhanvien = dbChitiethoadon.Rows[0]["MaNhanVien"].ToString();
+
+
+
+            // Header
+            g.DrawString("HOÁ ĐƠN THANH TOÁN", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, leftMargin, y); y += 32;
+            g.DrawString($"Ngày: {DateTime.Now:dd/MM/yyyy HH:mm}", font, Brushes.Black, leftMargin, y); y += 22;
+            g.DrawString($"Mã hóa đơn: {MaHoaDonMoiNhatTheoBan(maBan)}", font, Brushes.Black, leftMargin, y); y += 22;
+            g.DrawString($"Nhân viên: {maNhanvien}", font, Brushes.Black, leftMargin, y); y += 26;
+            //add hình quán vào bên phải
+            Image img = Image.FromFile("C:\\Users\\LT\\OneDrive\\Tài liệu\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Resources\\coffee.png");
+            g.DrawImage(img, leftMargin + 450, 20, 80, 80);
+
+            // Separator
+            g.DrawLine(Pens.Black, leftMargin, y, leftMargin + contentWidth, y); y += 8;
+
+            // Table headers
+            g.DrawString("TT", fontBold, Brushes.Black, leftMargin, y);
+            g.DrawString("Tên món", fontBold, Brushes.Black, leftMargin + 40, y);
+            g.DrawString("SL", fontBold, Brushes.Black, leftMargin + 220, y);
+            g.DrawString("Đơn giá", fontBold, Brushes.Black, leftMargin + 270, y);
+            g.DrawString("Thành tiền", fontBold, Brushes.Black, leftMargin + 350, y); y += 22;
+
+            // Items
+            decimal tongTien = 0;
+            for (int i = 0; i < dbChitiethoadon.Rows.Count; i++)
+            {
+                var row = dbChitiethoadon.Rows[i];
+                string tenMon = row["TenSanPham"].ToString();
+                int soLuong = Convert.ToInt32(row["SoLuong"]);
+                decimal donGia = Convert.ToDecimal(row["GiaBan"]);
+                decimal thanhTien = Convert.ToDecimal(row["ThanhTien"]);
+                tongTien += thanhTien;
+
+                g.DrawString((i + 1).ToString(), font, Brushes.Black, leftMargin, y);
+                g.DrawString(tenMon, font, Brushes.Black, leftMargin + 40, y);
+                g.DrawString(soLuong.ToString(), font, Brushes.Black, leftMargin + 220, y);
+                g.DrawString(donGia.ToString("N0"), font, Brushes.Black, leftMargin + 270, y);
+                g.DrawString(thanhTien.ToString("N0"), font, Brushes.Black, leftMargin + 380, y);
+                y += 20;
             }
+
+            y += 8;
+            g.DrawLine(Pens.Black, leftMargin, y, leftMargin + contentWidth, y); y += 8;
+
+            // Subtotal
+            g.DrawString("Tạm tính:", font, Brushes.Black, leftMargin + 100, y);
+            g.DrawString(tongTien.ToString("N0") + " đ", font, Brushes.Black, leftMargin + 380, y); y += 22;
+
+            // Discount (if any)
+            string maKhuyenMai = dbChitiethoadon.Rows[0]["MaKhuyenMai"].ToString();
+            if (!string.IsNullOrEmpty(maKhuyenMai))
+            {
+                string sqlKhuyenMai = "SELECT MucKhuyenMai FROM KhuyenMai WHERE MaKhuyenMai = '" + maKhuyenMai + "'";
+                DataTable dtKhuyenMai = Function.GetDataToTable(sqlKhuyenMai);
+                decimal giamGia = 0;
+
+                if (dtKhuyenMai.Rows.Count > 0)
+                {
+                    giamGia = Convert.ToDecimal(dtKhuyenMai.Rows[0]["MucKhuyenMai"]) * Convert.ToDecimal(tongTien);
+                    g.DrawString("Giảm giá:", font, Brushes.Black, leftMargin + 100, y);
+                    g.DrawString(giamGia.ToString("N0") + " đ", font, Brushes.Black, leftMargin + 380, y); y += 22;
+                }
+                else
+                {
+                    g.DrawString("Giảm giá:", font, Brushes.Black, leftMargin + 100, y);
+                    g.DrawString(giamGia.ToString("N0") + " đ", font, Brushes.Black, leftMargin + 380, y); y += 22;
+                }
+                }  
+            // Final total (No discount for now)
+            g.DrawString("TỔNG CỘNG:", fontBold, Brushes.Black, leftMargin + 100, y);
+            g.DrawString(Convert.ToDecimal(txtTongtien.Text).ToString("N0") + " đ", fontBold, Brushes.Black, leftMargin + 380, y); y += 32;
+
+            // QR Code
+            using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
+            {
+                QRCodeData qrCodeData = qrGenerator.CreateQrCode("https://forms.gle/C5MN5sJuHvTUu8MZ6", QRCodeGenerator.ECCLevel.Q);
+                using (QRCode qrCode = new QRCode(qrCodeData))
+                {
+                    Bitmap qrImage = qrCode.GetGraphic(6);
+                    g.DrawImage(qrImage, leftMargin + 40, y, 100, 100);
+                }
+            }
+
+            // Bank info
+            g.DrawString("Hãy cảm nhận quán cà phê qua link bên cạnh nha ><", font, Brushes.Black, leftMargin + 160, y + 20);
+            g.DrawString("NEST COFFEE - COFFEE SHOP", fontBold, Brushes.Black, leftMargin + 160, y + 42);
+            g.DrawString("Cảm ơn quý khách!", font, Brushes.Black, leftMargin + 160, y + 64);
+
+
+        }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {

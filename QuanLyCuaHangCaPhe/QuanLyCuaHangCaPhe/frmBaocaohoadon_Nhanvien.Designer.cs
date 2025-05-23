@@ -39,7 +39,7 @@
             this.dGridBaocaohoadon.Name = "dGridBaocaohoadon";
             this.dGridBaocaohoadon.RowHeadersWidth = 51;
             this.dGridBaocaohoadon.RowTemplate.Height = 24;
-            this.dGridBaocaohoadon.Size = new System.Drawing.Size(763, 605);
+            this.dGridBaocaohoadon.Size = new System.Drawing.Size(756, 605);
             this.dGridBaocaohoadon.TabIndex = 0;
             this.dGridBaocaohoadon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridBaocaohoadon_CellContentClick);
             // 
