@@ -232,7 +232,7 @@ namespace QuanLyCuaHangCaPhe
                 txtEmail.Focus();
                 return;
             }
-            if (mskSodienthoai.Text.Trim().Length != 10)
+            if (!mskSodienthoai.MaskFull)
             {
                 MessageBox.Show("Bạn phải nhập số điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 mskSodienthoai.Focus();
