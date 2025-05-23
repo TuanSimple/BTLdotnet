@@ -348,14 +348,14 @@ namespace QuanLyCuaHangCaPhe
                     return;
                 }
 
-                sql_themhoadon = "INSERT INTO HoaDonBan (MaBan, Hinhthuc, MaKhachHang, NgayBan) " +
-                                 "VALUES ('" + maBan + "', '" + cbHinhthuc.SelectedValue + "', N'" + maKhachHang + "', GETDATE())";
+                sql_themhoadon = "INSERT INTO HoaDonBan (MaBan,MaNhanVien, Hinhthuc, MaKhachHang, NgayBan) " +
+                                 "VALUES ('" + maBan + "','', '" + cbHinhthuc.SelectedValue + "', N'" + maKhachHang + "', GETDATE())";
             }
             else
             {
                 // Khách lẻ
-                sql_themhoadon = "INSERT INTO HoaDonBan (MaBan, Hinhthuc, NgayBan) " +
-                                 "VALUES ('" + maBan + "', '" + cbHinhthuc.SelectedValue + "', GETDATE())";
+                sql_themhoadon = "INSERT INTO HoaDonBan (MaBan,MaNhanVien, Hinhthuc, NgayBan) " +
+                                 "VALUES ('" + maBan + "','', '" + cbHinhthuc.SelectedValue + "', GETDATE())";
             }
 
             // Xác nhận trước khi thêm
@@ -744,6 +744,18 @@ namespace QuanLyCuaHangCaPhe
 
         private void btnThanhtoan_Click(object sender, EventArgs e)
         {
+            // Kiểm tra xem có hóa đơn nào không
+            if (dbChitiethoadon.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có hóa đơn nào để thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            //thong bao
+            DialogResult result = MessageBox.Show("Bạn có muốn thanh toán không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                return;
+            }
             PrintDocument pd = new PrintDocument();
             pd.PrintPage += new PrintPageEventHandler(PrintHoaDon);
             PrintPreviewDialog preview = new PrintPreviewDialog();
