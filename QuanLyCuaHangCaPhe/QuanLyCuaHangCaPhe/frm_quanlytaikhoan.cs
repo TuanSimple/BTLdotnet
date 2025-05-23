@@ -370,11 +370,6 @@ namespace QuanLyCuaHangCaPhe
             ibtnLuu.Enabled = false;
             txtManhanvien.Enabled = false;
         }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
