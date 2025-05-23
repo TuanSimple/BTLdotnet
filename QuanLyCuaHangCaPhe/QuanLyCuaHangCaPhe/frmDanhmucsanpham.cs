@@ -221,7 +221,6 @@ namespace QuanLyCuaHangCaPhe
             string sql;
             string sql1 = "";
             
-            string sql3 = "";
             if (dataGridViewDanhmuc.Rows.Count == 0)
             {
                 MessageBox.Show("Không có dữ liệu", "Thông báo", MessageBoxButtons.OK);
@@ -234,11 +233,11 @@ namespace QuanLyCuaHangCaPhe
             }
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                sql3 = "DELETE FROM ChiTietSanPham WHERE MaSanPham IN (SELECT MaSanPham FROM SanPham WHERE MaLoai = '" + txtMadanhmuc.Text + "')";
-                sql1 = "delete SanPham where MaLoai = N'" + txtMadanhmuc.Text + "'";
-                sql = "delete Loai where MaLoai = N'" + txtMadanhmuc.Text + "'";
-                QuanLyCuaHangCaPhe.Function.RunSqlDel(sql3);
-                QuanLyCuaHangCaPhe.Function.RunSqlDel(sql1);
+                
+                sql1 = "UPDATE SanPham SET MaLoai = null WHERE MaLoai = N'" + txtMadanhmuc.Text + "'";
+                sql = "DELETE FROM Loai WHERE MaLoai = N'" + txtMadanhmuc.Text + "'";
+                //QuanLyCuaHangCaPhe.Function.RunSqlDel(sql3);
+                QuanLyCuaHangCaPhe.Function.RunSql(sql1);
                 QuanLyCuaHangCaPhe.Function.RunSqlDel(sql);
                 Load_DataGridViewDanhmuc();
                 Load_DataGridViewSanpham();

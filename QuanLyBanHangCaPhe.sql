@@ -438,7 +438,10 @@ ALTER TABLE SanPham
 DROP CONSTRAINT FK__SanPham__MaLoai__628FA481; -- Tên khóa ngoại cũ, thay bằng tên thực
 
 ALTER TABLE SanPham
-ADD CONSTRAINT FK__SanPham__MaLoai__628FA481
-FOREIGN KEY (MaLoai) REFERENCES Loai(MaLoai)
-ON DELETE CASCADE;
+ADD CONSTRAINT FK_SanPham_Loai
+FOREIGN KEY (MaLoai) REFERENCES Loai(MaLoai) ON DELETE SET NULL;
 
+UPDATE SanPham SET MaLoai = null WHERE MaLoai = 4;
+
+select*from Loai
+select*from SanPham;
