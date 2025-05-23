@@ -21,20 +21,24 @@ namespace QuanLyCuaHangCaPhe
         {
             Function.Connect();
             txtManhanvien.Enabled = false;
-            txt
+            txtLuong.Enabled = false;
             ibtnLuu.Enabled = false;
             ibtnLammoi.Enabled = false;
+            chkNam.CheckedChanged += chkNam_CheckedChanged;
+            chkNu.CheckedChanged += chkNu_CheckedChanged;
             cboMachucvu.SelectedIndexChanged += new EventHandler(cboMachucvu_SelectedIndexChanged); // Đăng ký sự kiện
             Load_DataGridView();
             Load_ComboBoxes();
             ResetValues();
+
         }
         private void Load_DataGridView()
         {
-            string sql = "SELECT nv.Manhanvien, nv.TenNhanvien, nv.GioiTinh, nv.NgaySinh, nv.Email, nv.SoDienThoai, " +"nv.MaChucVu, cv.TenChucVu, nv.MaQue, q.TenQue, nv.MatKhau, nv.NgayTao, nv.Luong " +
-                         "FROM Nhanvien nv " +
-                         "JOIN ChucVu cv ON nv.MaChucVu = cv.MaChucVu " +
-                         "JOIN Que q ON nv.MaQue = q.MaQue";
+            string sql = "SELECT nv.Manhanvien, nv.TenNhanvien, nv.GioiTinh, nv.NgaySinh, nv.Email, nv.SoDienThoai, " +
+             "nv.MaChucVu, cv.TenChucVu, nv.MaQue, q.TenQue, nv.MatKhau, nv.NgayTao, nv.Luong " +
+             "FROM Nhanvien nv " +
+             "JOIN ChucVu cv ON nv.MaChucVu = cv.MaChucVu " +
+             "JOIN Que q ON nv.MaQue = q.MaQue";
             NV = Function.GetDataToTable(sql);
             datagridtaikhoan.DataSource = NV;
             datagridtaikhoan.Columns["Manhanvien"].HeaderText = "Mã nhân viên";
@@ -51,7 +55,6 @@ namespace QuanLyCuaHangCaPhe
             datagridtaikhoan.Columns["MaChucVu"].Visible = false;
             datagridtaikhoan.Columns["MaQue"].Visible = false;
             datagridtaikhoan.Columns[0].Width = 100;
-            datagridtaikhoan.Columns[0].Width = 250;
             datagridtaikhoan.Columns[1].Width = 250;
             datagridtaikhoan.Columns[2].Width = 250;
             datagridtaikhoan.Columns[3].Width = 250;
@@ -94,6 +97,7 @@ namespace QuanLyCuaHangCaPhe
             chkNu.Checked = false;
             ibtnLammoi.Enabled = false;
         }
+
         private void datagridtaikhoan_Click_1(object sender, EventArgs e)
         {
             if (ibtnLuu.Enabled == true) // Đang ở chế độ thêm mới
@@ -115,6 +119,7 @@ namespace QuanLyCuaHangCaPhe
             txtEmail.Text = datagridtaikhoan.CurrentRow.Cells["Email"].Value.ToString();
             mskSodienthoai.Text = datagridtaikhoan.CurrentRow.Cells["SoDienThoai"].Value.ToString();
             txtMatkhau.Text = datagridtaikhoan.CurrentRow.Cells["MatKhau"].Value.ToString();
+            txtLuong.Text = datagridtaikhoan.CurrentRow.Cells["Luong"].Value.ToString();
             cboMachucvu.SelectedValue = datagridtaikhoan.CurrentRow.Cells["MaChucVu"].Value.ToString();
             cboMaque.SelectedValue = datagridtaikhoan.CurrentRow.Cells["MaQue"].Value.ToString();
 
@@ -145,31 +150,32 @@ namespace QuanLyCuaHangCaPhe
         }
         private void cboMachucvu_SelectedIndexChanged(object sender, EventArgs e)
         {
-        if (cboMachucvu.SelectedIndex != -1) // Kiểm tra xem có chức vụ nào được chọn không
-        {
-        string selectedMaChucVu = cboMachucvu.SelectedValue?.ToString();
-        if (!string.IsNullOrEmpty(selectedMaChucVu))
-        {
-            // Truy vấn lấy lương cơ bản từ bảng ChucVu
-            string sql = "SELECT LuongCoBan FROM ChucVu WHERE MaChucVu = N'" + selectedMaChucVu + "'";
-            DataTable dtLuong = Function.GetDataToTable(sql);
-
-            if (dtLuong.Rows.Count > 0)
+            if (cboMachucvu.SelectedIndex != -1) // Kiểm tra xem có chức vụ nào được chọn không
             {
-                // Hiển thị lương cơ bản trong txtLuong
-                txtLuong.Text = dtLuong.Rows[0]["LuongCoBan"].ToString();
+                string selectedMaChucVu = cboMachucvu.SelectedValue?.ToString();
+                if (!string.IsNullOrEmpty(selectedMaChucVu))
+                {
+                    // Truy vấn lấy lương cơ bản từ bảng ChucVu
+                    string sql = "SELECT LuongCoBan FROM ChucVu WHERE MaChucVu = N'" + selectedMaChucVu + "'";
+                    DataTable dtLuong = Function.GetDataToTable(sql);
+
+                    if (dtLuong.Rows.Count > 0)
+                    {
+                        // Hiển thị lương cơ bản trong txtLuong
+                        txtLuong.Text = dtLuong.Rows[0]["LuongCoBan"].ToString();
+                    }
+                    else
+                    {
+                        txtLuong.Text = "0"; // Nếu không tìm thấy, đặt mặc định là 0
+                    }
+                }
             }
             else
             {
-                txtLuong.Text = "0"; // Nếu không tìm thấy, đặt mặc định là 0
+                txtLuong.Text = "0"; // Nếu không chọn chức vụ, đặt lương về 0
             }
         }
-    }
-    else
-    {
-        txtLuong.Text = "0"; // Nếu không chọn chức vụ, đặt lương về 0
-    }
-}
+
 
         private void ibtnThem_Click(object sender, EventArgs e)
         {
@@ -243,9 +249,9 @@ namespace QuanLyCuaHangCaPhe
             if (chkNam.Checked) gioitinh = "M";
             else if (chkNu.Checked) gioitinh = "F";
             // Câu lệnh cập nhật
-           sql = "UPDATE Nhanvien SET " + "TenNhanvien = N'" + txtTennhanvien.Text.Trim() + "', " +"GioiTinh = N'" + gioitinh + "', " +"NgaySinh = CONVERT(DATE, '" + mskNgaysinh.Text.Trim() + "', 120), " +
-                 "Email = N'" + txtEmail.Text.Trim() + "', " +"SoDienThoai = N'" + mskSodienthoai.Text.Trim() + "', " +"MaChucVu = N'" + cboMachucvu.SelectedValue.ToString().Trim() + "', " +"MaQue = N'" + cboMaque.SelectedValue.ToString().Trim() + "', " +
-                 "MatKhau = N'" + txtMatkhau.Text.Trim() + "' " +"WHERE MaNhanVien = N'" + txtManhanvien.Text.Trim() + "'";
+            sql = "UPDATE Nhanvien SET " + "TenNhanvien = N'" + txtTennhanvien.Text.Trim() + "', " +"GioiTinh = N'" + gioitinh + "', " +"NgaySinh = CONVERT(DATE, '" + mskNgaysinh.Text.Trim() + "', 120), " +
+                   "Email = N'" + txtEmail.Text.Trim() + "', " +"SoDienThoai = N'" + mskSodienthoai.Text.Trim() + "', " +"MaChucVu = N'" + cboMachucvu.SelectedValue.ToString().Trim() + "', " +"MaQue = N'" + cboMaque.SelectedValue.ToString().Trim() + "', " +
+                   "MatKhau = N'" + txtMatkhau.Text.Trim() + "' " +"WHERE MaNhanVien = N'" + txtManhanvien.Text.Trim() + "'";
             Function.RunSql(sql);
             Load_DataGridView();
             ResetValues();
@@ -325,7 +331,7 @@ namespace QuanLyCuaHangCaPhe
 
             sql = "INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, NgaySinh, Email, SoDienThoai, MaChucVu, MaQue, MatKhau, NgayTao, Luong) " +"VALUES (N'" + txtManhanvien.Text.Trim() + "', N'" + txtTennhanvien.Text.Trim() + "', N'" + gioitinh + "', " +
                    "CONVERT(DATE, '" + mskNgaysinh.Text.Trim() + "', 120), N'" + txtEmail.Text.Trim() + "', N'" + mskSodienthoai.Text.Trim() + "', " +"N'" + cboMachucvu.SelectedValue.ToString().Trim() + "', N'" + cboMaque.SelectedValue.ToString().Trim() + "', N'" + txtMatkhau.Text.Trim() + "', " +
-                   "CONVERT(DATE, '" + DateTime.Now.ToString("yyyy-MM-dd") + "', 120), " + Convert.ToDecimal(txtLuong.Text) + ")";
+                    "CONVERT(DATE, '" + DateTime.Now.ToString("yyyy-MM-dd") + "', 120), " + Convert.ToDecimal(txtLuong.Text) + ")";
             try
             {
                 Function.RunSql(sql);
@@ -369,6 +375,19 @@ namespace QuanLyCuaHangCaPhe
             ibtnXoa.Enabled = false;
             ibtnLuu.Enabled = false;
             txtManhanvien.Enabled = false;
+        }
+
+        private void chkNam_CheckedChanged(object sender, EventArgs e)
+        {
+          
+            if (chkNam.Checked)
+                chkNu.Checked = false;
+        }
+
+        private void chkNu_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkNu.Checked)
+                chkNam.Checked = false;
         }
     }
 }
