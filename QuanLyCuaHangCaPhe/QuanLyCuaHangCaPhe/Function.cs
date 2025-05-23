@@ -17,7 +17,9 @@ namespace QuanLyCuaHangCaPhe
         public static void Connect()
         {
             //Thiết lập giá trị cho chuỗi kết nối
-            connString = "Data Source=DESKTOP-VGFC502\\SQLEXPRESS;Initial Catalog=QuanLyBanHangCaPhe;Integrated Security=True;";
+
+            connString = "Data Source=DESKTOP-PLEJFRL;Initial Catalog=QuanLyBanHangCaPhe;Integrated Security=True;Encrypt=False;";
+
             Conn = new SqlConnection();                 //Cấp phát đối tượng
             Conn.ConnectionString = connString;         //Kết nối
             Conn.Open();                                //Mở kết nối
@@ -117,6 +119,7 @@ namespace QuanLyCuaHangCaPhe
 
             cbo.ValueMember = ma;    // Truong gia tri
             cbo.DisplayMember = ten;    // Truong hien thi
+            cbo.Refresh();
         }
 
     }
