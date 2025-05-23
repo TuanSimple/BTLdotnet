@@ -35,7 +35,7 @@ namespace QuanLyCuaHangCaPhe
         private void Load_DataGridView()
         {
             string sql = "SELECT nv.Manhanvien, nv.TenNhanvien, nv.GioiTinh, nv.NgaySinh, nv.Email, nv.SoDienThoai, " +
-             "nv.MaChucVu, cv.TenChucVu, nv.MaQue, q.TenQue, nv.MatKhau, nv.NgayTao, nv.Luong " +
+             "nv.MaChucVu, cv.TenChucVu, nv.MaQue, q.TenQue, nv.MatKhau, nv.NgayTao, cv.LuongCoBan " +
              "FROM Nhanvien nv " +
              "JOIN ChucVu cv ON nv.MaChucVu = cv.MaChucVu " +
              "JOIN Que q ON nv.MaQue = q.MaQue";
@@ -50,7 +50,7 @@ namespace QuanLyCuaHangCaPhe
             datagridtaikhoan.Columns["TenChucVu"].HeaderText = "Chức vụ";
             datagridtaikhoan.Columns["TenQue"].HeaderText = "Quê quán";
             datagridtaikhoan.Columns["MatKhau"].HeaderText = "Mật khẩu";
-            datagridtaikhoan.Columns["Luong"].HeaderText = "Luong";
+            datagridtaikhoan.Columns["LuongCoBan"].HeaderText = "LuongCoBan";
             datagridtaikhoan.Columns["NgayTao"].HeaderText = "Ngày tạo";
             datagridtaikhoan.Columns["MaChucVu"].Visible = false;
             datagridtaikhoan.Columns["MaQue"].Visible = false;
@@ -119,7 +119,7 @@ namespace QuanLyCuaHangCaPhe
             txtEmail.Text = datagridtaikhoan.CurrentRow.Cells["Email"].Value.ToString();
             mskSodienthoai.Text = datagridtaikhoan.CurrentRow.Cells["SoDienThoai"].Value.ToString();
             txtMatkhau.Text = datagridtaikhoan.CurrentRow.Cells["MatKhau"].Value.ToString();
-            txtLuong.Text = datagridtaikhoan.CurrentRow.Cells["Luong"].Value.ToString();
+            txtLuong.Text = datagridtaikhoan.CurrentRow.Cells["LuongCoBan"].Value.ToString();
             cboMachucvu.SelectedValue = datagridtaikhoan.CurrentRow.Cells["MaChucVu"].Value.ToString();
             cboMaque.SelectedValue = datagridtaikhoan.CurrentRow.Cells["MaQue"].Value.ToString();
 
@@ -329,9 +329,9 @@ namespace QuanLyCuaHangCaPhe
             if (chkNam.Checked) gioitinh = "M";
             else if (chkNu.Checked) gioitinh = "F";
 
-            sql = "INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, NgaySinh, Email, SoDienThoai, MaChucVu, MaQue, MatKhau, NgayTao, Luong) " +"VALUES (N'" + txtManhanvien.Text.Trim() + "', N'" + txtTennhanvien.Text.Trim() + "', N'" + gioitinh + "', " +
+            sql = "INSERT INTO NhanVien (MaNhanVien, TenNhanVien, GioiTinh, NgaySinh, Email, SoDienThoai, MaChucVu, MaQue, MatKhau, NgayTao) " +"VALUES (N'" + txtManhanvien.Text.Trim() + "', N'" + txtTennhanvien.Text.Trim() + "', N'" + gioitinh + "', " +
                    "CONVERT(DATE, '" + mskNgaysinh.Text.Trim() + "', 120), N'" + txtEmail.Text.Trim() + "', N'" + mskSodienthoai.Text.Trim() + "', " +"N'" + cboMachucvu.SelectedValue.ToString().Trim() + "', N'" + cboMaque.SelectedValue.ToString().Trim() + "', N'" + txtMatkhau.Text.Trim() + "', " +
-                    "CONVERT(DATE, '" + DateTime.Now.ToString("yyyy-MM-dd") + "', 120), " + Convert.ToDecimal(txtLuong.Text) + ")";
+                    "CONVERT(DATE, '" + DateTime.Now.ToString("yyyy-MM-dd") + "', 120))";
             try
             {
                 Function.RunSql(sql);
@@ -391,4 +391,5 @@ namespace QuanLyCuaHangCaPhe
         }
     }
 }
+
 
