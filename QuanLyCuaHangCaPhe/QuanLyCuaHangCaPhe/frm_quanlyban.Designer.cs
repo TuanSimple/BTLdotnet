@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flpBan = new System.Windows.Forms.FlowLayoutPanel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSoluongghe = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,44 +42,9 @@
             this.ibtnLuu = new FontAwesome.Sharp.IconButton();
             this.ibtnLamoi = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.flpBan.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridBan)).BeginInit();
             this.SuspendLayout();
-            // 
-            // flpBan
-            // 
-            this.flpBan.BackColor = System.Drawing.Color.Beige;
-            this.flpBan.Controls.Add(this.iconButton1);
-            this.flpBan.Controls.Add(this.iconButton2);
-            this.flpBan.Location = new System.Drawing.Point(720, 130);
-            this.flpBan.Name = "flpBan";
-            this.flpBan.Size = new System.Drawing.Size(533, 504);
-            this.flpBan.TabIndex = 18;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(3, 3);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(257, 198);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.Text = "B01";
-            this.iconButton1.UseVisualStyleBackColor = true;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.Black;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(266, 3);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(257, 198);
-            this.iconButton2.TabIndex = 1;
-            this.iconButton2.Text = "B02";
-            this.iconButton2.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -95,12 +57,12 @@
             this.panel1.Controls.Add(this.txtMaban);
             this.panel1.Location = new System.Drawing.Point(109, 130);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(587, 194);
+            this.panel1.Size = new System.Drawing.Size(1067, 194);
             this.panel1.TabIndex = 17;
             // 
             // txtSoluongghe
             // 
-            this.txtSoluongghe.Location = new System.Drawing.Point(172, 94);
+            this.txtSoluongghe.Location = new System.Drawing.Point(172, 115);
             this.txtSoluongghe.Name = "txtSoluongghe";
             this.txtSoluongghe.Size = new System.Drawing.Size(324, 31);
             this.txtSoluongghe.TabIndex = 4;
@@ -117,7 +79,7 @@
             // cboTinhtrang
             // 
             this.cboTinhtrang.FormattingEnabled = true;
-            this.cboTinhtrang.Location = new System.Drawing.Point(172, 143);
+            this.cboTinhtrang.Location = new System.Drawing.Point(691, 76);
             this.cboTinhtrang.Name = "cboTinhtrang";
             this.cboTinhtrang.Size = new System.Drawing.Size(324, 33);
             this.cboTinhtrang.TabIndex = 6;
@@ -125,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 94);
+            this.label2.Location = new System.Drawing.Point(11, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 25);
             this.label2.TabIndex = 1;
@@ -134,7 +96,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 143);
+            this.label3.Location = new System.Drawing.Point(530, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 25);
             this.label3.TabIndex = 2;
@@ -154,9 +116,8 @@
             this.datagridBan.Name = "datagridBan";
             this.datagridBan.RowHeadersWidth = 82;
             this.datagridBan.RowTemplate.Height = 33;
-            this.datagridBan.Size = new System.Drawing.Size(587, 304);
+            this.datagridBan.Size = new System.Drawing.Size(1067, 304);
             this.datagridBan.TabIndex = 16;
-//            this.datagridBan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridBan_CellContentClick);
             // 
             // ibtnThem
             // 
@@ -270,14 +231,12 @@
             this.Controls.Add(this.ibtnXoa);
             this.Controls.Add(this.ibtnSua);
             this.Controls.Add(this.ibtnThem);
-            this.Controls.Add(this.flpBan);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.datagridBan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_quanlyban";
             this.Text = "frm_quanlyban";
             this.Load += new System.EventHandler(this.frm_quanlyban_Load);
-            this.flpBan.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridBan)).EndInit();
@@ -287,8 +246,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flpBan;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSoluongghe;
         private System.Windows.Forms.Label label1;
@@ -302,8 +259,6 @@
         private FontAwesome.Sharp.IconButton ibtnLuu;
         private FontAwesome.Sharp.IconButton ibtnLamoi;
         public FontAwesome.Sharp.IconButton ibtnThem;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private System.Windows.Forms.Label label4;
     }
 }

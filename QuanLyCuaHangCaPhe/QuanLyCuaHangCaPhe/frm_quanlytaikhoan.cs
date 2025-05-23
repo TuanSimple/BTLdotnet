@@ -23,7 +23,7 @@ namespace QuanLyCuaHangCaPhe
             txtManhanvien.Enabled = false;
             txtLuong.Enabled = false;
             ibtnLuu.Enabled = false;
-            ibtnLammoi.Enabled = false;
+            ibtnLammoi.Enabled = true;
             chkNam.CheckedChanged += chkNam_CheckedChanged;
             chkNu.CheckedChanged += chkNu_CheckedChanged;
             cboMachucvu.SelectedIndexChanged += new EventHandler(cboMachucvu_SelectedIndexChanged); // Đăng ký sự kiện
@@ -95,7 +95,7 @@ namespace QuanLyCuaHangCaPhe
             txtMatkhau.Text = "";
             chkNam.Checked = false;
             chkNu.Checked = false;
-            ibtnLammoi.Enabled = false;
+            ibtnLammoi.Enabled = true;
         }
 
         private void datagridtaikhoan_Click_1(object sender, EventArgs e)
@@ -389,6 +389,8 @@ namespace QuanLyCuaHangCaPhe
             if (chkNu.Checked)
                 chkNam.Checked = false;
         }
+
+   
     }
 }
 
