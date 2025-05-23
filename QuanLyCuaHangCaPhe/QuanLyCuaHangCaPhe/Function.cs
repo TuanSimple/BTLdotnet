@@ -17,7 +17,9 @@ namespace QuanLyCuaHangCaPhe
         public static void Connect()
         {
             //Thiết lập giá trị cho chuỗi kết nối
+
             connString = "Data Source=DESKTOP-PLEJFRL;Initial Catalog=QuanLyBanHangCaPhe;Integrated Security=True;Encrypt=False;";
+
             Conn = new SqlConnection();                 //Cấp phát đối tượng
             Conn.ConnectionString = connString;         //Kết nối
             Conn.Open();                                //Mở kết nối
@@ -87,6 +89,7 @@ namespace QuanLyCuaHangCaPhe
             cmd = null;
         }
 
+
         public static string ConvertDateTime(string d)
         {
             string[] parts = d.Split('/');
@@ -96,7 +99,7 @@ namespace QuanLyCuaHangCaPhe
 
         public static string GetFieldValues(string sql)
         {
-            string ma = "";
+            string ma = null;
             SqlCommand cmd = new SqlCommand(sql, Function.Conn);
             SqlDataReader reader;
             reader = cmd.ExecuteReader();
@@ -118,5 +121,6 @@ namespace QuanLyCuaHangCaPhe
             cbo.DisplayMember = ten;    // Truong hien thi
             cbo.Refresh();
         }
+
     }
 }
