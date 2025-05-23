@@ -16,7 +16,12 @@ namespace QuanLyCuaHangCaPhe
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmQuanlybanhang_Nhanvien());
+
+
+           // Application.Run(new frmDanhmucsanpham());
+           Application.Run(new frmSanpham());
+
+
         }
     }
 }

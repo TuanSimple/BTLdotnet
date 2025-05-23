@@ -349,13 +349,13 @@ namespace QuanLyCuaHangCaPhe
                 }
 
                 sql_themhoadon = "INSERT INTO HoaDonBan (MaBan,MaNhanVien, Hinhthuc, MaKhachHang, NgayBan) " +
-                                 "VALUES ('" + maBan + "','', '" + cbHinhthuc.SelectedValue + "', N'" + maKhachHang + "', GETDATE())";
+                                 "VALUES ('" + maBan + "','NV01', '" + cbHinhthuc.SelectedValue + "', N'" + maKhachHang + "', GETDATE())";
             }
             else
             {
                 // Khách lẻ
                 sql_themhoadon = "INSERT INTO HoaDonBan (MaBan,MaNhanVien, Hinhthuc, NgayBan) " +
-                                 "VALUES ('" + maBan + "','', '" + cbHinhthuc.SelectedValue + "', GETDATE())";
+                                 "VALUES ('" + maBan + "','NV01', '" + cbHinhthuc.SelectedValue + "', GETDATE())";
             }
 
             // Xác nhận trước khi thêm
