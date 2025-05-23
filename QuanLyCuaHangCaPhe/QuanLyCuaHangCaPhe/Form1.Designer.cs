@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCuaHangCaPhe
 {
-    partial class frmMain
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -37,4 +37,3 @@
         #endregion
     }
 }
-

@@ -14,3 +14,22 @@ C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCua
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmBanhang_Nhanvien.resources
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmBaocaohoadon_Nhanvien.resources
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QRCoder.dll
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QuanLyCuaHangCaPhe.exe.config
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QuanLyCuaHangCaPhe.exe
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QuanLyCuaHangCaPhe.pdb
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QRCoder.dll
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmBanhang_Nhanvien.resources
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmBaocaohoadon_Nhanvien.resources
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmQuanlybanhang_Nhanvien.resources
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.Properties.Resources.resources
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCu.3418C657.Up2Date
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.exe
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.pdb
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmNguyenLieu.resources
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmNhanVienKho.resources
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmNhapKho.resources
+C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmBaoCaoKho.resources

@@ -17,7 +17,7 @@ namespace QuanLyCuaHangCaPhe
         public static void Connect()
         {
             //Thiết lập giá trị cho chuỗi kết nối
-            connString = "Data Source=DESKTOP-VGFC502\\SQLEXPRESS;Initial Catalog=QuanLyBanHangCaPhe;Integrated Security=True;";
+            connString = "Data Source=PHANANHTUAN;Initial Catalog=QuanLyBanHangCaPhe;Integrated Security=True";
             Conn = new SqlConnection();                 //Cấp phát đối tượng
             Conn.ConnectionString = connString;         //Kết nối
             Conn.Open();                                //Mở kết nối
