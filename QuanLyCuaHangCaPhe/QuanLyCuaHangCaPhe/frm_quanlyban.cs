@@ -43,6 +43,35 @@ namespace QuanLyCuaHangCaPhe
             datagridBan.EditMode = DataGridViewEditMode.EditProgrammatically;
             DoiMauTrangThaiBan();
         }
+        private void datagridBan_Click(object sender, EventArgs e)
+        {
+            if (ibtnLuu.Enabled == true)
+            {
+                MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaban.Focus();
+                return;
+            }
+
+            if (datagridBan.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Gán dữ liệu từ dòng đang chọn vào các ô nhập
+            txtMaban.Text = datagridBan.CurrentRow.Cells["Maban"].Value.ToString();
+            txtSoluongghe.Text = datagridBan.CurrentRow.Cells["Soluongghe"].Value.ToString();
+            cboTinhtrang.Text = datagridBan.CurrentRow.Cells["Tinhtrang"].Value.ToString();
+
+            // Cho phép sửa, xóa; không cho thêm hay lưu
+            ibtnSua.Enabled = true;
+            ibtnXoa.Enabled = true;
+            ibtnThem.Enabled = false;
+            ibtnLuu.Enabled = false;
+
+            // Không cho sửa mã bàn
+            txtMaban.Enabled = false;
+        }
         private void DoiMauTrangThaiBan()
         {
             foreach (DataGridViewRow row in datagridBan.Rows)
@@ -186,35 +215,6 @@ namespace QuanLyCuaHangCaPhe
             txtMaban.Enabled = false;
         }
 
-        private void datagridBan_Click(object sender, EventArgs e)
-        {
-            if (ibtnLuu.Enabled == true)
-            {
-                MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtMaban.Focus();
-                return;
-            }
-
-            if (datagridBan.Rows.Count == 0)
-            {
-                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            // Gán dữ liệu từ dòng đang chọn vào các ô nhập
-            txtMaban.Text = datagridBan.CurrentRow.Cells["Maban"].Value.ToString();
-            txtSoluongghe.Text = datagridBan.CurrentRow.Cells["Soluongghe"].Value.ToString();
-            cboTinhtrang.Text = datagridBan.CurrentRow.Cells["Tinhtrang"].Value.ToString();
-
-            // Cho phép sửa, xóa; không cho thêm hay lưu
-            ibtnSua.Enabled = true;
-            ibtnXoa.Enabled = true;
-            ibtnThem.Enabled = false;
-            ibtnLuu.Enabled = false;
-
-            // Không cho sửa mã bàn
-            txtMaban.Enabled = false;
-        }
 
     }
 }
