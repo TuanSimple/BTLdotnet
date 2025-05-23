@@ -17,7 +17,7 @@ namespace QuanLyCuaHangCaPhe
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
       //      Application.Run(new frmSanpham());
-            Application.Run(new frm_quanlytaikhoan());
+            Application.Run(new frm_quanlyban());
         }
     }
 }

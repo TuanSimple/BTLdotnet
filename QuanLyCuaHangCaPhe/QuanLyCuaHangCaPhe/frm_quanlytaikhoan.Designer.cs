@@ -398,7 +398,6 @@
             this.label11.Size = new System.Drawing.Size(751, 67);
             this.label11.TabIndex = 28;
             this.label11.Text = "Danh sách quản lý tài khoản";
-       //     this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // datagridtaikhoan
             // 
@@ -409,6 +408,7 @@
             this.datagridtaikhoan.RowTemplate.Height = 33;
             this.datagridtaikhoan.Size = new System.Drawing.Size(1126, 403);
             this.datagridtaikhoan.TabIndex = 29;
+       //     this.datagridtaikhoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridtaikhoan_CellContentClick);
             this.datagridtaikhoan.Click += new System.EventHandler(this.datagridtaikhoan_Click_1);
             // 
             // frm_quanlytaikhoan

@@ -390,7 +390,6 @@ namespace QuanLyCuaHangCaPhe
                 chkNam.Checked = false;
         }
 
-   
     }
 }
 
