@@ -48,6 +48,8 @@
             this.txtTonghoadon = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.mskNgayban = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dGridBaocaohoadon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGridChitiethoadon)).BeginInit();
             this.SuspendLayout();
@@ -55,11 +57,11 @@
             // dGridBaocaohoadon
             // 
             this.dGridBaocaohoadon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGridBaocaohoadon.Location = new System.Drawing.Point(70, 79);
+            this.dGridBaocaohoadon.Location = new System.Drawing.Point(50, 79);
             this.dGridBaocaohoadon.Name = "dGridBaocaohoadon";
             this.dGridBaocaohoadon.RowHeadersWidth = 51;
             this.dGridBaocaohoadon.RowTemplate.Height = 24;
-            this.dGridBaocaohoadon.Size = new System.Drawing.Size(756, 566);
+            this.dGridBaocaohoadon.Size = new System.Drawing.Size(783, 566);
             this.dGridBaocaohoadon.TabIndex = 0;
             this.dGridBaocaohoadon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGridBaocaohoadon_CellContentClick);
             this.dGridBaocaohoadon.Click += new System.EventHandler(this.dGridBaocaohoadon_Click);
@@ -129,7 +131,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Green;
-            this.label3.Location = new System.Drawing.Point(877, 426);
+            this.label3.Location = new System.Drawing.Point(927, 426);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 17);
             this.label3.TabIndex = 11;
@@ -140,7 +142,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Green;
-            this.label4.Location = new System.Drawing.Point(877, 462);
+            this.label4.Location = new System.Drawing.Point(881, 496);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 17);
             this.label4.TabIndex = 12;
@@ -151,7 +153,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Green;
-            this.label5.Location = new System.Drawing.Point(1153, 464);
+            this.label5.Location = new System.Drawing.Point(872, 573);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 17);
             this.label5.TabIndex = 13;
@@ -159,23 +161,23 @@
             // 
             // txtMakhuyenmai
             // 
-            this.txtMakhuyenmai.Location = new System.Drawing.Point(1006, 460);
+            this.txtMakhuyenmai.Location = new System.Drawing.Point(1006, 494);
             this.txtMakhuyenmai.Name = "txtMakhuyenmai";
             this.txtMakhuyenmai.Size = new System.Drawing.Size(113, 22);
             this.txtMakhuyenmai.TabIndex = 14;
             // 
             // txtMuckhuyenmai
             // 
-            this.txtMuckhuyenmai.Location = new System.Drawing.Point(1277, 460);
+            this.txtMuckhuyenmai.Location = new System.Drawing.Point(1006, 568);
             this.txtMuckhuyenmai.Name = "txtMuckhuyenmai";
-            this.txtMuckhuyenmai.Size = new System.Drawing.Size(100, 22);
+            this.txtMuckhuyenmai.Size = new System.Drawing.Size(113, 22);
             this.txtMuckhuyenmai.TabIndex = 15;
             // 
             // txtTinhtrang
             // 
-            this.txtTinhtrang.Location = new System.Drawing.Point(1277, 424);
+            this.txtTinhtrang.Location = new System.Drawing.Point(1006, 532);
             this.txtTinhtrang.Name = "txtTinhtrang";
-            this.txtTinhtrang.Size = new System.Drawing.Size(100, 22);
+            this.txtTinhtrang.Size = new System.Drawing.Size(113, 22);
             this.txtTinhtrang.TabIndex = 16;
             // 
             // label6
@@ -183,7 +185,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Green;
-            this.label6.Location = new System.Drawing.Point(1185, 431);
+            this.label6.Location = new System.Drawing.Point(914, 537);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 17);
             this.label6.TabIndex = 17;
@@ -198,7 +200,7 @@
             this.btnHuy.IconColor = System.Drawing.Color.Honeydew;
             this.btnHuy.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnHuy.IconSize = 25;
-            this.btnHuy.Location = new System.Drawing.Point(1264, 513);
+            this.btnHuy.Location = new System.Drawing.Point(1264, 423);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(113, 56);
             this.btnHuy.TabIndex = 21;
@@ -212,7 +214,7 @@
             // txtTongtien
             // 
             this.txtTongtien.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongtien.Location = new System.Drawing.Point(1241, 609);
+            this.txtTongtien.Location = new System.Drawing.Point(1214, 624);
             this.txtTongtien.Multiline = true;
             this.txtTongtien.Name = "txtTongtien";
             this.txtTongtien.Size = new System.Drawing.Size(136, 36);
@@ -223,7 +225,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Green;
-            this.label8.Location = new System.Drawing.Point(1152, 625);
+            this.label8.Location = new System.Drawing.Point(1125, 640);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 20);
             this.label8.TabIndex = 25;
@@ -232,7 +234,7 @@
             // txtTonghoadon
             // 
             this.txtTonghoadon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTonghoadon.Location = new System.Drawing.Point(1078, 609);
+            this.txtTonghoadon.Location = new System.Drawing.Point(1051, 624);
             this.txtTonghoadon.Multiline = true;
             this.txtTonghoadon.Name = "txtTonghoadon";
             this.txtTonghoadon.Size = new System.Drawing.Size(68, 36);
@@ -243,7 +245,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Green;
-            this.label7.Location = new System.Drawing.Point(955, 625);
+            this.label7.Location = new System.Drawing.Point(928, 640);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 20);
             this.label7.TabIndex = 27;
@@ -251,17 +253,39 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(1156, 528);
+            this.txtPass.Location = new System.Drawing.Point(1156, 438);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(100, 22);
             this.txtPass.TabIndex = 28;
             this.txtPass.UseSystemPasswordChar = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Green;
+            this.label9.Location = new System.Drawing.Point(949, 462);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 17);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Ngày";
+            // 
+            // mskNgayban
+            // 
+            this.mskNgayban.Location = new System.Drawing.Point(1006, 462);
+            this.mskNgayban.Mask = "00/00/0000";
+            this.mskNgayban.Name = "mskNgayban";
+            this.mskNgayban.Size = new System.Drawing.Size(113, 22);
+            this.mskNgayban.TabIndex = 30;
+            this.mskNgayban.ValidatingType = typeof(System.DateTime);
             // 
             // frmBaocaohoadon_Nhanvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1416, 686);
+            this.Controls.Add(this.mskNgayban);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtTonghoadon);
@@ -315,5 +339,7 @@
         private System.Windows.Forms.TextBox txtTonghoadon;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MaskedTextBox mskNgayban;
     }
 }
