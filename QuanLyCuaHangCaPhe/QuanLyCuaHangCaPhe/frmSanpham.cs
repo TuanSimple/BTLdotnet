@@ -573,12 +573,15 @@ namespace QuanLyCuaHangCaPhe
                 txtTim.Focus();
                 return;
             }
-            sql = "SELECT MaSanPham, TenSanPham, TenLoai, GiaBan, HinhAnh, GiaNhap FROM SanPham s join Loai l on l.MaLoai=s.MaLoai WHERE TenSanPham like N'%" + txtTim.Text + "%'";
+            //sql = "SELECT MaSanPham, TenSanPham, TenLoai, GiaBan, HinhAnh, GiaNhap FROM SanPham s join Loai l on l.MaLoai=s.MaLoai WHERE TenSanPham like N'%" + txtTim.Text + "%'";
+            //tìm theo mã sản phẩm, giá bán, giá nhập nữa
+            sql = "SELECT MaSanPham, TenSanPham, TenLoai, GiaBan, HinhAnh, GiaNhap FROM SanPham s join Loai l on l.MaLoai=s.MaLoai WHERE MaSanPham like N'%" + txtTim.Text + "%' or GiaBan like N'%" + txtTim.Text + "%' or GiaNhap like N'%" + txtTim.Text + "%'";
             SanPham = QuanLyCuaHangCaPhe.Function.GetDataToTable(sql);
             //Gán dữ liệu từ bảng vào datagridview
             dataGridViewQLyCaPhe.DataSource = SanPham;
             //xóa chữ ở ô txtTim sau khi tìm xong
             txtTim.Text = "";
+            btnBoqua.Enabled = true;
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

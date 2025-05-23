@@ -310,6 +310,7 @@ namespace QuanLyCuaHangCaPhe
                 return;
             }
             sql = "SELECT MaLoai, TenLoai FROM Loai WHERE TenLoai like N'%" + txtTimkiem.Text + "%'";
+            
             Loai = QuanLyCuaHangCaPhe.Function.GetDataToTable(sql);
             //Gán dữ liệu từ bảng vào datagridview
             dataGridViewDanhmuc.DataSource = Loai;
