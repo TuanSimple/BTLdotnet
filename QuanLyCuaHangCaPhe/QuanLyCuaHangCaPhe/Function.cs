@@ -117,6 +117,7 @@ namespace QuanLyCuaHangCaPhe
 
             cbo.ValueMember = ma;    // Truong gia tri
             cbo.DisplayMember = ten;    // Truong hien thi
+            cbo.Refresh();
         }
 
     }

@@ -65,5 +65,10 @@ namespace QuanLyCuaHangCaPhe
             ShowFormInPanel(new frmBaocaohoadon_Nhanvien(), pnelQuanlybanhang);
             ActivateButton((Button)sender);
         }
+
+        private void pnelQuanlybanhang_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -42,6 +42,8 @@ namespace QuanLyCuaHangCaPhe
             txtMuckhuyenmai.Enabled = false;
             txtTinhtrang.Enabled = false;
             txtTonghoadon.Enabled = false;
+            mskNgayban.Enabled = false;
+
             txtTongtien.Enabled = false;
             cbTinhtrangthanhtoan.SelectedIndex = 0;
             trangthai();
@@ -54,7 +56,7 @@ namespace QuanLyCuaHangCaPhe
         private string BuildSqlHoadon()
         {
             string sql =
-                "SELECT hdb.MaHoaDonBan, nv.TenNhanVien, hdb.MaBan, km.MucKhuyenMai, hdb.TongTien, " +
+                "SELECT hdb.Ngayban, hdb.MaHoaDonBan, nv.TenNhanVien, hdb.MaBan, km.MucKhuyenMai, hdb.TongTien , " +
                 "CASE WHEN hdb.TrangThai = 0 THEN N'Chưa thanh toán' " +
                 "     WHEN hdb.TrangThai = 1 THEN N'Đã thanh toán' " +
                 "     ELSE N'Không xác định' END AS TrangThai, " +
@@ -88,21 +90,25 @@ namespace QuanLyCuaHangCaPhe
 
             //do dl tu bang vao datagridview
 
-            dGridBaocaohoadon.Columns[0].HeaderText = "Mã hóa đơn";
-            dGridBaocaohoadon.Columns[1].HeaderText = "Tên nhân viên";
-            dGridBaocaohoadon.Columns[2].HeaderText = "Mã bàn";
-            dGridBaocaohoadon.Columns[3].HeaderText = "Mức khuyến mãi";
-            dGridBaocaohoadon.Columns[4].HeaderText = "Tổng tiền";
-            dGridBaocaohoadon.Columns[5].HeaderText = "Trạng thái";
-            dGridBaocaohoadon.Columns[6].HeaderText = "Hình thức";
+            dGridBaocaohoadon.Columns[0].HeaderText = "Ngày hóa đơn";
+            dGridBaocaohoadon.Columns[1].HeaderText = "Mã hóa đơn";
+            dGridBaocaohoadon.Columns[2].HeaderText = "Tên nhân viên";
+            dGridBaocaohoadon.Columns[3].HeaderText = "Mã bàn";
+            dGridBaocaohoadon.Columns[4].HeaderText = "Mức khuyến mãi";
+            dGridBaocaohoadon.Columns[5].HeaderText = "Tổng tiền";
+            dGridBaocaohoadon.Columns[6].HeaderText = "Trạng thái";
+            dGridBaocaohoadon.Columns[7].HeaderText = "Hình thức";
 
 
-            dGridBaocaohoadon.Columns[0].Width = 50;
-            dGridBaocaohoadon.Columns[1].Width = 150;
-            dGridBaocaohoadon.Columns[2].Width = 100;
+
+            dGridBaocaohoadon.Columns[0].Width = 100;
+            dGridBaocaohoadon.Columns[1].Width = 50;
+            dGridBaocaohoadon.Columns[2].Width = 150;
             dGridBaocaohoadon.Columns[3].Width = 100;
             dGridBaocaohoadon.Columns[4].Width = 100;
             dGridBaocaohoadon.Columns[5].Width = 100;
+            dGridBaocaohoadon.Columns[6].Width = 100;
+            dGridBaocaohoadon.Columns[7].Width = 100;
 
             // Không cho phép thêm mới dữ liệu trực tiếp trên lưới
             dGridBaocaohoadon.AllowUserToAddRows = false;
@@ -115,7 +121,16 @@ namespace QuanLyCuaHangCaPhe
             for (int i = 0; i < dGridBaocaohoadon.Rows.Count; i++)
             {
                 tonghoadon += 1;
-                tongtien += decimal.Parse(dGridBaocaohoadon.Rows[i].Cells["TongTien"].Value.ToString());
+
+                var value = dGridBaocaohoadon.Rows[i].Cells["TongTien"].Value;
+                if (value != null && decimal.TryParse(value.ToString(), out decimal tien))
+                {
+                    tongtien += tien;
+                }
+                else
+                {
+                    tongtien += 0;
+                }
             }
             txtTonghoadon.Text = tonghoadon.ToString();
             txtTongtien.Text = tongtien.ToString();
@@ -163,6 +178,7 @@ namespace QuanLyCuaHangCaPhe
             txtTinhtrang.Text = dGridBaocaohoadon.CurrentRow.Cells["TrangThai"].Value.ToString();
             string maKhuyenmai = Function.GetFieldValues("SELECT MaKhuyenMai FROM HoaDonBan WHERE MaHoaDonBan = '" + ma + "'");
             txtMakhuyenmai.Text = maKhuyenmai;
+            mskNgayban.Text = Convert.ToDateTime(dGridBaocaohoadon.CurrentRow.Cells["NgayBan"].Value).ToString("dd/MM/yyyy");
 
 
 
@@ -175,6 +191,7 @@ namespace QuanLyCuaHangCaPhe
             txtMuckhuyenmai.Text = "";
             txtTinhtrang.Text = "";
             dGridChitiethoadon.DataSource = null;
+            mskNgayban.Text = "";
 
         }
 
