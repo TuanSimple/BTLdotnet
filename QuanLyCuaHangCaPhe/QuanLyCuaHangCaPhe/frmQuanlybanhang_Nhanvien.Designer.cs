@@ -149,6 +149,7 @@
             this.pnelQuanlybanhang.Name = "pnelQuanlybanhang";
             this.pnelQuanlybanhang.Size = new System.Drawing.Size(1434, 753);
             this.pnelQuanlybanhang.TabIndex = 3;
+            this.pnelQuanlybanhang.Paint += new System.Windows.Forms.PaintEventHandler(this.pnelQuanlybanhang_Paint);
             // 
             // pictureBox1
             // 
