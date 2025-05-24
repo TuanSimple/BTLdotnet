@@ -69,5 +69,22 @@ namespace QuanLyCuaHangCaPhe.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        /// <summary>
+        internal static System.Drawing.Bitmap table_red {
+            get {
+                object obj = ResourceManager.GetObject("table_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap table_white {
+            get {
+                object obj = ResourceManager.GetObject("table_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

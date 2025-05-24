@@ -12,7 +12,23 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -23,6 +39,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
@@ -32,9 +49,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.6.0\lib\net40\QRCoder.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -52,18 +73,14 @@
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
+
   <ItemGroup>
+    <!-- Các form từ cả hai nhánh -->
     <Compile Include="frmDanhmucsanpham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDanhmucsanpham.Designer.cs">
       <DependentUpon>frmDanhmucsanpham.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSanpham.cs">
       <SubType>Form</SubType>
@@ -83,16 +100,51 @@
     <Compile Include="frm_quanlytaikhoan.Designer.cs">
       <DependentUpon>frm_quanlytaikhoan.cs</DependentUpon>
     </Compile>
+
+    <Compile Include="frmBanhang_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBanhang_Nhanvien.Designer.cs">
+      <DependentUpon>frmBanhang_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaocaohoadon_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaocaohoadon_Nhanvien.Designer.cs">
+      <DependentUpon>frmBaocaohoadon_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanlybanhang_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanlybanhang_Nhanvien.Designer.cs">
+      <DependentUpon>frmQuanlybanhang_Nhanvien.cs</DependentUpon>
+    </Compile>
+
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="Function.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
+
   <ItemGroup>
+    <!-- Resource -->
     <EmbeddedResource Include="frmDanhmucsanpham.resx">
       <DependentUpon>frmDanhmucsanpham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSanpham.resx">
       <DependentUpon>frmSanpham.cs</DependentUpon>
@@ -103,34 +155,52 @@
     <EmbeddedResource Include="frm_quanlytaikhoan.resx">
       <DependentUpon>frm_quanlytaikhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBanhang_Nhanvien.resx">
+      <DependentUpon>frmBanhang_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaocaohoadon_Nhanvien.resx">
+      <DependentUpon>frmBaocaohoadon_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanlybanhang_Nhanvien.resx">
+      <DependentUpon>frmQuanlybanhang_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+
   <ItemGroup>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <!-- Setting -->
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+
   <ItemGroup>
+    <!-- Hình ảnh -->
     <None Include="Resources\icons8-add-30.png" />
+    <None Include="Resources\coffee.png" />
+    <None Include="Resources\coffee_red.png" />
+    <None Include="Resources\coffee2.png" />
   </ItemGroup>
+
+  <ItemGroup>
+    <!-- Bootstrapper -->
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 (x86 và x64)</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
+<!-- End of QuanLyCuaHangCaPhe.csproj -->
