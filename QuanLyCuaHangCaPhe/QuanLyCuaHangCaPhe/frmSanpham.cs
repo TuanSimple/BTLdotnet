@@ -309,7 +309,7 @@ namespace QuanLyCuaHangCaPhe
         {
             OpenFileDialog open = new OpenFileDialog();
             open.Filter = "jpg(*.jpg)|*.jpg|png(*.png)|*.png|All files(*.*)|*.*\"";
-            open.InitialDirectory = "D:\\LẬP TRÌNH .NET\\BTLdotnet\\Picture";
+            open.InitialDirectory = "D:\\LẬP TRÌNH .NET\\BTL\\Picture";
             open.FilterIndex = 1;
             open.Title = "Chọn ảnh";
             if (open.ShowDialog() == DialogResult.OK)

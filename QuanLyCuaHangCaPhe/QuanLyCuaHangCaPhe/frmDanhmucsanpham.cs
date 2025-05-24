@@ -36,6 +36,8 @@ namespace QuanLyCuaHangCaPhe
             txtMadanhmuc.Enabled = true;
             txtTendanhmuc.Enabled = true;
             txtMadanhmuc.Focus();
+            //Kiểm tra khóa chính
+
         }
 
         private void frmDanhmucsanpham_Load(object sender, EventArgs e)

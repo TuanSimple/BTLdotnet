@@ -409,6 +409,7 @@ BEGIN
     ) ct ON sp.MaSanPham = ct.MaSanPham
     WHERE sp.MaSanPham IN (SELECT MaSanPham FROM @AffectedSanPham);
 END;
+
 -- Tự động cập nhập giá bán
 CREATE TRIGGER trg_CapNhatGiaBan_SanPham
 ON SanPham
@@ -445,3 +446,16 @@ UPDATE SanPham SET MaLoai = null WHERE MaLoai = 4;
 
 select*from Loai
 select*from SanPham;
+
+INSERT INTO ChiTietSanPham VALUES 
+('SP05', 'NL03', 0.02, 0);
+
+SELECT name
+FROM sys.triggers
+WHERE parent_id = OBJECT_ID('chitietsanpham');
+
+SELECT name
+FROM sys.triggers
+WHERE parent_id = OBJECT_ID('sanpham');
+
+select*from SanPham
