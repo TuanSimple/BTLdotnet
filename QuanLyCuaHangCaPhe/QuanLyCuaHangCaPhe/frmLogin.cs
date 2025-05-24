@@ -68,8 +68,8 @@ namespace QuanLyCuaHangCaPhe
 
                     if (tenChucVu == "QuanLy")
                     {
-                        FormQuanLy formQL = new FormQuanLy();
-                        formQL.ShowDialog();
+                       // FormQuanLy formQL = new FormQuanLy();
+                       // formQL.ShowDialog();
                     }
                     else if (tenChucVu == "Thu ngan")
                     {
