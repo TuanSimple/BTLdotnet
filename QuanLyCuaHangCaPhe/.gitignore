@@ -33,6 +33,7 @@ Thumbs.db
 # Others
 *.vspscc
 *.vssscc
+.vs/
 
 # Test result files
 TestResults/
