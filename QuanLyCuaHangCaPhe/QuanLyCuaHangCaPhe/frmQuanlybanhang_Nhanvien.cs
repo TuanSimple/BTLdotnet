@@ -69,7 +69,7 @@ namespace QuanLyCuaHangCaPhe
             ActivateButton((Button)sender);
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void pnelQuanlybanhang_Paint(object sender, PaintEventArgs e)
         {
 
         }

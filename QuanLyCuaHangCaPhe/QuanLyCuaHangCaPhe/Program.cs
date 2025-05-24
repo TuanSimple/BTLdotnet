@@ -17,7 +17,6 @@ namespace QuanLyCuaHangCaPhe
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmQuanlybanhang_Nhanvien());
-
         }
     }
 }
