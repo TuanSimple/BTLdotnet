@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -29,7 +28,6 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
@@ -40,7 +38,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>5</WarningLevel>
   </PropertyGroup>
-
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
@@ -50,7 +47,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
@@ -75,51 +71,86 @@
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
-
   <ItemGroup>
     <!-- Các file code và form -->
-    <Compile Include="Form1.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="Form1.Designer.cs"><DependentUpon>Form1.cs</DependentUpon></Compile>
-
-    <Compile Include="frmBanhang_Nhanvien.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frmBanhang_Nhanvien.Designer.cs"><DependentUpon>frmBanhang_Nhanvien.cs</DependentUpon></Compile>
-
-    <Compile Include="frmBaocaohoadon_Nhanvien.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frmBaocaohoadon_Nhanvien.Designer.cs"><DependentUpon>frmBaocaohoadon_Nhanvien.cs</DependentUpon></Compile>
-
-    <Compile Include="frmBaoCaoKho.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frmBaoCaoKho.Designer.cs"><DependentUpon>frmBaoCaoKho.cs</DependentUpon></Compile>
-
-    <Compile Include="frmLogin.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frmLogin.Designer.cs"><DependentUpon>frmLogin.cs</DependentUpon></Compile>
-
-    <Compile Include="frmNguyenLieu.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frmNguyenLieu.Designer.cs"><DependentUpon>frmNguyenLieu.cs</DependentUpon></Compile>
-
-    <Compile Include="frmNhanVienKho.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frmNhanVienKho.Designer.cs"><DependentUpon>frmNhanVienKho.cs</DependentUpon></Compile>
-
-    <Compile Include="frmNhapKho.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frmNhapKho.Designer.cs"><DependentUpon>frmNhapKho.cs</DependentUpon></Compile>
-
-    <Compile Include="frmQuanlybanhang_Nhanvien.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frmQuanlybanhang_Nhanvien.Designer.cs"><DependentUpon>frmQuanlybanhang_Nhanvien.cs</DependentUpon></Compile>
-
-    <Compile Include="frmDanhmucsanpham.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frmDanhmucsanpham.Designer.cs"><DependentUpon>frmDanhmucsanpham.cs</DependentUpon></Compile>
-
-    <Compile Include="frmSanpham.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frmSanpham.Designer.cs"><DependentUpon>frmSanpham.cs</DependentUpon></Compile>
-
-    <Compile Include="frm_quanlyban.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frm_quanlyban.Designer.cs"><DependentUpon>frm_quanlyban.cs</DependentUpon></Compile>
-
-    <Compile Include="frm_quanlytaikhoan.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frm_quanlytaikhoan.Designer.cs"><DependentUpon>frm_quanlytaikhoan.cs</DependentUpon></Compile>
-
-    <Compile Include="frmMain.cs"><SubType>Form</SubType></Compile>
-    <Compile Include="frmMain.Designer.cs"><DependentUpon>frmMain.cs</DependentUpon></Compile>
-
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBanhang_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBanhang_Nhanvien.Designer.cs">
+      <DependentUpon>frmBanhang_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaocaohoadon_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaocaohoadon_Nhanvien.Designer.cs">
+      <DependentUpon>frmBaocaohoadon_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaoCaoKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCaoKho.Designer.cs">
+      <DependentUpon>frmBaoCaoKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNguyenLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNguyenLieu.Designer.cs">
+      <DependentUpon>frmNguyenLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhanVienKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhanVienKho.Designer.cs">
+      <DependentUpon>frmNhanVienKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhapKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhapKho.Designer.cs">
+      <DependentUpon>frmNhapKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanlybanhang_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanlybanhang_Nhanvien.Designer.cs">
+      <DependentUpon>frmQuanlybanhang_Nhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDanhmucsanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDanhmucsanpham.Designer.cs">
+      <DependentUpon>frmDanhmucsanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSanpham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSanpham.Designer.cs">
+      <DependentUpon>frmSanpham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_quanlyban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_quanlyban.Designer.cs">
+      <DependentUpon>frm_quanlyban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_quanlytaikhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_quanlytaikhoan.Designer.cs">
+      <DependentUpon>frm_quanlytaikhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Function.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -134,26 +165,43 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-
   <ItemGroup>
     <!-- Các file .resx -->
-    <EmbeddedResource Include="frmBanhang_Nhanvien.resx"><DependentUpon>frmBanhang_Nhanvien.cs</DependentUpon></EmbeddedResource>
-    <EmbeddedResource Include="frmBaocaohoadon_Nhanvien.resx"><DependentUpon>frmBaocaohoadon_Nhanvien.cs</DependentUpon></EmbeddedResource>
-    <EmbeddedResource Include="frmBaoCaoKho.resx"><DependentUpon>frmBaoCaoKho.cs</DependentUpon></EmbeddedResource>
-    <EmbeddedResource Include="frmNguyenLieu.resx"><DependentUpon>frmNguyenLieu.cs</DependentUpon></EmbeddedResource>
-    <EmbeddedResource Include="frmNhapKho.resx"><DependentUpon>frmNhapKho.cs</DependentUpon></EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx"><DependentUpon>frmLogin.cs</DependentUpon></EmbeddedResource>
-    <EmbeddedResource Include="frmDanhmucsanpham.resx"><DependentUpon>frmDanhmucsanpham.cs</DependentUpon></EmbeddedResource>
-    <EmbeddedResource Include="frmSanpham.resx"><DependentUpon>frmSanpham.cs</DependentUpon></EmbeddedResource>
-    <EmbeddedResource Include="frm_quanlyban.resx"><DependentUpon>frm_quanlyban.cs</DependentUpon></EmbeddedResource>
-    <EmbeddedResource Include="frm_quanlytaikhoan.resx"><DependentUpon>frm_quanlytaikhoan.cs</DependentUpon></EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx"><DependentUpon>frmMain.cs</DependentUpon></EmbeddedResource>
+    <EmbeddedResource Include="frmBanhang_Nhanvien.resx">
+      <DependentUpon>frmBanhang_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaocaohoadon_Nhanvien.resx">
+      <DependentUpon>frmBaocaohoadon_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCaoKho.resx">
+      <DependentUpon>frmBaoCaoKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNguyenLieu.resx">
+      <DependentUpon>frmNguyenLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhapKho.resx">
+      <DependentUpon>frmNhapKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDanhmucsanpham.resx">
+      <DependentUpon>frmDanhmucsanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSanpham.resx">
+      <DependentUpon>frmSanpham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_quanlyban.resx">
+      <DependentUpon>frm_quanlyban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_quanlytaikhoan.resx">
+      <DependentUpon>frm_quanlytaikhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
     <!-- Các resource hình ảnh -->
     <None Include="Resources\coffee2.png" />
@@ -167,14 +215,11 @@
     <None Include="Resources\table_red.png" />
     <None Include="Resources\table_white.png" />
   </ItemGroup>
-
   <ItemGroup>
     <None Include="Properties\Settings.settings" />
     <None Include="App.config" />
   </ItemGroup>
-
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
