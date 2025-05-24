@@ -1,0 +1,70 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.log
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## NuGet
+packages/
+*.nupkg
+project.lock.json
+project.assets.json
+*.nuget.props
+*.nuget.targets
+.nuget/
+
+## VS IDE folders
+.vs/
+.vscode/
+.idea/
+
+## Debugging & Testing
+TestResults/
+*.trx
+*.vsmdi
+*.pdb
+*.cache
+*.pidb
+*.svclog
+
+## Rider / ReSharper / DotCover
+_ReSharper*/
+*.DotSettings.user
+*.dotCover
+
+## Publishing
+publish/
+*.Publish.xml
+*.application
+*.manifest
+
+## Temporary / Backup
+*.tmp
+*.bak
+*.old
+
+## ClickOnce
+*.ClickOnce/
+
+## Auto-generated
+*.designer.cs
+*.g.cs
+*.g.i.cs
+
+## Local DB
+*.mdf
+*.ldf
+
+## Others (if using Git LFS or manual backups)
+*.zip
+*.7z
+*.rar
+*.tar.gz
+*.db
+*.sqlite
