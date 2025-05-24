@@ -79,6 +79,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1410, 40);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnBaocaohoadon_nhanvien
             // 
@@ -191,7 +192,7 @@
             this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.Color.Green;
             this.Name = "frmQuanlybanhang_Nhanvien";
-            this.Text = "frmQuanlybanhang_Nhanvien";
+            this.Text = "Quản lý bán hàng";
             this.Load += new System.EventHandler(this.frmQuanlybanhang_Nhanvien_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

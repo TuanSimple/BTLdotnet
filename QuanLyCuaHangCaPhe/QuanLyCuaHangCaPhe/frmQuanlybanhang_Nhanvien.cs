@@ -22,6 +22,9 @@ namespace QuanLyCuaHangCaPhe
         {
             Function.Connect();
             iconButton1_Click(iconButton1, EventArgs.Empty);
+            //ten nhan vien
+
+            lbXinchao.Text = "Xin chào Lâm Đức Thịnh ";//+ Function.GetTenNhanVien(); // Lấy tên nhân viên từ hàm GetTenNhanVien trong lớp Function
 
         }
         private Button currentButton = null;
@@ -64,6 +67,11 @@ namespace QuanLyCuaHangCaPhe
         {
             ShowFormInPanel(new frmBaocaohoadon_Nhanvien(), pnelQuanlybanhang);
             ActivateButton((Button)sender);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
