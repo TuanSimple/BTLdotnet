@@ -3,11 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frm_quanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frm_quanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frmsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frmsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|c:\\users\\lt\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\btldotnet\\quanlycuahangcaphe\\quanlycuahangcaphe\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|c:\\users\\lt\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\btldotnet\\quanlycuahangcaphe\\quanlycuahangcaphe\\frmnguyenlieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frmnguyenlieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frmnguyenlieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -17,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frmbanhang_nhanvien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frmbanhang_nhanvien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frmbanhang_nhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -47,24 +55,16 @@
       "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frmsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:quanlycuahangcaphe\\frmsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:quanlycuahangcaphe\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frmdanhmucsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frmdanhmucsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frmdanhmucsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:quanlycuahangcaphe\\frmdanhmucsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\lt\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\btldotnet\\quanlycuahangcaphe\\quanlycuahangcaphe\\frm_quanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:quanlycuahangcaphe\\frm_quanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frm_quanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:quanlycuahangcaphe\\frm_quanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frm_quanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frm_quanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Function.cs",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Function.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\Function.cs",
@@ -111,19 +111,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "frmNguyenLieu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmNguyenLieu.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmNguyenLieu.cs",
               "ToolTip": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmNguyenLieu.cs [Design]",
               "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmNguyenLieu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:21:56.574Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-24T19:21:56.574Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "frmNhanVienKho.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmNhanVienKho.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmNhanVienKho.cs",
@@ -134,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "frmBanhang_Nhanvien.Designer.cs",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmBanhang_Nhanvien.Designer.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmBanhang_Nhanvien.Designer.cs",
@@ -146,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "frmNhapKho.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmNhapKho.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmNhapKho.cs",
@@ -157,19 +156,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Program.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\Program.cs",
               "ToolTip": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Program.cs",
               "RelativeToolTip": "QuanLyCuaHangCaPhe\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T19:20:35.814Z"
+              "WhenOpened": "2025-05-24T19:20:35.814Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "frmBaoCaoKho.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmBaoCaoKho.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmBaoCaoKho.cs",
@@ -180,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\App.config",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\App.config",
@@ -188,23 +188,23 @@
               "RelativeToolTip": "QuanLyCuaHangCaPhe\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-05-24T18:38:29.814Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T18:38:29.814Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
               "Title": "frmSanpham.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmSanpham.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmSanpham.cs",
               "ToolTip": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmSanpham.cs [Design]",
               "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmSanpham.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:37:46.288Z"
+              "WhenOpened": "2025-05-24T18:37:46.288Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "frmQuanlybanhang_Nhanvien.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmQuanlybanhang_Nhanvien.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmQuanlybanhang_Nhanvien.cs",
@@ -215,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "frmMain.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmMain.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmMain.cs",
@@ -226,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "frmDanhmucsanpham.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmDanhmucsanpham.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmDanhmucsanpham.cs",
@@ -237,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "frmBaocaohoadon_Nhanvien.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmBaocaohoadon_Nhanvien.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmBaocaohoadon_Nhanvien.cs",
@@ -248,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "frmBanhang_Nhanvien.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmBanhang_Nhanvien.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmBanhang_Nhanvien.cs",
@@ -259,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "frm_quanlytaikhoan.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs",
@@ -270,14 +270,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 1,
               "Title": "frm_quanlyban.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
               "ToolTip": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs [Design]",
               "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlyban.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T18:37:25.194Z"
+              "WhenOpened": "2025-05-24T18:37:25.194Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },
