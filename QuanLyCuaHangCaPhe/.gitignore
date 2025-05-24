@@ -1,0 +1,33 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.db
+*.db-shm
+*.db-wal
+*.vscode/
+*.vsidx
+*.dtbcache.json
+*.wsuo
+*.sqlite
+
+# Build
+bin/
+obj/
+*.exe
+*.pdb
+*.cache
+*.dll
+*.dll.config
+*.resources
+
+# Backup
+*.log
+*.htm
+UpgradeLog*.htm
+
+# Others
+*.nupkg
+*.Designer.cs.dll
