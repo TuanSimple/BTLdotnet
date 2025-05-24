@@ -130,16 +130,12 @@ namespace QuanLyCuaHangCaPhe
                 chkNam.Checked = true;
                 chkNu.Checked = false;
             }
-            else if (gioitinh == "F")
+            else 
             {
                 chkNam.Checked = false;
                 chkNu.Checked = true;
             }
-            else
-            {
-                chkNam.Checked = false;
-                chkNu.Checked = false;
-            }
+
 
             txtEmail.Text = datagridtaikhoan.CurrentRow.Cells["Email"].Value.ToString();
             mskSodienthoai.Text = datagridtaikhoan.CurrentRow.Cells["SoDienThoai"].Value.ToString();

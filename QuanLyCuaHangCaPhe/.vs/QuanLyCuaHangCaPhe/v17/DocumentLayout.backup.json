@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frm_quanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|d:\\web php\\htdocs\\btldotnet\\quanlycuahangcaphe\\quanlycuahangcaphe\\frm_quanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frm_quanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|d:\\web php\\htdocs\\btldotnet\\quanlycuahangcaphe\\quanlycuahangcaphe\\frm_quanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frm_quanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frm_quanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -58,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -81,10 +81,6 @@
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "frm_quanlytaikhoan.cs",
@@ -92,97 +88,9 @@
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs",
               "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs*",
               "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs*",
-              "ViewState": "AgIAANYAAAAAAAAAAAAYwOoAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAHMAAAAAAAAAAIAwwIQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T17:35:25.1Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frm_quanlytaikhoan.cs [Design]",
-              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs",
-              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs",
-              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs [Design]*",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:35:15.116Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frm_quanlyban.cs",
-              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
-              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
-              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAAwC8AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:36:33.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Program.cs",
-              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\Program.cs",
-              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Program.cs",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:34:15.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmMain.cs",
-              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmMain.cs",
-              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmMain.cs [Design]",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:41:27.249Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frm_quanlyban.cs [Design]",
-              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
-              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
-              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs [Design]",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlyban.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:34:22.482Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Function.cs",
-              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Function.cs",
-              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\Function.cs",
-              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Function.cs",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\Function.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAswBkAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:34:15.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frm_quanlytaikhoan.Designer.cs",
-              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.Designer.cs",
-              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.Designer.cs",
-              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.Designer.cs",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.Designer.cs",
-              "ViewState": "AgIAAIABAAAAAAAAAAAgwJABAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:35:17.271Z",
               "EditorCaption": ""
             },
             {
@@ -209,6 +117,87 @@
               "ViewState": "AgIAAGgCAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T17:34:15.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frm_quanlytaikhoan.cs [Design]",
+              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs",
+              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs",
+              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs [Design]",
+              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:35:15.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frm_quanlyban.cs",
+              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
+              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
+              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
+              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAwC8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:36:33.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Program.cs",
+              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\Program.cs",
+              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Program.cs",
+              "RelativeToolTip": "QuanLyCuaHangCaPhe\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:34:15.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmMain.cs",
+              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmMain.cs",
+              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmMain.cs [Design]",
+              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:41:27.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frm_quanlyban.cs [Design]",
+              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
+              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
+              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs [Design]",
+              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlyban.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:34:22.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Function.cs",
+              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Function.cs",
+              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\Function.cs",
+              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Function.cs",
+              "RelativeToolTip": "QuanLyCuaHangCaPhe\\Function.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAswBkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:34:15.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frm_quanlytaikhoan.Designer.cs",
+              "DocumentMoniker": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.Designer.cs",
+              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.Designer.cs",
+              "ToolTip": "D:\\web PHP\\htdocs\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.Designer.cs",
+              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.Designer.cs",
+              "ViewState": "AgIAAIABAAAAAAAAAAAgwJABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-23T17:35:17.271Z"
             },
             {
               "$type": "Document",
