@@ -1,0 +1,78 @@
+
+
+
+## Build results
+
+[Bb]in/
+
+[Oo]bj/
+
+
+
+## User-specific files
+
+*.user
+
+*.suo
+
+*.userosscache
+
+*.sln.docstates
+
+
+
+## VS temporary folders
+
+.vs/
+
+_TestResults/
+
+_ReSharper*/
+
+
+
+## Auto-generated files
+
+*.Designer.cs
+
+*.g.cs
+
+*.g.i.cs
+
+
+
+## Log & temp files
+
+*.log
+
+*.tmp
+
+
+
+## Packages (restore bằng NuGet)
+
+packages/
+
+*.nupkg
+
+
+
+## Others
+
+*.dbmdl
+
+*.pdb
+
+*.cache
+
+*.pidb
+
+*.svclog
+
+
+
+# OS-specific
+
+.DS_Store
+
+Thumbs.db
