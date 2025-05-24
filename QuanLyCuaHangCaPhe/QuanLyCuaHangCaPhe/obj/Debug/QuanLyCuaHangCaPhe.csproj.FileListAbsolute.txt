@@ -14,3 +14,7 @@ C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCua
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmBanhang_Nhanvien.resources
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmBaocaohoadon_Nhanvien.resources
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QRCoder.dll
+C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmDanhmucsanpham.resources
+C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmSanpham.resources
+C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frm_quanlyban.resources
+C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frm_quanlytaikhoan.resources
