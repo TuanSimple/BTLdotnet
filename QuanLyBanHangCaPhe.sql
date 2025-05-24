@@ -28,7 +28,7 @@ CREATE TABLE NhanVien (
     GioiTinh CHAR(1),
     NgaySinh DATE,
     Email NVARCHAR(50),
-    SoDienThoai CHAR(10),
+    SoDienThoai NVARCHAR(15),
     MatKhau NVARCHAR(50),
     NgayTao DATE,
     FOREIGN KEY (MaChucVu) REFERENCES ChucVu(MaChucVu),
@@ -426,6 +426,7 @@ BEGIN
 END;
 
 
+<<<<<<< HEAD
 SELECT MaSanPham, n.MaNguyenLieu, n.TenNguyenLieu, SoLuongDung, ChiPhi
 FROM ChiTietSanPham c
 JOIN NguyenLieu n ON c.MaNguyenLieu = n.MaNguyenLieu
@@ -445,3 +446,29 @@ UPDATE SanPham SET MaLoai = null WHERE MaLoai = 4;
 
 select*from Loai
 select*from SanPham;
+=======
+ALTER TABLE NhanVien
+ADD Luong DECIMAL(15,4) NULL;
+
+UPDATE nv
+SET nv.Luong = cv.LuongCoBan
+FROM NhanVien nv
+JOIN ChucVu cv ON nv.MaChucVu = cv.MaChucVu;
+
+CREATE TRIGGER trg_SyncLuongNhanVien
+ON ChucVu
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    UPDATE nv
+    SET nv.Luong = i.LuongCoBan
+    FROM NhanVien nv
+    INNER JOIN inserted i ON nv.MaChucVu = i.MaChucVu
+    INNER JOIN deleted d ON i.MaChucVu = d.MaChucVu
+    WHERE i.LuongCoBan != d.LuongCoBan;
+END;
+ 
+ select * from ChucVu
+>>>>>>> main
