@@ -170,5 +170,10 @@ namespace QuanLyCuaHangCaPhe
             ActivateButton(sender, "Quản lý khuyến mãi");
             OpenForm(new frmKhuyenMai(), "Quản lý khuyến mãi");
         }
+
+        private void pnlTieuDe_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

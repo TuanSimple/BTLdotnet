@@ -31,6 +31,14 @@ namespace QuanLyCuaHangCaPhe
 
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
             dateTimePicker2.CustomFormat = "dd/MM/yyyy";
+            //hien hoa don ngay hom day
+            DateTime today = DateTime.Now;
+            dateTimePicker1.Value = new DateTime(today.Year, today.Month, today.Day);
+            dateTimePicker2.Value = new DateTime(today.Year, today.Month, today.Day);
+            Load_dGridHoadon();
+
+
+
         }
         private void Load_dGridHoadon()
         {
@@ -78,7 +86,12 @@ namespace QuanLyCuaHangCaPhe
         }
 
         private void dGridDsHD_Click(object sender, EventArgs e)
-        {          
+        {  //kiem tra du lieu
+            if(tblHoadonBan.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             string ma;
             ma = dGridDsHD.CurrentRow.Cells["MaHoaDonBan"].Value.ToString();
             Load_dGridChitietHoadon(ma);
