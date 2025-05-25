@@ -139,7 +139,6 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Baocao.rdlc" />
     <EmbeddedResource Include="frmBaoCao.resx">
       <DependentUpon>frmBaoCao.cs</DependentUpon>
       <SubType>Designer</SubType>

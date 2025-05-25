@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.rdoNgay = new System.Windows.Forms.RadioButton();
             this.rdoKhoang = new System.Windows.Forms.RadioButton();
             this.PanelTime = new System.Windows.Forms.Panel();
@@ -37,9 +36,6 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.btnLammoi = new System.Windows.Forms.Button();
-            this.btnHienthi = new System.Windows.Forms.Button();
-            this.btnInBC = new System.Windows.Forms.Button();
             this.txtBangchu = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTongtien = new System.Windows.Forms.TextBox();
@@ -47,19 +43,13 @@
             this.ckbSP = new System.Windows.Forms.CheckBox();
             this.cboSP = new System.Windows.Forms.ComboBox();
             this.mskNgay = new System.Windows.Forms.DateTimePicker();
+            this.btnInBC = new System.Windows.Forms.Button();
+            this.btnHienthi = new System.Windows.Forms.Button();
+            this.btnLammoi = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.PanelTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(448, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 36);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "BÁO CÁO DOANH THU";
             // 
             // rdoNgay
             // 
@@ -138,45 +128,16 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 62;
             this.dataGridView.RowTemplate.Height = 28;
-            this.dataGridView.Size = new System.Drawing.Size(922, 352);
+            this.dataGridView.Size = new System.Drawing.Size(934, 352);
             this.dataGridView.TabIndex = 6;
-            // 
-            // btnLammoi
-            // 
-            this.btnLammoi.Location = new System.Drawing.Point(438, 670);
-            this.btnLammoi.Name = "btnLammoi";
-            this.btnLammoi.Size = new System.Drawing.Size(93, 31);
-            this.btnLammoi.TabIndex = 7;
-            this.btnLammoi.Text = "Làm mới";
-            this.btnLammoi.UseVisualStyleBackColor = true;
-            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
-            // 
-            // btnHienthi
-            // 
-            this.btnHienthi.Location = new System.Drawing.Point(590, 670);
-            this.btnHienthi.Name = "btnHienthi";
-            this.btnHienthi.Size = new System.Drawing.Size(93, 31);
-            this.btnHienthi.TabIndex = 8;
-            this.btnHienthi.Text = "Hiển thị";
-            this.btnHienthi.UseVisualStyleBackColor = true;
-            this.btnHienthi.Click += new System.EventHandler(this.btnHienthi_Click);
-            // 
-            // btnInBC
-            // 
-            this.btnInBC.Location = new System.Drawing.Point(752, 670);
-            this.btnInBC.Name = "btnInBC";
-            this.btnInBC.Size = new System.Drawing.Size(93, 31);
-            this.btnInBC.TabIndex = 9;
-            this.btnInBC.Text = "In báo cáo";
-            this.btnInBC.UseVisualStyleBackColor = true;
-            this.btnInBC.Click += new System.EventHandler(this.btnInBC_Click);
             // 
             // txtBangchu
             // 
             this.txtBangchu.AutoSize = true;
+            this.txtBangchu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBangchu.Location = new System.Drawing.Point(178, 616);
             this.txtBangchu.Name = "txtBangchu";
-            this.txtBangchu.Size = new System.Drawing.Size(85, 20);
+            this.txtBangchu.Size = new System.Drawing.Size(95, 20);
             this.txtBangchu.TabIndex = 10;
             this.txtBangchu.Text = "Bằng chữ: ";
             // 
@@ -234,11 +195,62 @@
             this.mskNgay.Size = new System.Drawing.Size(139, 26);
             this.mskNgay.TabIndex = 16;
             // 
+            // btnInBC
+            // 
+            this.btnInBC.BackColor = System.Drawing.Color.Green;
+            this.btnInBC.ForeColor = System.Drawing.Color.White;
+            this.btnInBC.Location = new System.Drawing.Point(741, 650);
+            this.btnInBC.Name = "btnInBC";
+            this.btnInBC.Size = new System.Drawing.Size(104, 49);
+            this.btnInBC.TabIndex = 19;
+            this.btnInBC.Text = "In báo cáo";
+            this.btnInBC.UseVisualStyleBackColor = false;
+            this.btnInBC.Click += new System.EventHandler(this.btnInBC_Click_1);
+            // 
+            // btnHienthi
+            // 
+            this.btnHienthi.BackColor = System.Drawing.Color.Green;
+            this.btnHienthi.ForeColor = System.Drawing.Color.White;
+            this.btnHienthi.Location = new System.Drawing.Point(579, 650);
+            this.btnHienthi.Name = "btnHienthi";
+            this.btnHienthi.Size = new System.Drawing.Size(103, 49);
+            this.btnHienthi.TabIndex = 18;
+            this.btnHienthi.Text = "Hiển thị";
+            this.btnHienthi.UseVisualStyleBackColor = false;
+            this.btnHienthi.Click += new System.EventHandler(this.btnHienthi_Click_1);
+            // 
+            // btnLammoi
+            // 
+            this.btnLammoi.BackColor = System.Drawing.Color.Green;
+            this.btnLammoi.ForeColor = System.Drawing.Color.White;
+            this.btnLammoi.Location = new System.Drawing.Point(422, 650);
+            this.btnLammoi.Name = "btnLammoi";
+            this.btnLammoi.Size = new System.Drawing.Size(98, 49);
+            this.btnLammoi.TabIndex = 17;
+            this.btnLammoi.Text = "Làm mới";
+            this.btnLammoi.UseVisualStyleBackColor = false;
+            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Green;
+            this.label1.Location = new System.Drawing.Point(452, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(367, 36);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "BÁO CÁO DOANH THU";
+            // 
             // frmBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1338, 726);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnInBC);
+            this.Controls.Add(this.btnHienthi);
+            this.Controls.Add(this.btnLammoi);
             this.Controls.Add(this.mskNgay);
             this.Controls.Add(this.cboSP);
             this.Controls.Add(this.ckbSP);
@@ -246,14 +258,10 @@
             this.Controls.Add(this.txtTongtien);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtBangchu);
-            this.Controls.Add(this.btnInBC);
-            this.Controls.Add(this.btnHienthi);
-            this.Controls.Add(this.btnLammoi);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.PanelTime);
             this.Controls.Add(this.rdoKhoang);
             this.Controls.Add(this.rdoNgay);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBaoCao";
             this.Text = "frmBaoCao";
@@ -267,8 +275,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rdoNgay;
         private System.Windows.Forms.RadioButton rdoKhoang;
         private System.Windows.Forms.Panel PanelTime;
@@ -277,9 +283,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.Button btnLammoi;
-        private System.Windows.Forms.Button btnHienthi;
-        private System.Windows.Forms.Button btnInBC;
         private System.Windows.Forms.Label txtBangchu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTongtien;
@@ -287,5 +290,9 @@
         private System.Windows.Forms.CheckBox ckbSP;
         private System.Windows.Forms.ComboBox cboSP;
         private System.Windows.Forms.DateTimePicker mskNgay;
+        private System.Windows.Forms.Button btnInBC;
+        private System.Windows.Forms.Button btnHienthi;
+        private System.Windows.Forms.Button btnLammoi;
+        private System.Windows.Forms.Label label1;
     }
 }

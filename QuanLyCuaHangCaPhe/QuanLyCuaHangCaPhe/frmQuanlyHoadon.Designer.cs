@@ -36,13 +36,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnInHD = new FontAwesome.Sharp.IconButton();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtsdt = new System.Windows.Forms.TextBox();
+            this.BtnThongke = new FontAwesome.Sharp.IconButton();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
+            this.btnInHD = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dGridDsHD)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGridChitietHD)).BeginInit();
@@ -130,51 +130,6 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(136, 26);
             this.dateTimePicker2.TabIndex = 5;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(28, 107);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 50);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Thống kê";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnInHD
-            // 
-            this.btnInHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnInHD.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.btnInHD.IconColor = System.Drawing.Color.Black;
-            this.btnInHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInHD.IconSize = 30;
-            this.btnInHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInHD.Location = new System.Drawing.Point(1158, 167);
-            this.btnInHD.Name = "btnInHD";
-            this.btnInHD.Size = new System.Drawing.Size(128, 49);
-            this.btnInHD.TabIndex = 8;
-            this.btnInHD.Text = "In hóa đơn";
-            this.btnInHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInHD.UseVisualStyleBackColor = false;
-            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.SearchMinus;
-            this.btnSearch.IconColor = System.Drawing.Color.Black;
-            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSearch.IconSize = 30;
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(1158, 107);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(128, 49);
-            this.btnSearch.TabIndex = 9;
-            this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -208,19 +163,74 @@
             this.txtsdt.Name = "txtsdt";
             this.txtsdt.Size = new System.Drawing.Size(125, 26);
             this.txtsdt.TabIndex = 14;
+            this.txtsdt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsdt_KeyPress);
+            // 
+            // BtnThongke
+            // 
+            this.BtnThongke.BackColor = System.Drawing.Color.Green;
+            this.BtnThongke.ForeColor = System.Drawing.Color.White;
+            this.BtnThongke.IconChar = FontAwesome.Sharp.IconChar.Receipt;
+            this.BtnThongke.IconColor = System.Drawing.Color.White;
+            this.BtnThongke.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnThongke.IconSize = 30;
+            this.BtnThongke.Location = new System.Drawing.Point(64, 106);
+            this.BtnThongke.Name = "BtnThongke";
+            this.BtnThongke.Size = new System.Drawing.Size(139, 49);
+            this.BtnThongke.TabIndex = 16;
+            this.BtnThongke.Text = "Thống kê";
+            this.BtnThongke.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnThongke.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnThongke.UseVisualStyleBackColor = false;
+            this.BtnThongke.Click += new System.EventHandler(this.BtnThongke_Click_1);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Green;
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.SearchMinus;
+            this.btnSearch.IconColor = System.Drawing.Color.White;
+            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSearch.IconSize = 30;
+            this.btnSearch.Location = new System.Drawing.Point(1158, 101);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(128, 54);
+            this.btnSearch.TabIndex = 18;
+            this.btnSearch.Text = "Tìm kiếm";
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnInHD
+            // 
+            this.btnInHD.BackColor = System.Drawing.Color.Green;
+            this.btnInHD.ForeColor = System.Drawing.Color.White;
+            this.btnInHD.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btnInHD.IconColor = System.Drawing.Color.White;
+            this.btnInHD.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInHD.IconSize = 30;
+            this.btnInHD.Location = new System.Drawing.Point(1158, 162);
+            this.btnInHD.Name = "btnInHD";
+            this.btnInHD.Size = new System.Drawing.Size(128, 53);
+            this.btnInHD.TabIndex = 17;
+            this.btnInHD.Text = "In hóa đơn";
+            this.btnInHD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInHD.UseVisualStyleBackColor = false;
+            this.btnInHD.Click += new System.EventHandler(this.btnInHD_Click);
             // 
             // frmQuanlyHoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1338, 803);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnInHD);
+            this.Controls.Add(this.BtnThongke);
             this.Controls.Add(this.txtsdt);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.btnInHD);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
@@ -248,12 +258,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Button button1;
-        private FontAwesome.Sharp.IconButton btnInHD;
-        private FontAwesome.Sharp.IconButton btnSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtsdt;
+        private FontAwesome.Sharp.IconButton BtnThongke;
+        private FontAwesome.Sharp.IconButton btnSearch;
+        private FontAwesome.Sharp.IconButton btnInHD;
     }
 }

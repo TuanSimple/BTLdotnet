@@ -106,8 +106,8 @@ namespace QuanLyCuaHangCaPhe
             dataGridView.Columns[1].HeaderText = "Ngày bán";
             dataGridView.Columns[2].HeaderText = "Tên nhân viên";
             dataGridView.Columns[3].HeaderText = "Tên khách hàng";
-            dataGridView.Columns[4].HeaderText = "Tổng tiền";
-            dataGridView.Columns[5].HeaderText = "Hình thức thanh toán";
+            dataGridView.Columns[4].HeaderText = "Giảm giá";
+            dataGridView.Columns[5].HeaderText = "Tổng tiền";
             dataGridView.Columns[0].Width = 100;
             dataGridView.Columns[1].Width = 100;
             dataGridView.Columns[2].Width = 120;
@@ -127,14 +127,16 @@ namespace QuanLyCuaHangCaPhe
             dataGridView.Columns[1].HeaderText = "Tên sản phẩm";
             dataGridView.Columns[2].HeaderText = "Mã loại";
             dataGridView.Columns[3].HeaderText = "Số luợng";
-            dataGridView.Columns[4].HeaderText = "Giá bán";
-            dataGridView.Columns[5].HeaderText = "Thành tiền";
+            dataGridView.Columns[4].HeaderText = "Ngày bán";
+            dataGridView.Columns[5].HeaderText = "Giá bán";
+            dataGridView.Columns[6].HeaderText = "Thành tiền";
             dataGridView.Columns[0].Width = 100;
             dataGridView.Columns[1].Width = 100;
             dataGridView.Columns[2].Width = 100;
             dataGridView.Columns[3].Width = 100;
             dataGridView.Columns[4].Width = 100;
             dataGridView.Columns[5].Width = 100;
+            dataGridView.Columns[6].Width = 100;
             dataGridView.AllowUserToAddRows = false;
             dataGridView.EditMode = DataGridViewEditMode.EditProgrammatically;
             btnLammoi.Enabled = true;
@@ -142,9 +144,9 @@ namespace QuanLyCuaHangCaPhe
         }
         private void ResetValues()
         {
-            dateTimePicker1.Text = " / /";
-            dateTimePicker2.Text = " / /";
-            mskNgay.Text = " / /";
+            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now;
+            mskNgay.Value = DateTime.Now;
             ckbHD.Checked = false;
             ckbSP.Checked = false;
             rdoKhoang.Checked = false;
@@ -157,8 +159,7 @@ namespace QuanLyCuaHangCaPhe
         // Khai báo biến toàn cục trong Form
         string sqlBaoCao = "";
         string loaiBaoCao = "";
-
-        private void btnHienthi_Click(object sender, EventArgs e)
+        private void btnHienthi_Click_1(object sender, EventArgs e)
         {
             string sql = "", sql1 = "";
             string ngay = mskNgay.Text.Trim();
@@ -175,13 +176,14 @@ namespace QuanLyCuaHangCaPhe
             if (ckbHD.Checked)
             {
                 // Báo cáo theo hóa đơn
-                sql = "SELECT a.MaHoaDonBan, a.NgayBan, b.TenNhanVien, c.TenKhachHang, a.TongTien, a.Hinhthuc " +
+                sql = "SELECT a.MaHoaDonBan, a.NgayBan, b.TenNhanVien, c.TenKhachHang, (d.MucKhuyenMai)*(a.TongTien) as GiamGia, a.TongTien " +
                       "FROM HoaDonBan a " +
                       "JOIN NhanVien b ON a.MaNhanVien = b.MaNhanVien " +
                       "JOIN KhachHang c ON a.MaKhachHang = c.MaKhachHang " +
-                      "WHERE 1=1";
+                      "JOIN KhuyenMai d ON d.MaKhuyenMai = a.MaKhuyenMai " +
+                      "WHERE a.Trangthai=1";
 
-                sql1 = "FROM HoaDonBan WHERE 1=1";
+                sql1 = "FROM HoaDonBan Where Trangthai=1";
 
                 if (rdoNgay.Checked && !string.IsNullOrWhiteSpace(ngay))
                 {
@@ -231,16 +233,16 @@ namespace QuanLyCuaHangCaPhe
             else if (ckbSP.Checked)
             {
                 // Báo cáo theo sản phẩm
-                sql = "SELECT a.MaSanPham, a.TenSanPham, a.MaLoai, c.SoLuong, a.GiaBan, c.ThanhTien " +
+                sql = "SELECT a.MaSanPham, a.TenSanPham, a.MaLoai, c.SoLuong, b.NgayBan, a.GiaBan, c.ThanhTien " +
                       "FROM SanPham a " +
                       "JOIN ChiTietHoaDonBan c ON a.MaSanPham = c.MaSanPham " +
                       "JOIN HoaDonBan b ON c.MaHoaDonBan = b.MaHoaDonBan " +
-                      "WHERE 1=1";
+                      "WHERE b.Trangthai=1";
 
                 sql1 = "FROM SanPham a " +
                        "JOIN ChiTietHoaDonBan b ON a.MaSanPham = b.MaSanPham " +
                        "JOIN HoaDonBan c ON b.MaHoaDonBan = c.MaHoaDonBan " +
-                       "WHERE 1=1";
+                       "WHERE c.Trangthai=1";
 
                 if (rdoNgay.Checked && !string.IsNullOrWhiteSpace(ngay))
                 {
@@ -298,14 +300,15 @@ namespace QuanLyCuaHangCaPhe
             }
         }
 
-        private void btnLammoi_Click(object sender, EventArgs e)
+        private void btnLammoi_Click_1(object sender, EventArgs e)
         {
+
             cboSP.Text = "";
             txtTongtien.Text = "";
-            mskNgay.Text = "";
-            dateTimePicker1.Text = "";
-            dateTimePicker2.Text = "";
-
+            mskNgay.Value = DateTime.Now;
+            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now;
+            txtBangchu.Text = "Bằng chữ: ";
             cboSP.Enabled = true;
             btnInBC.Enabled = false;
             btnLammoi.Enabled = false;
@@ -316,8 +319,7 @@ namespace QuanLyCuaHangCaPhe
             rdoKhoang.Enabled = true;
             dataGridView.DataSource = null;
         }
-
-        private void btnInBC_Click(object sender, EventArgs e)
+        private void btnInBC_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(loaiBaoCao) || string.IsNullOrEmpty(sqlBaoCao))
             {
@@ -330,11 +332,12 @@ namespace QuanLyCuaHangCaPhe
             COMExcel.Worksheet exSheet = exBook.Worksheets[1];
             COMExcel.Range exRange;
             int row = 1;
+            int colCount = (loaiBaoCao == "HD") ? 6 : 7;
 
             exSheet.Cells.Font.Name = "Times New Roman";
 
             // Tiêu đề chính
-            exRange = exSheet.Range["A1:F1"];
+            exRange = exSheet.Range[exSheet.Cells[row, 1], exSheet.Cells[row, colCount]];
             exRange.MergeCells = true;
             exRange.Font.Size = 14;
             exRange.Font.Bold = true;
@@ -342,18 +345,14 @@ namespace QuanLyCuaHangCaPhe
             exRange.Value = "NEFT COFFEE - BÁO CÁO DOANH THU";
             row += 2;
 
-            // Thời gian lọc báo cáo
+            // Thời gian lọc
             string thoiGianLoc = "";
             if (rdoNgay.Checked && Function.IsDate(mskNgay.Text.Trim()))
-            {
                 thoiGianLoc = "Ngày báo cáo: " + mskNgay.Text.Trim();
-            }
             else if (rdoKhoang.Checked)
-            {
                 thoiGianLoc = "Từ ngày: " + dateTimePicker1.Text + " đến ngày: " + dateTimePicker2.Text;
-            }
 
-            exRange = exSheet.Range["A" + row + ":F" + row];
+            exRange = exSheet.Range[exSheet.Cells[row, 1], exSheet.Cells[row, colCount]];
             exRange.MergeCells = true;
             exRange.HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
             exRange.Font.Italic = true;
@@ -361,24 +360,28 @@ namespace QuanLyCuaHangCaPhe
             row += 2;
 
             double tongTien = 0;
+            int dataStartRow = row;
 
             if (loaiBaoCao == "HD")
             {
                 DataTable tblHD = Function.GetDataToTable(sqlBaoCao);
-                exRange = exSheet.Range["A" + row + ":F" + row];
+
+                // Header
+                exRange = exSheet.Range[exSheet.Cells[row, 1], exSheet.Cells[row, 6]];
                 exRange.Font.Bold = true;
-                exRange.Value2 = new object[,] { { "Mã HĐ", "Ngày bán", "Nhân viên", "Khách hàng", "Tổng tiền", "Hình thức" } };
+                exRange.Value2 = new object[,] { { "Mã HĐ", "Ngày bán", "Nhân viên", "Khách hàng", "Giảm giá", "Tổng tiền" } };
                 row++;
 
+                // Dữ liệu
                 foreach (DataRow r in tblHD.Rows)
                 {
                     exSheet.Cells[row, 1] = r["MaHoaDonBan"];
                     exSheet.Cells[row, 2] = Convert.ToDateTime(r["NgayBan"]).ToString("dd/MM/yyyy");
                     exSheet.Cells[row, 3] = r["TenNhanVien"];
                     exSheet.Cells[row, 4] = r["TenKhachHang"];
+                    exSheet.Cells[row, 5] = r["GiamGia"];
                     double tien = Convert.ToDouble(r["TongTien"]);
-                    exSheet.Cells[row, 5] = tien.ToString("N0");
-                    exSheet.Cells[row, 6] = r["Hinhthuc"];
+                    exSheet.Cells[row, 6] = tien.ToString("N0");
                     tongTien += tien;
                     row++;
                 }
@@ -386,74 +389,56 @@ namespace QuanLyCuaHangCaPhe
             else if (loaiBaoCao == "SP")
             {
                 DataTable tblSP = Function.GetDataToTable(sqlBaoCao);
-                exRange = exSheet.Range["A" + row + ":F" + row];
+
+                // Header
+                exRange = exSheet.Range[exSheet.Cells[row, 1], exSheet.Cells[row, 7]];
                 exRange.Font.Bold = true;
-                exRange.Value2 = new object[,] { { "Mã SP", "Tên SP", "Mã loại", "Số lượng", "Giá bán", "Thành tiền" } };
+                exRange.Value2 = new object[,] { { "Mã SP", "Tên SP", "Mã loại", "Số lượng", "Ngày bán", "Giá bán", "Thành tiền" } };
                 row++;
 
+                // Dữ liệu
                 foreach (DataRow r in tblSP.Rows)
                 {
                     exSheet.Cells[row, 1] = r["MaSanPham"];
                     exSheet.Cells[row, 2] = r["TenSanPham"];
                     exSheet.Cells[row, 3] = r["MaLoai"];
                     exSheet.Cells[row, 4] = r["SoLuong"];
-                    exSheet.Cells[row, 5] = Convert.ToDouble(r["GiaBan"]).ToString("N0");
+                    exSheet.Cells[row, 5] = Convert.ToDateTime(r["NgayBan"]).ToString("dd/MM/yyyy");
+                    exSheet.Cells[row, 6] = Convert.ToDouble(r["GiaBan"]).ToString("N0");
                     double tien = Convert.ToDouble(r["ThanhTien"]);
-                    exSheet.Cells[row, 6] = tien.ToString("N0");
+                    exSheet.Cells[row, 7] = tien.ToString("N0");
                     tongTien += tien;
                     row++;
                 }
             }
 
-            // Tổng tiền bằng số
-            exRange = exSheet.Range["E" + row];
+            // Tổng tiền
+            exRange = exSheet.Cells[row, colCount - 1];
             exRange.Font.Bold = true;
             exRange.Value = "Tổng tiền:";
-            exSheet.Cells[row, 6] = tongTien.ToString("N0");
+            exSheet.Cells[row, colCount] = tongTien.ToString("N0");
 
-            // Tổng tiền bằng chữ
+            // Bằng chữ
             row += 2;
-            exRange = exSheet.Range["A" + row + ":F" + row];
+            exRange = exSheet.Range[exSheet.Cells[row, 1], exSheet.Cells[row, colCount]];
             exRange.MergeCells = true;
             exRange.Font.Italic = true;
             exRange.Value = "Bằng chữ: " + Function.ChuyenSoSangChu(tongTien.ToString());
 
-            // Chữ ký và ngày lập
+            // Ngày ký
             row += 3;
-            exRange = exSheet.Range["E" + row + ":F" + row];
+            exRange = exSheet.Range[exSheet.Cells[row, colCount - 2], exSheet.Cells[row, colCount]];
             exRange.MergeCells = true;
             exRange.HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
             exRange.Value = "Hà Nội, ngày " + DateTime.Now.Day + " tháng " + DateTime.Now.Month + " năm " + DateTime.Now.Year;
 
             row++;
-            exRange = exSheet.Range["E" + row + ":F" + row];
+            exRange = exSheet.Range[exSheet.Cells[row, colCount - 2], exSheet.Cells[row, colCount]];
             exRange.MergeCells = true;
             exRange.HorizontalAlignment = COMExcel.XlHAlign.xlHAlignCenter;
             exRange.Value = "Người lập báo cáo";
 
             exSheet.Name = "BaoCaoDoanhThu";
-            if (loaiBaoCao == "SP")
-            {
-                // Xác định vùng dữ liệu biểu đồ: từ A(rowStart) đến F(rowEnd)
-                int rowStart = row - tblBCSP.Rows.Count;
-                int rowEnd = row - 1;
-
-                COMExcel.ChartObjects chartObjs = (COMExcel.ChartObjects)exSheet.ChartObjects();
-                COMExcel.ChartObject chartObj = chartObjs.Add(300, 50, 500, 300); // (left, top, width, height)
-                COMExcel.Chart chart = chartObj.Chart;
-
-                // Vùng dữ liệu: Tên SP (B) và Thành tiền (F)
-                COMExcel.Range chartRange = exSheet.get_Range("B" + rowStart, "F" + rowEnd);
-                chart.SetSourceData(chartRange);
-
-                chart.ChartType = COMExcel.XlChartType.xlColumnClustered;
-                chart.HasTitle = true;
-                chart.ChartTitle.Text = "Doanh thu theo sản phẩm";
-                chart.Axes(COMExcel.XlAxisType.xlCategory).HasTitle = true;
-                chart.Axes(COMExcel.XlAxisType.xlCategory).AxisTitle.Text = "Tên sản phẩm";
-                chart.Axes(COMExcel.XlAxisType.xlValue).HasTitle = true;
-                chart.Axes(COMExcel.XlAxisType.xlValue).AxisTitle.Text = "Thành tiền (VNĐ)";
-            }
             exApp.Visible = true;
         }
     }

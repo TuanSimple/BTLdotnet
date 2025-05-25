@@ -25,7 +25,7 @@ namespace QuanLyCuaHangCaPhe
         private void frmQuanlyHoadon_Load(object sender, EventArgs e)
         {
             Load_dGridHoadon();
-
+            dGridDsHD.DataSource = null;
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "dd/MM/yyyy";
 
@@ -91,7 +91,20 @@ namespace QuanLyCuaHangCaPhe
         }
         #endregion
 
-        private void button1_Click(object sender, EventArgs e)
+        private void txtsdt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Chỉ cho phép nhập số và xóa
+            if (e.KeyChar >= '0' && e.KeyChar <= '9' || e.KeyChar == (char)Keys.Back)
+            {
+                e.Handled = false; // Cho phép nhập
+            }
+            else
+            {
+                e.Handled = true; // Không cho phép nhập ký tự khác
+            }
+        }
+
+        private void BtnThongke_Click_1(object sender, EventArgs e)
         {
             dGridChitietHD.DataSource = null;
             string tuNgay = dateTimePicker1.Text;
@@ -108,8 +121,42 @@ namespace QuanLyCuaHangCaPhe
             LoadListBillByDate(dateTimePicker1.Value, dateTimePicker2.Value);
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string sdt = txtsdt.Text.Trim();
+
+            if (sdt == "")
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Lưu ý: nếu số điện thoại lưu trong DB có dấu '0' đầu thì cần giữ nguyên
+            string sql = "SELECT a.MaHoaDonBan, a.NgayBan, a.TongTien, b.TenKhachHang, c.TenNhanVien " +
+                         "FROM HoaDonBan AS a " +
+                         "JOIN KhachHang AS b ON a.MaKhachHang = b.MaKhachHang " +
+                         "JOIN NhanVien AS c ON a.MaNhanVien = c.MaNhanVien " +
+                         "WHERE b.SoDienThoai = N'" + sdt + "'";
+
+            DataTable dt = Function.GetDataToTable(sql);
+
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy hóa đơn nào cho số điện thoại này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                dGridDsHD.DataSource = dt;
+            }
+        }
+
         private void btnInHD_Click(object sender, EventArgs e)
         {
+            if (tblChitietHoadon == null || tblChitietHoadon.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu chi tiết hóa đơn để in.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             COMExcel.Application exApp = new COMExcel.Application();
             COMExcel.Workbook exBook = exApp.Workbooks.Add(COMExcel.XlWBATemplate.xlWBATWorksheet);
             COMExcel.Worksheet exSheet = exBook.Worksheets[1];
@@ -263,41 +310,6 @@ namespace QuanLyCuaHangCaPhe
             // Tên sheet
             exSheet.Name = "Hóa đơn bán";
             exApp.Visible = true;
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            string sdt = txtsdt.Text.Trim();
-
-            if (sdt == "")
-            {
-                MessageBox.Show("Vui lòng nhập số điện thoại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Lưu ý: nếu số điện thoại lưu trong DB có dấu '0' đầu thì cần giữ nguyên
-            string sql = "SELECT a.MaHoaDonBan, a.NgayBan, a.TongTien, b.TenKhachHang, c.TenNhanVien " +
-                         "FROM HoaDonBan AS a " +
-                         "JOIN KhachHang AS b ON a.MaKhachHang = b.MaKhachHang " +
-                         "JOIN NhanVien AS c ON a.MaNhanVien = c.MaNhanVien " +
-                         "WHERE b.SoDienThoai = N'" + sdt + "'";
-
-            DataTable dt = Function.GetDataToTable(sql);
-
-            if (dt.Rows.Count == 0)
-            {
-                MessageBox.Show("Không tìm thấy hóa đơn nào cho số điện thoại này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                dGridDsHD.DataSource = dt;
-            }
-        }
-
-        private void txtsdt_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            //Kiểm tra chỉ được phép nhập số
-
         }
     }
 }
