@@ -100,7 +100,7 @@ namespace QuanLyCuaHangCaPhe
 
         private void dataGridViewQLyCaPhe_Click(object sender, EventArgs e)
         {
-            string ma;
+            
             if (btnThem.Enabled == false)
             {
                 MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -434,7 +434,7 @@ namespace QuanLyCuaHangCaPhe
         private void btnXoaChitiet_Click(object sender, EventArgs e)
         {
             string sql1= "";
-            string sql2 = "";   
+
             if (ChiTietSanPham.Rows.Count == 0)
             {
                 MessageBox.Show("Không có dữ liệu", "Thông báo", MessageBoxButtons.OK);
