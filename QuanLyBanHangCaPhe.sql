@@ -28,7 +28,7 @@ CREATE TABLE NhanVien (
     GioiTinh CHAR(1),
     NgaySinh DATE,
     Email NVARCHAR(50),
-    SoDienThoai CHAR(10),
+    SoDienThoai NVARCHAR(15),
     MatKhau NVARCHAR(50),
     NgayTao DATE,
     FOREIGN KEY (MaChucVu) REFERENCES ChucVu(MaChucVu),

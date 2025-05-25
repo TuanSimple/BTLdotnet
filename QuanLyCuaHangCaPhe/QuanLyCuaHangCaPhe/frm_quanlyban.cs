@@ -23,7 +23,6 @@ namespace QuanLyCuaHangCaPhe
             txtMaban.Enabled = false;
             ibtnLuu.Enabled = false;
             Load_DataGridView();
-            LoadFlowLayoutPanel();
             cboTinhtrang.Items.Clear();
             cboTinhtrang.Items.Add("1");
             cboTinhtrang.Items.Add("0");
@@ -44,6 +43,35 @@ namespace QuanLyCuaHangCaPhe
             datagridBan.EditMode = DataGridViewEditMode.EditProgrammatically;
             DoiMauTrangThaiBan();
         }
+        private void datagridBan_Click(object sender, EventArgs e)
+        {
+            if (ibtnLuu.Enabled == true)
+            {
+                MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMaban.Focus();
+                return;
+            }
+
+            if (datagridBan.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Gán dữ liệu từ dòng đang chọn vào các ô nhập
+            txtMaban.Text = datagridBan.CurrentRow.Cells["Maban"].Value.ToString();
+            txtSoluongghe.Text = datagridBan.CurrentRow.Cells["Soluongghe"].Value.ToString();
+            cboTinhtrang.Text = datagridBan.CurrentRow.Cells["Tinhtrang"].Value.ToString();
+
+            // Cho phép sửa, xóa; không cho thêm hay lưu
+            ibtnSua.Enabled = true;
+            ibtnXoa.Enabled = true;
+            ibtnThem.Enabled = false;
+            ibtnLuu.Enabled = false;
+
+            // Không cho sửa mã bàn
+            txtMaban.Enabled = false;
+        }
         private void DoiMauTrangThaiBan()
         {
             foreach (DataGridViewRow row in datagridBan.Rows)
@@ -58,36 +86,8 @@ namespace QuanLyCuaHangCaPhe
                 }
             }
         }
-        private void LoadFlowLayoutPanel()
-        {
-            flpBan.Controls.Clear(); // Xóa dữ liệu cũ
-            string sql = "SELECT * FROM Ban";
-            DataTable dtBan = Function.GetDataToTable(sql);
-
-            foreach (DataRow row in dtBan.Rows)
-            {
-                Button btn = new Button();
-                btn.Width = 100;
-                btn.Height = 100;
-                btn.Text = row["Maban"].ToString();
-
-                // Áp dụng màu sắc theo trạng thái
-                if (row["Tinhtrang"].ToString() == "1")
-                    btn.BackColor = Color.LightPink; // Đang dùng
-                else
-                    btn.BackColor = Color.LightGreen; // Trống
-
-                // Thêm sự kiện click nếu muốn xử lý chọn bàn
-                btn.Click += (s, e) =>
-                {
-                    txtMaban.Text = row["Maban"].ToString();
-                    txtSoluongghe.Text = row["Soluongghe"].ToString();
-                    cboTinhtrang.Text = row["Tinhtrang"].ToString();
-                };
-
-                flpBan.Controls.Add(btn); // Thêm vào FlowLayoutPanel
-            }
-        }
+       
+        
         private void ResetValues()
         {
             txtMaban.Text = "";
@@ -160,7 +160,6 @@ namespace QuanLyCuaHangCaPhe
             {
                 sql = "DELETE Ban WHERE Maban = N'" + txtMaban.Text.Trim() + "'";
                 Function.RunSqlDel(sql);
-                LoadFlowLayoutPanel();
                 Load_DataGridView();
                 ResetValues();
             }
@@ -197,7 +196,6 @@ namespace QuanLyCuaHangCaPhe
             }
             sql = "INSERT INTO Ban(Maban, Soluongghe, Tinhtrang) VALUES(N'" + txtMaban.Text.Trim() + "', " + soluong + ", N'" + cboTinhtrang.Text.Trim() + "')";
             Function.RunSql(sql);
-            LoadFlowLayoutPanel();
             Load_DataGridView();  // Nạp lại bảng
             ResetValues();        // Đặt lại các textbox
             ibtnXoa.Enabled = true;
@@ -217,6 +215,7 @@ namespace QuanLyCuaHangCaPhe
             txtMaban.Enabled = false;
         }
 
-       
+
     }
 }
+

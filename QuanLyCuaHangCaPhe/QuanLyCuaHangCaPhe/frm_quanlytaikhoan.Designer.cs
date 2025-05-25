@@ -34,6 +34,8 @@
             this.ibtnSua = new FontAwesome.Sharp.IconButton();
             this.ibtnThem = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtLuong = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.datagridtaikhoan = new System.Windows.Forms.DataGridView();
-            this.txtLuong = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridtaikhoan)).BeginInit();
@@ -179,6 +179,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(563, 297);
             this.panel2.TabIndex = 21;
+            // 
+            // txtLuong
+            // 
+            this.txtLuong.Location = new System.Drawing.Point(180, 230);
+            this.txtLuong.Name = "txtLuong";
+            this.txtLuong.Size = new System.Drawing.Size(319, 31);
+            this.txtLuong.TabIndex = 17;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(16, 230);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(78, 25);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Lương ";
             // 
             // label9
             // 
@@ -381,7 +398,6 @@
             this.label11.Size = new System.Drawing.Size(751, 67);
             this.label11.TabIndex = 28;
             this.label11.Text = "Danh sách quản lý tài khoản";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // datagridtaikhoan
             // 
@@ -393,23 +409,6 @@
             this.datagridtaikhoan.Size = new System.Drawing.Size(1126, 403);
             this.datagridtaikhoan.TabIndex = 29;
             this.datagridtaikhoan.Click += new System.EventHandler(this.datagridtaikhoan_Click_1);
-            // 
-            // txtLuong
-            // 
-            this.txtLuong.Location = new System.Drawing.Point(180, 230);
-            this.txtLuong.Name = "txtLuong";
-            this.txtLuong.Size = new System.Drawing.Size(319, 31);
-            this.txtLuong.TabIndex = 17;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(16, 230);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 25);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Lương ";
             // 
             // frm_quanlytaikhoan
             // 
