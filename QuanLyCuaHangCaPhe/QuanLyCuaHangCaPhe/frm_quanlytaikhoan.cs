@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyCuaHangCaPhe;
 
 namespace QuanLyCuaHangCaPhe
 {
@@ -165,29 +166,16 @@ namespace QuanLyCuaHangCaPhe
                         txtLuong.Text = "0"; // Nếu không tìm thấy, đặt mặc định là 0
                     }
                 }
+                else
+                {
+                    txtLuong.Text = "0"; // Nếu SelectedValue null hoặc empty
+                }
             }
             else
             {
                 txtLuong.Text = "0"; // Nếu không chọn chức vụ, đặt lương về 0
             }
         }
-
-            if (dtLuong.Rows.Count > 0)
-            {
-                // Hiển thị lương cơ bản trong txtLuong
-                txtLuong.Text = dtLuong.Rows[0]["LuongCoBan"].ToString();
-            }
-            else
-            {
-                txtLuong.Text = "0"; // Nếu không tìm thấy, đặt mặc định là 0
-            }
-        }
-    }
-    else
-    {
-        txtLuong.Text = "0"; // Nếu không chọn chức vụ, đặt lương về 0
-    }
-}
 
         private void ibtnThem_Click(object sender, EventArgs e)
         {

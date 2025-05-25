@@ -163,3 +163,4 @@ C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCua
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frm_quanly.resources
