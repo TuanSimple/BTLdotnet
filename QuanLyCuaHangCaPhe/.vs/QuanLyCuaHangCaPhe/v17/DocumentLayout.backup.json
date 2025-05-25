@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|c:\\users\\lt\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\btldotnet\\quanlycuahangcaphe\\quanlycuahangcaphe\\quanly\\frmbaocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\quanly\\frmbaocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|c:\\users\\lt\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\btldotnet\\quanlycuahangcaphe\\quanlycuahangcaphe\\quanly\\frmbaocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\quanly\\frmbaocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|c:\\users\\lt\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\btldotnet\\quanlycuahangcaphe\\quanlycuahangcaphe\\quanly\\frmbaocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\quanly\\frmbaocao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|c:\\users\\lt\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\btldotnet\\quanlycuahangcaphe\\quanlycuahangcaphe\\quanly\\frmdanhmucsanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 59,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frmBaoCao.cs",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\QuanLy\\frmBaoCao.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\QuanLy\\frmBaoCao.cs",
@@ -91,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "frmBaoCao.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\QuanLy\\frmBaoCao.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\QuanLy\\frmBaoCao.cs",

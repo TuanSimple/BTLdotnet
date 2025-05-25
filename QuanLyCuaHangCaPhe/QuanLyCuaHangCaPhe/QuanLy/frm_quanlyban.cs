@@ -31,12 +31,16 @@ namespace QuanLyCuaHangCaPhe
         }
         private void Load_DataGridView()
         {
-            string sql = "SELECT * FROM Ban";
+            string sql = "SELECT MaBan, SoLuongGhe, " +
+             "CASE WHEN TinhTrang = 0 THEN N'Trống' " +
+             "WHEN TinhTrang = 1 THEN N'Đang sử dụng' " +
+             "ELSE N'Không xác định' END AS TinhTrang " +
+             "FROM Ban";
             tblban = Function.GetDataToTable(sql);
             datagridBan.DataSource = tblban;
             datagridBan.Columns[0].HeaderText = "Mã bàn";
-            datagridBan.Columns[1].HeaderText = "Số lượng bàn";
-            datagridBan.Columns[2].HeaderText = "Trạng thái";
+            datagridBan.Columns[1].HeaderText = "Số lượng ghế";
+            datagridBan.Columns[2].HeaderText = "Tình trạng";
             datagridBan.Columns[0].Width = 100;
             datagridBan.Columns[1].Width = 150;
             datagridBan.Columns[2].Width = 150;
@@ -216,7 +220,10 @@ namespace QuanLyCuaHangCaPhe
             txtMaban.Enabled = false;
         }
 
+        private void datagridBan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }
 
