@@ -60,6 +60,7 @@ namespace QuanLyCuaHangCaPhe
 
                 if (dt.Rows.Count > 0)
                 {
+                    StaticData.MaNV = dt.Rows[0]["MaNhanVien"].ToString();
                     string tenChucVu = dt.Rows[0]["TenChucVu"].ToString();
 
                     MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -68,8 +69,8 @@ namespace QuanLyCuaHangCaPhe
 
                     if (tenChucVu == "QuanLy")
                     {
-                       // FormQuanLy formQL = new FormQuanLy();
-                       // formQL.ShowDialog();
+                        frm_quanly formQL = new frm_quanly();
+                        formQL.ShowDialog();
                     }
                     else if (tenChucVu == "Thu ngan")
                     {

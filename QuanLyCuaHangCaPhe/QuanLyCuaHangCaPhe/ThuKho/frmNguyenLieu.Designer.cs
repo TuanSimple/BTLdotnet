@@ -131,12 +131,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
             this.label1.Location = new System.Drawing.Point(8, 330);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 17);
+            this.label1.Size = new System.Drawing.Size(96, 18);
             this.label1.TabIndex = 34;
             this.label1.Text = "Số lượng tồn:";
             // 
@@ -155,36 +155,36 @@
             // lblLuong
             // 
             this.lblLuong.AutoSize = true;
-            this.lblLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lblLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
             this.lblLuong.Location = new System.Drawing.Point(8, 266);
             this.lblLuong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLuong.Name = "lblLuong";
-            this.lblLuong.Size = new System.Drawing.Size(79, 17);
+            this.lblLuong.Size = new System.Drawing.Size(81, 18);
             this.lblLuong.TabIndex = 31;
             this.lblLuong.Text = "Đơn vị tính:";
             // 
             // lblTen
             // 
             this.lblTen.AutoSize = true;
-            this.lblTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lblTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
             this.lblTen.Location = new System.Drawing.Point(8, 204);
             this.lblTen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(114, 17);
+            this.lblTen.Size = new System.Drawing.Size(114, 18);
             this.lblTen.TabIndex = 20;
             this.lblTen.Text = "Tên nguyên liệu:";
             // 
             // lblMSSV
             // 
             this.lblMSSV.AutoSize = true;
-            this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMSSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(27)))), ((int)(((byte)(63)))));
             this.lblMSSV.Location = new System.Drawing.Point(8, 144);
             this.lblMSSV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMSSV.Name = "lblMSSV";
-            this.lblMSSV.Size = new System.Drawing.Size(108, 17);
+            this.lblMSSV.Size = new System.Drawing.Size(110, 18);
             this.lblMSSV.TabIndex = 21;
             this.lblMSSV.Text = "Mã nguyên liệu:";
             // 

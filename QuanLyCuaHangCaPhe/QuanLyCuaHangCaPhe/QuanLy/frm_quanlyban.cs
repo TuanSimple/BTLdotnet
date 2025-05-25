@@ -26,6 +26,7 @@ namespace QuanLyCuaHangCaPhe
             cboTinhtrang.Items.Clear();
             cboTinhtrang.Items.Add("1");
             cboTinhtrang.Items.Add("0");
+            datagridBan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ResetValues();
         }
         private void Load_DataGridView()
