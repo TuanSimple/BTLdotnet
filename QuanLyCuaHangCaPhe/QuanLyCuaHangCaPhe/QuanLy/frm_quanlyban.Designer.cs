@@ -164,18 +164,19 @@
             // 
             this.ibtnXoa.BackColor = System.Drawing.Color.Green;
             this.ibtnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnXoa.ForeColor = System.Drawing.Color.Yellow;
+            this.ibtnXoa.ForeColor = System.Drawing.Color.White;
             this.ibtnXoa.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.ibtnXoa.IconColor = System.Drawing.Color.Yellow;
+            this.ibtnXoa.IconColor = System.Drawing.Color.White;
             this.ibtnXoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnXoa.IconSize = 30;
-            this.ibtnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnXoa.Location = new System.Drawing.Point(513, 21);
             this.ibtnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnXoa.Name = "ibtnXoa";
             this.ibtnXoa.Size = new System.Drawing.Size(133, 57);
             this.ibtnXoa.TabIndex = 21;
             this.ibtnXoa.Text = "     Xóa ";
+            this.ibtnXoa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibtnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnXoa.UseVisualStyleBackColor = false;
             this.ibtnXoa.Click += new System.EventHandler(this.ibtnXoa_Click);
             // 
@@ -183,18 +184,19 @@
             // 
             this.ibtnSua.BackColor = System.Drawing.Color.Green;
             this.ibtnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnSua.ForeColor = System.Drawing.Color.Yellow;
+            this.ibtnSua.ForeColor = System.Drawing.Color.White;
             this.ibtnSua.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.ibtnSua.IconColor = System.Drawing.Color.Yellow;
+            this.ibtnSua.IconColor = System.Drawing.Color.White;
             this.ibtnSua.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnSua.IconSize = 30;
-            this.ibtnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnSua.Location = new System.Drawing.Point(303, 21);
             this.ibtnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnSua.Name = "ibtnSua";
             this.ibtnSua.Size = new System.Drawing.Size(133, 57);
             this.ibtnSua.TabIndex = 20;
             this.ibtnSua.Text = "     Sửa";
+            this.ibtnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibtnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnSua.UseVisualStyleBackColor = false;
             this.ibtnSua.Click += new System.EventHandler(this.ibtnSua_Click);
             // 
@@ -202,18 +204,19 @@
             // 
             this.ibtnLuu.BackColor = System.Drawing.Color.Green;
             this.ibtnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnLuu.ForeColor = System.Drawing.Color.Yellow;
+            this.ibtnLuu.ForeColor = System.Drawing.Color.White;
             this.ibtnLuu.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.ibtnLuu.IconColor = System.Drawing.Color.Yellow;
+            this.ibtnLuu.IconColor = System.Drawing.Color.White;
             this.ibtnLuu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnLuu.IconSize = 30;
-            this.ibtnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnLuu.Location = new System.Drawing.Point(735, 21);
             this.ibtnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnLuu.Name = "ibtnLuu";
             this.ibtnLuu.Size = new System.Drawing.Size(133, 57);
             this.ibtnLuu.TabIndex = 22;
             this.ibtnLuu.Text = "     Lưu";
+            this.ibtnLuu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibtnLuu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnLuu.UseVisualStyleBackColor = false;
             this.ibtnLuu.Click += new System.EventHandler(this.ibtnLuu_Click);
             // 
@@ -221,18 +224,19 @@
             // 
             this.ibtnThem.BackColor = System.Drawing.Color.Green;
             this.ibtnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnThem.ForeColor = System.Drawing.Color.Yellow;
+            this.ibtnThem.ForeColor = System.Drawing.Color.White;
             this.ibtnThem.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.ibtnThem.IconColor = System.Drawing.Color.Yellow;
+            this.ibtnThem.IconColor = System.Drawing.Color.White;
             this.ibtnThem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnThem.IconSize = 30;
-            this.ibtnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnThem.Location = new System.Drawing.Point(76, 21);
             this.ibtnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnThem.Name = "ibtnThem";
             this.ibtnThem.Size = new System.Drawing.Size(133, 57);
             this.ibtnThem.TabIndex = 19;
             this.ibtnThem.Text = "     Thêm ";
+            this.ibtnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibtnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnThem.UseVisualStyleBackColor = false;
             this.ibtnThem.Click += new System.EventHandler(this.ibtnThem_Click);
             // 
@@ -240,18 +244,19 @@
             // 
             this.ibtnLamoi.BackColor = System.Drawing.Color.Green;
             this.ibtnLamoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ibtnLamoi.ForeColor = System.Drawing.Color.Yellow;
+            this.ibtnLamoi.ForeColor = System.Drawing.Color.White;
             this.ibtnLamoi.IconChar = FontAwesome.Sharp.IconChar.Sync;
-            this.ibtnLamoi.IconColor = System.Drawing.Color.Yellow;
+            this.ibtnLamoi.IconColor = System.Drawing.Color.White;
             this.ibtnLamoi.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ibtnLamoi.IconSize = 30;
-            this.ibtnLamoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ibtnLamoi.Location = new System.Drawing.Point(956, 21);
             this.ibtnLamoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ibtnLamoi.Name = "ibtnLamoi";
             this.ibtnLamoi.Size = new System.Drawing.Size(133, 57);
             this.ibtnLamoi.TabIndex = 23;
             this.ibtnLamoi.Text = "     Làm mới ";
+            this.ibtnLamoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ibtnLamoi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibtnLamoi.UseVisualStyleBackColor = false;
             this.ibtnLamoi.Click += new System.EventHandler(this.ibtnLamoi_Click);
             // 

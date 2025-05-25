@@ -96,6 +96,7 @@ namespace QuanLyCuaHangCaPhe
             dataGridViewQLyCaPhe.AllowUserToAddRows = false;
             // Không cho phép sửa dữ liệu trực tiếp trên lưới
             dataGridViewQLyCaPhe.EditMode = DataGridViewEditMode.EditProgrammatically;
+
         }
 
         private void dataGridViewQLyCaPhe_Click(object sender, EventArgs e)
@@ -136,7 +137,9 @@ namespace QuanLyCuaHangCaPhe
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnBoqua.Enabled = true;
-            
+            txtGiaban.Enabled = false;
+            txtGianhap.Enabled = false;
+
             Load_DataGridViewChiTietSP();
 
         }
@@ -497,6 +500,8 @@ namespace QuanLyCuaHangCaPhe
                 btnBoqua.Enabled = false;
             }
             txtGiaban.Enabled = false;
+            Load_DataGridViewSP();
+            ResetValues();
             
         }
 
@@ -529,15 +534,8 @@ namespace QuanLyCuaHangCaPhe
             string maNguyenLieu = cboNguyenlieu.SelectedValue.ToString();
             string soLuongDung = txtSoluongdung.Text.Trim();
 
-            // Kiểm tra số lượng có phải số không (nếu cần)
-            if (!int.TryParse(soLuongDung, out int soluong))
-            {
-                MessageBox.Show("Số lượng dùng phải là số nguyên.", "Thông báo", MessageBoxButtons.OK);
-                txtSoluongdung.Focus();
-                return;
-            }
-
-            string sql = "UPDATE ChiTietSanPham SET SoLuongDung = " + soluong +
+            
+            string sql = "UPDATE ChiTietSanPham SET SoLuongDung = " + soLuongDung +
                          " WHERE MaSanPham = N'" + maSanPham + "' AND MaNguyenLieu = N'" + maNguyenLieu + "'";
 
             if (MessageBox.Show("Bạn có chắc chắn muốn sửa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -547,6 +545,7 @@ namespace QuanLyCuaHangCaPhe
                 ResetValues1(); // Reset lại các trường chi tiết
                 btnBoqua.Enabled = false;
             }
+            Load_DataGridViewSP();
         }
 
 
@@ -560,6 +559,7 @@ namespace QuanLyCuaHangCaPhe
             btnLuu.Enabled = false;
             txtMasanpham.Enabled = false;
             Load_DataGridViewSP();
+            Load_DataGridViewChiTietSP();
 
         }
 
@@ -573,15 +573,13 @@ namespace QuanLyCuaHangCaPhe
                 txtTim.Focus();
                 return;
             }
-            //sql = "SELECT MaSanPham, TenSanPham, TenLoai, GiaBan, HinhAnh, GiaNhap FROM SanPham s join Loai l on l.MaLoai=s.MaLoai WHERE TenSanPham like N'%" + txtTim.Text + "%'";
-            //tìm theo mã sản phẩm, giá bán, giá nhập nữa
-            sql = "SELECT MaSanPham, TenSanPham, TenLoai, GiaBan, HinhAnh, GiaNhap FROM SanPham s join Loai l on l.MaLoai=s.MaLoai WHERE MaSanPham like N'%" + txtTim.Text + "%' or GiaBan like N'%" + txtTim.Text + "%' or GiaNhap like N'%" + txtTim.Text + "%'";
+            sql = "SELECT MaSanPham, TenSanPham, TenLoai, GiaBan, HinhAnh, GiaNhap FROM SanPham s join Loai l on l.MaLoai=s.MaLoai WHERE TenSanPham like N'%" + txtTim.Text + "%'";
             SanPham = QuanLyCuaHangCaPhe.Function.GetDataToTable(sql);
             //Gán dữ liệu từ bảng vào datagridview
             dataGridViewQLyCaPhe.DataSource = SanPham;
             //xóa chữ ở ô txtTim sau khi tìm xong
             txtTim.Text = "";
-            btnBoqua.Enabled = true;
+
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -592,6 +590,26 @@ namespace QuanLyCuaHangCaPhe
         private void txtTim_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtSoluongdung_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSoluongdung_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true; // chặn ký tự không hợp lệ
+            }
+
+            // Không cho phép nhập nhiều hơn một dấu chấm
+            TextBox textBox = sender as TextBox;
+            if (e.KeyChar == '.' && textBox.Text.Contains("."))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

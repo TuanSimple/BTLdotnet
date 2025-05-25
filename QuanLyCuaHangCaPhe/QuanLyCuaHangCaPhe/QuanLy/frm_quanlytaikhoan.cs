@@ -390,7 +390,10 @@ namespace QuanLyCuaHangCaPhe
                 chkNam.Checked = false;
         }
 
-       
+        private void txtManhanvien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

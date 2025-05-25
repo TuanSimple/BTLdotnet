@@ -140,12 +140,12 @@
             // 
             this.dataGridView.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(146, 159);
+            this.dataGridView.Location = new System.Drawing.Point(161, 159);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 62;
             this.dataGridView.RowTemplate.Height = 28;
-            this.dataGridView.Size = new System.Drawing.Size(846, 282);
+            this.dataGridView.Size = new System.Drawing.Size(831, 282);
             this.dataGridView.TabIndex = 6;
             // 
             // txtBangchu
@@ -227,7 +227,7 @@
             // 
             this.btnInBC.BackColor = System.Drawing.Color.Green;
             this.btnInBC.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInBC.ForeColor = System.Drawing.Color.Yellow;
+            this.btnInBC.ForeColor = System.Drawing.Color.White;
             this.btnInBC.Location = new System.Drawing.Point(767, 561);
             this.btnInBC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInBC.Name = "btnInBC";
@@ -241,7 +241,7 @@
             // 
             this.btnHienthi.BackColor = System.Drawing.Color.Green;
             this.btnHienthi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHienthi.ForeColor = System.Drawing.Color.Yellow;
+            this.btnHienthi.ForeColor = System.Drawing.Color.White;
             this.btnHienthi.Location = new System.Drawing.Point(524, 561);
             this.btnHienthi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHienthi.Name = "btnHienthi";
@@ -255,7 +255,7 @@
             // 
             this.btnLammoi.BackColor = System.Drawing.Color.Green;
             this.btnLammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLammoi.ForeColor = System.Drawing.Color.Yellow;
+            this.btnLammoi.ForeColor = System.Drawing.Color.White;
             this.btnLammoi.Location = new System.Drawing.Point(276, 561);
             this.btnLammoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLammoi.Name = "btnLammoi";
