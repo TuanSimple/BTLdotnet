@@ -101,12 +101,6 @@
     <Compile Include="frmBaoCao.Designer.cs">
       <DependentUpon>frmBaoCao.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmBanhang_Nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,24 +173,6 @@
     <Compile Include="frm_quanlytaikhoan.Designer.cs">
       <DependentUpon>frm_quanlytaikhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSanpham.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSanpham.Designer.cs">
-      <DependentUpon>frmSanpham.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_quanlyban.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_quanlyban.Designer.cs">
-      <DependentUpon>frm_quanlyban.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_quanlytaikhoan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_quanlytaikhoan.Designer.cs">
-      <DependentUpon>frm_quanlytaikhoan.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmQuanlyHoadon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,9 +192,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="QuanLyBanHangCaPheDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyBanHangCaPheDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyBanHangCaPheDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyBanHangCaPheDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <!-- Các file .resx -->
+    <EmbeddedResource Include="frmBaoCao.resx">
+      <DependentUpon>frmBaoCao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBanhang_Nhanvien.resx">
       <DependentUpon>frmBanhang_Nhanvien.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,57 +229,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDanhmucsanpham.resx">
       <DependentUpon>frmDanhmucsanpham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSanpham.resx">
-      <DependentUpon>frmSanpham.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_quanlyban.resx">
-      <DependentUpon>frm_quanlyban.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_quanlytaikhoan.resx">
-      <DependentUpon>frm_quanlytaikhoan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <!-- Các resource hình ảnh -->
-    <None Include="Resources\coffee2.png" />
-    <None Include="Resources\icons8-add-30.png" />
-    <None Include="Resources\icons8-home-30.png" />
-    <None Include="Resources\icons8-product-30.png" />
-    <None Include="Resources\icons8-sale-30.png" />
-    <None Include="Resources\icons8-settings-30.png" />
-    <None Include="Resources\icons8-shop-30.png" />
-    <None Include="Resources\icons8-statistics-30.png" />
-    <None Include="Resources\table_red.png" />
-    <None Include="Resources\table_white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Settings.settings" />
-    <None Include="App.config" />
-    <Compile Include="QuanLyBanHangCaPheDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyBanHangCaPheDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QuanLyBanHangCaPheDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyBanHangCaPheDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="SqlServerTypes\Loader.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="frmBaoCao.resx">
-      <DependentUpon>frmBaoCao.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSanpham.resx">
       <DependentUpon>frmSanpham.cs</DependentUpon>
@@ -338,7 +277,16 @@
     <None Include="QuanLyBanHangCaPheDataSet1.xss">
       <DependentUpon>QuanLyBanHangCaPheDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="Resources\coffee2.png" />
     <None Include="Resources\icons8-add-30.png" />
+    <None Include="Resources\icons8-home-30.png" />
+    <None Include="Resources\icons8-product-30.png" />
+    <None Include="Resources\icons8-sale-30.png" />
+    <None Include="Resources\icons8-settings-30.png" />
+    <None Include="Resources\icons8-shop-30.png" />
+    <None Include="Resources\icons8-statistics-30.png" />
+    <None Include="Resources\table_red.png" />
+    <None Include="Resources\table_white.png" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
