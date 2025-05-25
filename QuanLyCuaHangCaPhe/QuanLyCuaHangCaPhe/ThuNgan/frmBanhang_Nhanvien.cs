@@ -15,10 +15,10 @@ namespace QuanLyCuaHangCaPhe
 {
     public partial class frmBanhang_Nhanvien : Form
     {
-        //public frmBanhang_Nhanvien()
-        //{
-        //    InitializeComponent();
-        //}
+        public frmBanhang_Nhanvien()
+        {
+            InitializeComponent();
+        }
 
         //mã bàn
         private string maBan = "0";
@@ -30,7 +30,6 @@ namespace QuanLyCuaHangCaPhe
             // load
             LoadTableList(flowLayoutPanel1);
             LoadDataGridView(dbChitiethoadon, maBan);
-
             //tat
             grChitietban.Enabled = false;
             grBan.Enabled = false;

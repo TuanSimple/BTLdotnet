@@ -18,7 +18,7 @@ namespace QuanLyCuaHangCaPhe
             Application.SetCompatibleTextRenderingDefault(false);
             Function.Connect();
            // Application.Run(new frmBaoCaoKho());
-           Application.Run(new frm_quanly());
+           Application.Run(new frmLogin());
         }
     }
 }

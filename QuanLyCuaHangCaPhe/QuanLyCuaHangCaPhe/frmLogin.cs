@@ -51,7 +51,7 @@ namespace QuanLyCuaHangCaPhe
             }
             else
             {
-                string sql = "SELECT nv.*, cv.TenChucVu FROM NhanVien nv " +
+                string sql = "SELECT nv.*, cv.TenChucVu, nv.MaChucVu FROM NhanVien nv " +
                              "JOIN ChucVu cv ON nv.MaChucVu = cv.MaChucVu " +
                              "WHERE nv.MaNhanVien = '" + txtTaikhoan.Text + "' " +
                              "AND nv.MatKhau = '" + txtMatkhau.Text + "'";
@@ -62,23 +62,28 @@ namespace QuanLyCuaHangCaPhe
                 {
                     StaticData.MaNV = dt.Rows[0]["MaNhanVien"].ToString();
                     string tenChucVu = dt.Rows[0]["TenChucVu"].ToString();
-
-                    MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    string maChucVu = dt.Rows[0]["MaChucVu"].ToString();
+                  
                     this.Hide(); // Ẩn form login
 
-                    if (tenChucVu == "QuanLy")
+                    if (maChucVu == "CV03")
                     {
+                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frm_quanly formQL = new frm_quanly();
                         formQL.ShowDialog();
                     }
-                    else if (tenChucVu == "Thu ngan")
+                    else if (maChucVu == "CV02")
                     {
+                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frmQuanlybanhang_Nhanvien formTN = new frmQuanlybanhang_Nhanvien();
-                        formTN.ShowDialog();
+                        formTN.StartPosition = FormStartPosition.CenterScreen; // ✅ tuỳ chỉnh vị trí nếu cần
+                        formTN.Show(); // ✅ không mất kích thước
+                        this.Hide();   // ✅ ẩn form login
+
                     }
-                    else if (tenChucVu == "Thu kho")
+                    else if (maChucVu == "CV07")
                     {
+                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frmNhanVienKho formTK = new frmNhanVienKho();
                         formTK.ShowDialog();
                     }
@@ -122,6 +127,11 @@ namespace QuanLyCuaHangCaPhe
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

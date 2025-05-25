@@ -16,6 +16,8 @@ namespace QuanLyCuaHangCaPhe
         public frmQuanlybanhang_Nhanvien()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.WindowState = FormWindowState.Normal;
         }
 
         private void frmQuanlybanhang_Nhanvien_Load(object sender, EventArgs e)
@@ -67,6 +69,11 @@ namespace QuanLyCuaHangCaPhe
         }
 
         private void pnelQuanlybanhang_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

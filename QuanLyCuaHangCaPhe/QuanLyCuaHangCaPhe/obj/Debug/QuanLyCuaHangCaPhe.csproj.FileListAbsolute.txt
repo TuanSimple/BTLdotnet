@@ -228,3 +228,4 @@ C:\Users\Admin\OneDrive\Documents\CacMonHoc\Nam3\Ky2\LapTrinhNET\BTLdotnet\QuanL
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmThongTinTK.resources
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.QuanLy.frmKhuyenMai.resources
 C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmNhanVienKho.resources
+C:\Users\LT\OneDrive\Tài liệu\GitHub\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frmQuanlybanhang_Nhanvien.resources

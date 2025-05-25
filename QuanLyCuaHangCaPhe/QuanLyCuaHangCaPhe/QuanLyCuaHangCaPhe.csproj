@@ -282,6 +282,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ThuNgan\frmQuanlybanhang_Nhanvien.resx">
+      <DependentUpon>frmQuanlybanhang_Nhanvien.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
