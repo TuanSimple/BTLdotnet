@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|c:\\users\\lt\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\btldotnet\\quanlycuahangcaphe\\quanlycuahangcaphe\\frm_quanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frm_quanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frm_quanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frm_quanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|c:\\users\\lt\\onedrive\\ta\u0300i li\u00EA\u0323u\\github\\btldotnet\\quanlycuahangcaphe\\quanlycuahangcaphe\\frm_quanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frm_quanlytaikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -116,10 +116,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\quanlycuahangcaphe\\frmquanlyhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frmquanlyhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|d:\\hoctap\\.net\\btldotnet\\quanlycuahangcaphe\\quanlycuahangcaphe\\frmquanlyhoadon.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{393A82AC-1712-434F-AA2D-D3DBF7A32B18}|QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe.csproj|solutionrelative:quanlycuahangcaphe\\frmquanlyhoadon.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -129,7 +125,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -153,25 +149,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "frm_quanlytaikhoan.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs",
               "ToolTip": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs [Design]",
               "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlytaikhoan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T18:11:12.577Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-25T04:20:18.119Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "frm_quanlyban.cs [Design]",
               "DocumentMoniker": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frm_quanlyban.cs",
-              "ToolTip": "D:\\HOCTAP\\.NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs [Design]",
+              "ToolTip": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frm_quanlyban.cs [Design]",
+              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlyban.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T18:10:58.193Z"
+              "WhenOpened": "2025-05-25T04:17:19.256Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -227,7 +225,7 @@
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\Program.cs",
               "ToolTip": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Program.cs",
               "RelativeToolTip": "QuanLyCuaHangCaPhe\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvxMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T06:23:36.081Z"
             },
@@ -361,7 +359,8 @@
               "RelativeToolTip": "QuanLyCuaHangCaPhe\\frm_quanlyban.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-23T17:31:40.091Z"
+              "WhenOpened": "2025-05-23T17:31:40.091Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -462,9 +461,10 @@
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmQuanlyHoadon.cs",
               "ToolTip": "C:\\Users\\LT\\OneDrive\\Ta\u0300i li\u00EA\u0323u\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmQuanlyHoadon.cs",
               "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmQuanlyHoadon.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAADgvxoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
-              "WhenOpened": "2025-05-23T07:38:00.899Z"
+              "ViewState": "AgIAACMBAAAAAAAAAAAQwCsBAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T03:08:24.164Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -484,59 +484,7 @@
               "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmBaoCao.cs",
               "ToolTip": "D:\\HOCTAP\\.NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmBaoCao.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T04:17:19.256Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmQuanlyHoadon.Designer.cs",
-              "DocumentMoniker": "D:\\HOCTAP\\.NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmQuanlyHoadon.Designer.cs",
-              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmQuanlyHoadon.Designer.cs",
-              "ToolTip": "D:\\HOCTAP\\.NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmQuanlyHoadon.Designer.cs",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmQuanlyHoadon.Designer.cs",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAAwNwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T03:48:40.117Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\HOCTAP\\.NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Program.cs",
-              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\Program.cs",
-              "ToolTip": "D:\\HOCTAP\\.NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Program.cs*",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\Program.cs*",
-              "ViewState": "AgIAAAsAAAAAAAAAAADwvxMAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T03:30:52.447Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmQuanlyHoadon.cs",
-              "DocumentMoniker": "D:\\HOCTAP\\.NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmQuanlyHoadon.cs",
-              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmQuanlyHoadon.cs",
-              "ToolTip": "D:\\HOCTAP\\.NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmQuanlyHoadon.cs",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmQuanlyHoadon.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAAACYAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T03:08:24.164Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmQuanlyHoadon.cs [Design]",
-              "DocumentMoniker": "D:\\HOCTAP\\.NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmQuanlyHoadon.cs",
-              "RelativeDocumentMoniker": "QuanLyCuaHangCaPhe\\frmQuanlyHoadon.cs",
-              "ToolTip": "D:\\HOCTAP\\.NET\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\frmQuanlyHoadon.cs [Design]",
-              "RelativeToolTip": "QuanLyCuaHangCaPhe\\frmQuanlyHoadon.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T03:05:23.532Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-23T07:44:17.884Z"
             }
           ]
         },
