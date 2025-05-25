@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHangCaPhe
 {
-    public partial class frmMain : Form
+    public partial class frm_quanly : Form
     {
-        public frmMain()
+        public frm_quanly()
         {
             InitializeComponent();
         }

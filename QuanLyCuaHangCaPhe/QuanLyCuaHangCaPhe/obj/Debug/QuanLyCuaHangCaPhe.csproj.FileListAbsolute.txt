@@ -42,3 +42,4 @@ D:\web PHP\htdocs\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\Quan
 D:\web PHP\htdocs\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\QuanLyCuaHangCaPhe.pdb
 D:\web PHP\htdocs\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\bin\Debug\FontAwesome.Sharp.dll
 D:\web PHP\htdocs\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCu.3418C657.Up2Date
+D:\web PHP\htdocs\BTLdotnet\QuanLyCuaHangCaPhe\QuanLyCuaHangCaPhe\obj\Debug\QuanLyCuaHangCaPhe.frm_quanly.resources
