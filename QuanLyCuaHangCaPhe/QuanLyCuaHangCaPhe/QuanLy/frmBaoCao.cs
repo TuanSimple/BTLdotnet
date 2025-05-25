@@ -83,6 +83,8 @@ namespace QuanLyCuaHangCaPhe
         DataTable tblBCHD;
         private void frmBaoCao_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'quanLyBanHangCaPheDataSet.HoaDonBan' table. You can move, or remove it, as needed.
+          //  this.hoaDonBanTableAdapter.Fill(this.quanLyBanHangCaPheDataSet.HoaDonBan);
             btnInBC.Enabled = false;
             btnLammoi.Enabled = false;
             txtTongtien.Enabled = false;
@@ -97,6 +99,7 @@ namespace QuanLyCuaHangCaPhe
 
             Function.FillCombo("Select MaSanPham, TenSanPham From SanPham", cboSP, "MaSanPham", "TenSanPham");
             cboSP.SelectedIndex = -1;
+            
         }
         private void Load_dGridHD(string sql)
         {

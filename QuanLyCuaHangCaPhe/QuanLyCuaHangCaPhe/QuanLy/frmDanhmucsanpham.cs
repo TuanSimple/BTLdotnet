@@ -88,7 +88,7 @@ namespace QuanLyCuaHangCaPhe
 
         private void dataGridViewDanhmuc_Click(object sender, EventArgs e)
         {
-            string ma;
+        
             if (btnThem.Enabled == false)
             {
                 MessageBox.Show("Đang ở chế độ thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.rdoNgay = new System.Windows.Forms.RadioButton();
             this.rdoKhoang = new System.Windows.Forms.RadioButton();
             this.PanelTime = new System.Windows.Forms.Panel();
@@ -47,8 +48,14 @@
             this.btnHienthi = new System.Windows.Forms.Button();
             this.btnLammoi = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.quanLyBanHangCaPheDataSet = new QuanLyCuaHangCaPhe.QuanLyBanHangCaPheDataSet();
+            this.hoaDonBanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.hoaDonBanTableAdapter = new QuanLyCuaHangCaPhe.QuanLyBanHangCaPheDataSetTableAdapters.HoaDonBanTableAdapter();
+            this.chiTietSanPhamTableAdapter1 = new QuanLyCuaHangCaPhe.QuanLyBanHangCaPheDataSet1TableAdapters.ChiTietSanPhamTableAdapter();
             this.PanelTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangCaPheDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // rdoNgay
@@ -268,6 +275,24 @@
             this.label1.Size = new System.Drawing.Size(0, 31);
             this.label1.TabIndex = 20;
             // 
+            // quanLyBanHangCaPheDataSet
+            // 
+            this.quanLyBanHangCaPheDataSet.DataSetName = "QuanLyBanHangCaPheDataSet";
+            this.quanLyBanHangCaPheDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hoaDonBanBindingSource
+            // 
+            this.hoaDonBanBindingSource.DataMember = "HoaDonBan";
+            this.hoaDonBanBindingSource.DataSource = this.quanLyBanHangCaPheDataSet;
+            // 
+            // hoaDonBanTableAdapter
+            // 
+            this.hoaDonBanTableAdapter.ClearBeforeFill = true;
+            // 
+            // chiTietSanPhamTableAdapter1
+            // 
+            this.chiTietSanPhamTableAdapter1.ClearBeforeFill = true;
+            // 
             // frmBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -296,6 +321,8 @@
             this.PanelTime.ResumeLayout(false);
             this.PanelTime.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyBanHangCaPheDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoaDonBanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +348,9 @@
         private System.Windows.Forms.Button btnHienthi;
         private System.Windows.Forms.Button btnLammoi;
         private System.Windows.Forms.Label label1;
+        private QuanLyBanHangCaPheDataSet quanLyBanHangCaPheDataSet;
+        private System.Windows.Forms.BindingSource hoaDonBanBindingSource;
+        private QuanLyBanHangCaPheDataSetTableAdapters.HoaDonBanTableAdapter hoaDonBanTableAdapter;
+        private QuanLyBanHangCaPheDataSet1TableAdapters.ChiTietSanPhamTableAdapter chiTietSanPhamTableAdapter1;
     }
 }

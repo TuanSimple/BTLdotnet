@@ -147,6 +147,7 @@
             this.datagridBan.RowTemplate.Height = 33;
             this.datagridBan.Size = new System.Drawing.Size(732, 494);
             this.datagridBan.TabIndex = 16;
+            this.datagridBan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagridBan_CellContentClick);
             this.datagridBan.Click += new System.EventHandler(this.datagridBan_Click);
             // 
             // panel2

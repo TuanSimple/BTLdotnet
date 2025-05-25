@@ -239,7 +239,7 @@ namespace QuanLyCuaHangCaPhe
                 decimal tongTienSo;
                 bool isDecimal = decimal.TryParse(TongTien, out tongTienSo);
                 btnThanhtoan.Enabled = isDecimal && tongTienSo > 0;
-
+                XoaMaGiamGiaNeuKhongDuDieuKien(maBan);
                 //fill ma giam gia
                 string maKhuyenMai = "";
 
@@ -978,6 +978,42 @@ namespace QuanLyCuaHangCaPhe
         {
 
         }
+        private void XoaMaGiamGiaNeuKhongDuDieuKien(string maBan)
+        {
+            string maHoaDon = MaHoaDonMoiNhatTheoBan(maBan);
+
+            // Lấy mã giảm giá hiện tại (nếu có)
+            string sqlCheck = "SELECT MaKhuyenMai, TongTien FROM HoaDonBan WHERE MaHoaDonBan = '" + maHoaDon + "'";
+            DataTable dt = Function.GetDataToTable(sqlCheck);
+
+            if (dt.Rows.Count == 0 || dt.Rows[0]["MaKhuyenMai"] == DBNull.Value)
+                return; // Không có hóa đơn hoặc không có mã giảm giá
+
+            string maKhuyenMai = dt.Rows[0]["MaKhuyenMai"].ToString();
+            decimal tongTien = Convert.ToDecimal(dt.Rows[0]["TongTien"]);
+
+            // Lấy điều kiện áp dụng của mã giảm giá
+            string sqlKhuyenMai = "SELECT DieuKien FROM KhuyenMai WHERE MaKhuyenMai = '" + maKhuyenMai + "'";
+            object objDieuKien = Function.GetFieldValues(sqlKhuyenMai);
+
+            if (objDieuKien == null) return;
+
+            decimal dieuKien = Convert.ToDecimal(objDieuKien);
+
+            if (tongTien < dieuKien)
+            {
+                // Xoá mã giảm giá khỏi hóa đơn
+                string sqlXoa = "UPDATE HoaDonBan SET MaKhuyenMai = NULL WHERE MaHoaDonBan = '" + maHoaDon + "'";
+                Function.RunSql(sqlXoa);
+
+                // Cập nhật giao diện
+                lbThonbaogiamgia.Text = "Mã giảm giá đã bị xoá (không đủ điều kiện)";
+                txtMagiamgia.Text = "";
+                txtMagiamgia.Enabled = true;
+                btnGiamgia.Enabled = true;
+            }
+        }
+
     }
 }
 
