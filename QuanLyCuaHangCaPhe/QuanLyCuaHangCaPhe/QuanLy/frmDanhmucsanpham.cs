@@ -297,6 +297,7 @@ namespace QuanLyCuaHangCaPhe
             btnLuu.Enabled = false;
             txtMadanhmuc.Enabled = false;
             Load_DataGridViewDanhmuc();
+            Load_DataGridViewSanpham();
         }
 
         private void btnTim_Click(object sender, EventArgs e)
@@ -310,7 +311,6 @@ namespace QuanLyCuaHangCaPhe
                 return;
             }
             sql = "SELECT MaLoai, TenLoai FROM Loai WHERE TenLoai like N'%" + txtTimkiem.Text + "%'";
-            
             Loai = QuanLyCuaHangCaPhe.Function.GetDataToTable(sql);
             //Gán dữ liệu từ bảng vào datagridview
             dataGridViewDanhmuc.DataSource = Loai;
