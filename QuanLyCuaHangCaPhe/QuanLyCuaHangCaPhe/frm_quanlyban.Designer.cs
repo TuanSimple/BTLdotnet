@@ -58,13 +58,13 @@
             this.panel1.Location = new System.Drawing.Point(72, 84);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1423, 239);
+            this.panel1.Size = new System.Drawing.Size(1067, 194);
             this.panel1.TabIndex = 17;
             // 
             // txtSoluongghe
             // 
             this.txtSoluongghe.Location = new System.Drawing.Point(229, 142);
-            this.txtSoluongghe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoluongghe.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoluongghe.Name = "txtSoluongghe";
             this.txtSoluongghe.Size = new System.Drawing.Size(217, 22);
             this.txtSoluongghe.TabIndex = 4;
@@ -82,7 +82,7 @@
             // 
             this.cboTinhtrang.FormattingEnabled = true;
             this.cboTinhtrang.Location = new System.Drawing.Point(921, 94);
-            this.cboTinhtrang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTinhtrang.Margin = new System.Windows.Forms.Padding(4);
             this.cboTinhtrang.Name = "cboTinhtrang";
             this.cboTinhtrang.Size = new System.Drawing.Size(217, 24);
             this.cboTinhtrang.TabIndex = 6;
@@ -123,7 +123,7 @@
             this.datagridBan.Name = "datagridBan";
             this.datagridBan.RowHeadersWidth = 82;
             this.datagridBan.RowTemplate.Height = 33;
-            this.datagridBan.Size = new System.Drawing.Size(1423, 374);
+            this.datagridBan.Size = new System.Drawing.Size(1067, 194);
             this.datagridBan.TabIndex = 16;
             this.datagridBan.Click += new System.EventHandler(this.datagridBan_Click);
             // 
@@ -237,7 +237,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 501);
+            this.ClientSize = new System.Drawing.Size(1338, 826);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ibtnLamoi);
             this.Controls.Add(this.ibtnLuu);
