@@ -95,28 +95,41 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmBaoCao.cs">
+    <Compile Include="frmThongTinTK.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBaoCao.Designer.cs">
+    <Compile Include="frmThongTinTK.Designer.cs">
+      <DependentUpon>frmThongTinTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy\frmBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\frmBaoCao.Designer.cs">
       <DependentUpon>frmBaoCao.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBanhang_Nhanvien.cs">
+    <Compile Include="QuanLy\frmKhuyenMai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBanhang_Nhanvien.Designer.cs">
+    <Compile Include="QuanLy\frmKhuyenMai.Designer.cs">
+      <DependentUpon>frmKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaticData.cs" />
+    <Compile Include="ThuNgan\frmBanhang_Nhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThuNgan\frmBanhang_Nhanvien.Designer.cs">
       <DependentUpon>frmBanhang_Nhanvien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBaocaohoadon_Nhanvien.cs">
+    <Compile Include="ThuNgan\frmBaocaohoadon_Nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBaocaohoadon_Nhanvien.Designer.cs">
+    <Compile Include="ThuNgan\frmBaocaohoadon_Nhanvien.Designer.cs">
       <DependentUpon>frmBaocaohoadon_Nhanvien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBaoCaoKho.cs">
+    <Compile Include="ThuKho\frmBaoCaoKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBaoCaoKho.Designer.cs">
+    <Compile Include="ThuKho\frmBaoCaoKho.Designer.cs">
       <DependentUpon>frmBaoCaoKho.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
@@ -125,64 +138,64 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNguyenLieu.cs">
+    <Compile Include="ThuKho\frmNguyenLieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNguyenLieu.Designer.cs">
+    <Compile Include="ThuKho\frmNguyenLieu.Designer.cs">
       <DependentUpon>frmNguyenLieu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNhanVienKho.cs">
+    <Compile Include="ThuKho\frmNhanVienKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhanVienKho.Designer.cs">
+    <Compile Include="ThuKho\frmNhanVienKho.Designer.cs">
       <DependentUpon>frmNhanVienKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNhapKho.cs">
+    <Compile Include="ThuKho\frmNhapKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhapKho.Designer.cs">
+    <Compile Include="ThuKho\frmNhapKho.Designer.cs">
       <DependentUpon>frmNhapKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuanlybanhang_Nhanvien.cs">
+    <Compile Include="ThuNgan\frmQuanlybanhang_Nhanvien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuanlybanhang_Nhanvien.Designer.cs">
+    <Compile Include="ThuNgan\frmQuanlybanhang_Nhanvien.Designer.cs">
       <DependentUpon>frmQuanlybanhang_Nhanvien.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDanhmucsanpham.cs">
+    <Compile Include="QuanLy\frmDanhmucsanpham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDanhmucsanpham.Designer.cs">
+    <Compile Include="QuanLy\frmDanhmucsanpham.Designer.cs">
       <DependentUpon>frmDanhmucsanpham.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSanpham.cs">
+    <Compile Include="QuanLy\frmSanpham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSanpham.Designer.cs">
+    <Compile Include="QuanLy\frmSanpham.Designer.cs">
       <DependentUpon>frmSanpham.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_quanly.cs">
+    <Compile Include="QuanLy\frm_quanly.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_quanly.Designer.cs">
+    <Compile Include="QuanLy\frm_quanly.Designer.cs">
       <DependentUpon>frm_quanly.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_quanlyban.cs">
+    <Compile Include="QuanLy\frm_quanlyban.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_quanlyban.Designer.cs">
+    <Compile Include="QuanLy\frm_quanlyban.Designer.cs">
       <DependentUpon>frm_quanlyban.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_quanlytaikhoan.cs">
+    <Compile Include="QuanLy\frm_quanlytaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_quanlytaikhoan.Designer.cs">
+    <Compile Include="QuanLy\frm_quanlytaikhoan.Designer.cs">
       <DependentUpon>frm_quanlytaikhoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmQuanlyHoadon.cs">
+    <Compile Include="QuanLy\frmQuanlyHoadon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmQuanlyHoadon.Designer.cs">
+    <Compile Include="QuanLy\frmQuanlyHoadon.Designer.cs">
       <DependentUpon>frmQuanlyHoadon.cs</DependentUpon>
     </Compile>
     <Compile Include="Function.cs" />
@@ -211,47 +224,56 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmBaoCao.resx">
+    <EmbeddedResource Include="frmThongTinTK.resx">
+      <DependentUpon>frmThongTinTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy\frmBaoCao.resx">
       <DependentUpon>frmBaoCao.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBanhang_Nhanvien.resx">
+    <EmbeddedResource Include="QuanLy\frmKhuyenMai.resx">
+      <DependentUpon>frmKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThuNgan\frmBanhang_Nhanvien.resx">
       <DependentUpon>frmBanhang_Nhanvien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBaocaohoadon_Nhanvien.resx">
+    <EmbeddedResource Include="ThuNgan\frmBaocaohoadon_Nhanvien.resx">
       <DependentUpon>frmBaocaohoadon_Nhanvien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBaoCaoKho.resx">
+    <EmbeddedResource Include="ThuKho\frmBaoCaoKho.resx">
       <DependentUpon>frmBaoCaoKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNguyenLieu.resx">
+    <EmbeddedResource Include="ThuKho\frmNguyenLieu.resx">
       <DependentUpon>frmNguyenLieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNhapKho.resx">
+    <EmbeddedResource Include="ThuKho\frmNhanVienKho.resx">
+      <DependentUpon>frmNhanVienKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThuKho\frmNhapKho.resx">
       <DependentUpon>frmNhapKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDanhmucsanpham.resx">
+    <EmbeddedResource Include="QuanLy\frmDanhmucsanpham.resx">
       <DependentUpon>frmDanhmucsanpham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSanpham.resx">
+    <EmbeddedResource Include="QuanLy\frmSanpham.resx">
       <DependentUpon>frmSanpham.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_quanly.resx">
+    <EmbeddedResource Include="QuanLy\frm_quanly.resx">
       <DependentUpon>frm_quanly.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_quanlyban.resx">
+    <EmbeddedResource Include="QuanLy\frm_quanlyban.resx">
       <DependentUpon>frm_quanlyban.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_quanlytaikhoan.resx">
+    <EmbeddedResource Include="QuanLy\frm_quanlytaikhoan.resx">
       <DependentUpon>frm_quanlytaikhoan.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuanlyHoadon.resx">
+    <EmbeddedResource Include="QuanLy\frmQuanlyHoadon.resx">
       <DependentUpon>frmQuanlyHoadon.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -306,6 +328,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\logo1.png" />
+    <None Include="Resources\pngegg %281%29.png" />
+    <None Include="Resources\hello.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -328,4 +354,5 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
 </Project>

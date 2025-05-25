@@ -210,20 +210,22 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::QuanLyCuaHangCaPhe.Properties.Resources.pngegg__1_;
             this.pictureBox1.Location = new System.Drawing.Point(15, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(359, 146);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Green;
+            this.pictureBox2.Image = global::QuanLyCuaHangCaPhe.Properties.Resources.logo1;
             this.pictureBox2.Location = new System.Drawing.Point(28, 142);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(315, 286);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 

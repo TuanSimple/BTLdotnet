@@ -72,7 +72,7 @@
             this.pnlDeskTop.Location = new System.Drawing.Point(206, 61);
             this.pnlDeskTop.Margin = new System.Windows.Forms.Padding(2);
             this.pnlDeskTop.Name = "pnlDeskTop";
-            this.pnlDeskTop.Size = new System.Drawing.Size(892, 537);
+            this.pnlDeskTop.Size = new System.Drawing.Size(884, 537);
             this.pnlDeskTop.TabIndex = 6;
             // 
             // panelMenu
@@ -172,6 +172,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::QuanLyCuaHangCaPhe.Properties.Resources.logo1;
             this.pictureBox1.Location = new System.Drawing.Point(14, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";

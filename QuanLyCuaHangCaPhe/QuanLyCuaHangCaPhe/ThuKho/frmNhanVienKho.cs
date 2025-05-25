@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,16 @@ namespace QuanLyCuaHangCaPhe
     public partial class frmNhanVienKho: Form
     {
         private Form currentChildForm;
+        private IconButton currentBtn;
+        private Dictionary<IconButton, string> originalButtonTexts = new Dictionary<IconButton, string>();
+
+        private Color defaultIconColor = Color.Yellow;
+        private Color defaultTextColor = Color.Yellow;
+        private Color defaultButtonColor = Color.FromArgb(255, 128, 0);
+
+        private Color activeIconColor = Color.Yellow;
+        private Color activeTextColor = Color.Yellow;
+        private Color activeButtonColor = Color.FromArgb(192, 0, 0);
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -37,9 +48,50 @@ namespace QuanLyCuaHangCaPhe
             childForm.Show();
             lblTieuDe.Text = tenTrang;
         }
+        private void ActivateButton(object senderBtn, string tenTrang)
+        {
+            if (senderBtn == null) return;
+
+            IconButton clickedBtn = (IconButton)senderBtn;
+
+            if (currentBtn != null && currentBtn != clickedBtn)
+            {
+                DisableButton(currentBtn);
+            }
+
+            if (!originalButtonTexts.ContainsKey(clickedBtn))
+                originalButtonTexts[clickedBtn] = clickedBtn.Text;
+
+            currentBtn = clickedBtn;
+            currentBtn.BackColor = activeButtonColor;
+            currentBtn.ForeColor = activeTextColor;
+            currentBtn.Text = string.Empty;
+            currentBtn.IconColor = activeIconColor;
+            currentBtn.ImageAlign = ContentAlignment.MiddleCenter;
+            currentBtn.TextImageRelation = TextImageRelation.Overlay;
+            currentBtn.Padding = new Padding(0);
+
+            lblTieuDe.Text = tenTrang;
+        }
+
+        private void DisableButton(IconButton button)
+        {
+            if (button == null) return;
+
+            button.BackColor = defaultButtonColor;
+            button.ForeColor = defaultTextColor;
+            if (originalButtonTexts.ContainsKey(button))
+                button.Text = originalButtonTexts[button];
+            button.TextAlign = ContentAlignment.MiddleCenter;
+            button.IconColor = defaultIconColor;
+            button.TextImageRelation = TextImageRelation.Overlay;
+            button.ImageAlign = ContentAlignment.MiddleLeft;
+            button.Padding = new Padding(10, 0, 0, 0);
+        }
 
         private void btnTK_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, "Danh sách nguyên liệu");
             OpenForm(new frmNguyenLieu(), "Danh sách nguyên liệu");
         }
 
@@ -63,16 +115,18 @@ namespace QuanLyCuaHangCaPhe
 
         private void frmNhanVienKho_Load(object sender, EventArgs e)
         {
-            Function.Connect();
+            OpenForm(new frmThongTinTK(), "Thông tin tài khoản");
         }
 
         private void btnNhapKho_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, "Nhập kho");
             OpenForm(new frmNhapKho(), "Nhập kho");
         }
 
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
+            ActivateButton(sender, "Báo cáo kho");
             OpenForm(new frmBaoCaoKho(), "Báo cáo kho");
         }
     }
