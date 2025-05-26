@@ -20,11 +20,11 @@ namespace QuanLyCuaHangCaPhe
 
         private Color defaultIconColor = Color.Yellow;
         private Color defaultTextColor = Color.Yellow;
-        private Color defaultButtonColor = Color.FromArgb(255, 128, 0);
+        private Color defaultButtonColor = Color.Green;
 
-        private Color activeIconColor = Color.Yellow;
-        private Color activeTextColor = Color.Yellow;
-        private Color activeButtonColor = Color.FromArgb(192, 0, 0);
+        private Color activeIconColor = Color.Green;
+        private Color activeTextColor = Color.Green;
+        private Color activeButtonColor = Color.Yellow;
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -128,6 +128,17 @@ namespace QuanLyCuaHangCaPhe
         {
             ActivateButton(sender, "Báo cáo kho");
             OpenForm(new frmBaoCaoKho(), "Báo cáo kho");
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                frmLogin f = new frmLogin();
+                f.Show();
+            }
         }
     }
 }

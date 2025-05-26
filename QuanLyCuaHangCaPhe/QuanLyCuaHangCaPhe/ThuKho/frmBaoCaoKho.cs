@@ -25,6 +25,8 @@ namespace QuanLyCuaHangCaPhe
             series.ChartType = SeriesChartType.Column;
             series.IsValueShownAsLabel = true;
 
+            series.IsValueShownAsLabel = false;
+
             string sql = "SELECT TenNguyenLieu, SoLuongHienCo FROM NguyenLieu ORDER BY SoLuongHienCo DESC";
             DataTable dt = Function.GetDataToTable(sql);
 
@@ -45,6 +47,8 @@ namespace QuanLyCuaHangCaPhe
             Series series = new Series("Chi phí nhập");
             series.ChartType = SeriesChartType.Column;
             series.IsValueShownAsLabel = true;
+
+            series.IsValueShownAsLabel = false;
 
             string sql = @"
         SELECT nl.TenNguyenLieu, SUM(ct.ThanhTien) AS TongChiPhi
@@ -70,6 +74,11 @@ namespace QuanLyCuaHangCaPhe
         {
             LoadTonKhoChart();
             LoadChiPhiNhapChart();
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

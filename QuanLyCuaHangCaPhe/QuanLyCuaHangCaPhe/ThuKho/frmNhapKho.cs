@@ -472,5 +472,27 @@ namespace QuanLyCuaHangCaPhe
             btnLuu2.Enabled = false;
             cboNguyenLieu.Enabled = false;
         }
+
+        private void txtSLNhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != '\b') // \b = Backspace
+                e.Handled = true;
+
+            if ((e.KeyChar == '.' && tb.Text.Contains(".")))
+                e.Handled = true;
+        }
+
+        private void txtDonGiaNhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != '\b') // \b = Backspace
+                e.Handled = true;
+
+            if ((e.KeyChar == '.' && tb.Text.Contains(".")))
+                e.Handled = true;
+        }
     }
 }

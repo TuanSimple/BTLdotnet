@@ -246,5 +246,16 @@ namespace QuanLyCuaHangCaPhe
             btnLuu.Enabled = false;
             txtMaNL.Enabled = false;
         }
+
+        private void txtSoLuongTon_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != '\b') // \b = Backspace
+                e.Handled = true;
+
+            if ((e.KeyChar == '.' && tb.Text.Contains(".")))
+                e.Handled = true;
+        }
     }
 }

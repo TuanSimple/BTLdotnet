@@ -63,37 +63,34 @@ namespace QuanLyCuaHangCaPhe
                     StaticData.MaNV = dt.Rows[0]["MaNhanVien"].ToString();
                     string tenChucVu = dt.Rows[0]["TenChucVu"].ToString();
                     string maChucVu = dt.Rows[0]["MaChucVu"].ToString();
-                  
+
                     this.Hide(); // Ẩn form login
 
                     if (maChucVu == "CV03")
                     {
-                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frm_quanly formQL = new frm_quanly();
-                        formQL.ShowDialog();
+                        formQL.Show();
                     }
                     else if (maChucVu == "CV02")
                     {
-                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frmQuanlybanhang_Nhanvien formTN = new frmQuanlybanhang_Nhanvien();
                         formTN.StartPosition = FormStartPosition.CenterScreen; // ✅ tuỳ chỉnh vị trí nếu cần
                         formTN.Show(); // ✅ không mất kích thước
-                        this.Hide();   // ✅ ẩn form login
 
                     }
                     else if (maChucVu == "CV07")
                     {
-                        MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Đăng nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         frmNhanVienKho formTK = new frmNhanVienKho();
-                        formTK.ShowDialog();
+                        formTK.Show();
                     }
                     else
                     {
                         MessageBox.Show("Chức vụ không được hỗ trợ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         this.Show(); // Hiện lại form login nếu lỗi
                     }
-
-                    this.Show(); // Hiện lại form login khi form con đóng
                 }
                 else
                 {

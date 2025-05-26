@@ -83,7 +83,7 @@ namespace QuanLyCuaHangCaPhe
         DataTable tblBCHD;
         private void frmBaoCao_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quanLyBanHangCaPheDataSet.HoaDonBan' table. You can move, or remove it, as needed.
+            //TODO: This line of code loads data into the 'quanLyBanHangCaPheDataSet.HoaDonBan' table. You can move, or remove it, as needed.
           //  this.hoaDonBanTableAdapter.Fill(this.quanLyBanHangCaPheDataSet.HoaDonBan);
             btnInBC.Enabled = false;
             btnLammoi.Enabled = false;
@@ -99,7 +99,14 @@ namespace QuanLyCuaHangCaPhe
 
             Function.FillCombo("Select MaSanPham, TenSanPham From SanPham", cboSP, "MaSanPham", "TenSanPham");
             cboSP.SelectedIndex = -1;
-            
+            // --- Thiết lập mặc định báo cáo hóa đơn theo ngày hôm nay ---
+            ckbHD.Checked = true;
+            rdoNgay.Checked = true;
+            mskNgay.Value = DateTime.Now;
+
+            // Gọi hàm hiển thị dữ liệu
+            btnHienthi_Click_1(null, null);
+
         }
         private void Load_dGridHD(string sql)
         {

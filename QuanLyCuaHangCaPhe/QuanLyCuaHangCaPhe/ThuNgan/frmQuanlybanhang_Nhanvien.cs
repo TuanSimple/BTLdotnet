@@ -77,5 +77,16 @@ namespace QuanLyCuaHangCaPhe
         {
 
         }
+
+        private void btnDangxuat_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                frmLogin f = new frmLogin();
+                f.Show();
+            }
+        }
     }
 }

@@ -238,7 +238,7 @@ namespace QuanLyCuaHangCaPhe
                 decimal tongTienSo;
                 bool isDecimal = decimal.TryParse(TongTien, out tongTienSo);
                 btnThanhtoan.Enabled = isDecimal && tongTienSo > 0;
-                XoaMaGiamGiaNeuKhongDuDieuKien(maBan);
+               
                 //fill ma giam gia
                 string maKhuyenMai = "";
 
@@ -270,6 +270,7 @@ namespace QuanLyCuaHangCaPhe
                 cbThucuong.Enabled = false;
                 numSoluong.Enabled = false;
                 txtTongtien.Enabled = false;
+                XoaMaGiamGiaNeuKhongDuDieuKien(maBan);
             }
         }
         //lay hoa don moi nhat
@@ -598,7 +599,6 @@ namespace QuanLyCuaHangCaPhe
                     ResetDrinkSelection();
                 }
             }
-
         }
 
         private void btnChuyenban_Click(object sender, EventArgs e)
@@ -669,6 +669,7 @@ namespace QuanLyCuaHangCaPhe
             LoadDataGridView(dbChitiethoadon, maBanGop);
             grChitietban.Enabled = false;
         }
+
 
         private void btnGiamgia_Click(object sender, EventArgs e)
         {
@@ -818,7 +819,7 @@ namespace QuanLyCuaHangCaPhe
             g.DrawString($"Mã hóa đơn: {MaHoaDonMoiNhatTheoBan(maBan)}", font, Brushes.Black, leftMargin, y); y += 22;
             g.DrawString($"Nhân viên: {maNhanvien}", font, Brushes.Black, leftMargin, y); y += 26;
             //add hình quán vào bên phải
-            Image img = Image.FromFile("C:\\Users\\LT\\OneDrive\\Tài liệu\\GitHub\\BTLdotnet\\QuanLyCuaHangCaPhe\\QuanLyCuaHangCaPhe\\Resources\\coffee.png");
+            Image img = Properties.Resources.logo;
             g.DrawImage(img, leftMargin + 450, 20, 80, 80);
 
             // Separator
